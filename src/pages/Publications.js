@@ -1,42 +1,52 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEnvelope,
+  faLocationPin,
+  faPhone,
+  faCode,
+  faBookOpen,
+  faDatabase,
+  faCopyright
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faHackerrank,
+  faKaggle,
+  faLinkedin,
+  faResearchgate,
+  faOpera
+} from "@fortawesome/free-brands-svg-icons";
 
 const Publications = () => {
   return (
     <div className="max-w-2xl mx-auto my-8 p-4 bg-white rounded shadow">
       {/* Semantic Scholar */}
       <h2 className="text-2xl font-bold mb-4">Publications related profile:</h2>
-      <ul className="list-disc pl-6">
-        <li>
-          <a
-            href="https://www.semanticscholar.org/author/MD-Shafikul-Islam/2244783507"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:underline"
-          >
-            SEMANTIC SCHOLAR
-          </a>
-        </li>
-        <li>
-          <a
+      <div className="pl-2 flex space-x-4">
+      <a
             href="https://www.researchgate.net/profile/Md-Islam-2168"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-500 hover:underline"
           >
-            RESEARCH GATE
+            <FontAwesomeIcon icon={faResearchgate} />
           </a>
-        </li>
-        <li>
-          <a
-            href="https://openreview.net/profile?id=~MD_Shafikul_Islam1"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:underline"
-          >
-            Open Review
-          </a>
-        </li>
-      </ul>
+      <a
+                href="https://www.semanticscholar.org/author/MD-Shafikul-Islam/2244783507"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faBookOpen} />
+              </a>
+              
+              <a
+                href="https://openreview.net/profile?id=~MD_Shafikul_Islam1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                 <FontAwesomeIcon icon={faOpera} />
+              </a>
+      </div>
 
       {/* Conference Proceedings */}
       <div className="mt-8">
@@ -92,10 +102,14 @@ const Publications = () => {
 
       {/* Supplygraph */}
       <div className="mt-8">
-        <h2 className="text-2xl font-bold mb-4">
-          Supplygraph: A Benchmark Dataset for Supply Chain Planning using Graph
-          Neural Networks
-        </h2>
+        <a
+            href="https://github.com/CIOL-SUST/SupplyGraph"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:underline"
+          >
+            Supplygraph: A Benchmark Dataset for Supply Chain Planning using Graph Neural Networks
+        </a>
         <p>
           Azmine Toushik Wasi, MD Shafikul Islam, Adipto Raihan Akib
           <br />
@@ -135,17 +149,22 @@ const Publications = () => {
             title={Supplygraph: A Benchmark Dataset for Supply Chain Planning using Graph Neural Networks},
             author={Azmine Toushik Wasi, MD Shafikul Islam, Adipto Raihan Akib},
             booktitle={Graphs and more Complex structures for Learning and Reasoning workshop, AAAI 2024}
-          }`}
+            }`}
           </pre>
         </details>
       </div>
 
       {/* Multivariate Time Series Analysis */}
       <div className="mt-8">
-        <h2 className="text-2xl font-bold mb-4">
-          Multivariate Time Series Analysis and Forecasting on Air Quality Index
+        <a
+            href="https://www.researchgate.net/publication/367283494_Multivariate_Time_Series_Analysis_and_Forecasting_on_Air_Quality_Index_with_Industrial_Statistics_A_Case_Study_of_Bangladesh"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:underline"
+          >
+             Multivariate Time Series Analysis and Forecasting on Air Quality Index
           with Industrial Statistics: A Case Study of Bangladesh
-        </h2>
+        </a>
         <p>
           MD Shafikul Islam, Azmine Toushik Wasi
           <br />
@@ -190,7 +209,15 @@ const Publications = () => {
 
       {/* Journal Proceedings */}
       <div className="mt-8">
-        <h2 className="text-2xl font-bold mb-4">Journal Proceedings:</h2>
+      <h2 className="text-2xl font-bold mb-4">Journal Proceedings:</h2>
+        <a
+            href="https://www.researchgate.net/profile/Md-Islam-2168/publication/347985922_Approach_of_green_and_lean_manufacturing_study_of_the_small_industries_in_Bangladesh/links/60978881299bf1ad8d897104/Approach-of-green-and-lean-manufacturing-study-of-the-small-industries-in-Bangladesh.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 hover:underline"
+          >
+            Approach of green and lean manufacturing study of the small industries in Bangladesh 
+        </a>
         <p>
           Sanatan Sushil, Md Shafikul Islam, Tanjidul Islam, M. SI Khan
           <br />
@@ -254,7 +281,7 @@ const Publications = () => {
             </a>
           </p>
           <p>
-            Abul Mukid Md. Mukaddes, MD Shafikul Islam, Mohammad Mejbah Uddin
+            MD Shafikul Islam, Mohammad Mejbah Uddin
           </p>
           <details className="mt-2">
             <summary className="text-blue-500 cursor-pointer">
@@ -279,20 +306,21 @@ const Publications = () => {
             Ready-made Garment Industries:
           </h3>
           <p className="text-gray-800">
-            Saifur Rahman Tushar, MD Shafikul Islam, MD Emad Uddin Fahim
+          <a
+              href="https://scholar.google.com/citations?user=ynk_X20AAAAJ&hl=en&oi=ao"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:underline"
+            >
+              Saifur Rahman Tushar
+            </a>, MD Shafikul Islam, MD Emad Uddin Fahim
           </p>
           <details className="mt-2">
             <summary className="text-blue-500 cursor-pointer">
               Short Description
             </summary>
             <p className="text-gray-800 mt-2">
-              Our research merges data-driven decision-making and prescriptive
-              analytics, focusing on the "Predict, then Optimize" framework. We
-              aim to predict academic grades using machine learning and optimize
-              preparatory leave for enhanced student performance. This
-              pioneering approach addresses a gap in education, aiming to
-              revolutionize academic success strategies through personalized,
-              data-driven recommendations.
+            This research finds challenges impeding the integration of smart textiles in ready-made garment industries. Employing the fuzzy DEMATEL method, we identify relationships among these challenges, determining their significance criteria. Subsequently, we propose a strategic approach for sustainable business management within this context. 
             </p>
           </details>
         </div>

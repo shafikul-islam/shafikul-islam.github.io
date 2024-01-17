@@ -6,7 +6,7 @@ const HomeAdditionalInfo = () => {
       {/* Ongoing Research Projects */}
       <div className="flex flex-col gap-y-4">
         <h2 className="text-xl font-bold">Ongoing Research Projects</h2>
-        <ul className="space-y-2">
+        <ul className="space-y-2" style={{listStyle: 'disc', marginLeft: '17px'}}>
           <div>
             <li>
               Exploring the integration of Graph Neural Networks (GNN) and
@@ -29,11 +29,10 @@ const HomeAdditionalInfo = () => {
           </div>
         </ul>
       </div>
-
       {/* Hobbies and Interests */}
       <div className="flex flex-col gap-y-4">
         <h2 className="text-xl font-bold">Hobbies and Interests</h2>
-        <ul className="list-none space-y-2">
+        <ul className="space-y-2" style={{listStyle: 'disc', marginLeft: '17px'}}>
           <div>
             <li>
               Beyond the academic realm, I am an avid reader, delving into a

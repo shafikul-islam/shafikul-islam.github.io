@@ -6,6 +6,10 @@ import {
   faEnvelope,
   faLocationPin,
   faPhone,
+  faCode,
+  faBookOpen,
+  faDatabase,
+  faCopyright
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
@@ -13,6 +17,7 @@ import {
   faKaggle,
   faLinkedin,
   faResearchgate,
+  faOpera
 } from "@fortawesome/free-brands-svg-icons";
 
 const Hero = () => {
@@ -89,15 +94,13 @@ const Hero = () => {
             >
               <FontAwesomeIcon icon={faHackerrank} />
             </a>
-            {/* New Lines with Tiny Fonts for the Links without Icons */}
-            <span className="text-xs">
-              <a
+            <a
                 className="m-3"
                 href="https://www.semanticscholar.org/author/MD-Shafikul-Islam/2244783507"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Semantic Scholar
+                <FontAwesomeIcon icon={faBookOpen} />
               </a>
               <a
                 className="m-3"
@@ -105,7 +108,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                LeetCode
+                 <FontAwesomeIcon icon={faCode} />
               </a>
               <a
                 className="m-3"
@@ -113,7 +116,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Open Review
+                 <FontAwesomeIcon icon={faOpera} />
               </a>
               <a
                 className="m-3"
@@ -121,7 +124,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Data Camp
+                 <FontAwesomeIcon icon={faDatabase} />
               </a>
               <a
                 className="m-3"
@@ -129,9 +132,8 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Coursera
+                <FontAwesomeIcon icon={faCopyright} />
               </a>
-            </span>
           </div>
         </div>
       </div>
