@@ -41,16 +41,16 @@ toc: true
       <a href="https://scholar.google.com/citations?user=A8KOQBEAAAAJ&hl=en" target="_blank" rel="noopener" class="icon-link">
         <img src="https://img.shields.io/badge/Google%20Scholar-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Google Scholar">
       </a>
-      <a href="https://github.com/mdshafikul" target="_blank" rel="noopener" class="icon-link">
+      <a href="https://github.com/shafikul-islam" target="_blank" rel="noopener" class="icon-link">
         <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
       </a>
-      <a href="https://www.linkedin.com/in/md-shafikul-islam-sohan-079737130/" target="_blank" rel="noopener" class="icon-link">
+      <a href="https://www.linkedin.com/in/md-shafikul-islam-sohan/" target="_blank" rel="noopener" class="icon-link">
         <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
       </a>
-      <a href="https://orcid.org/0009-0005-2579-2810" target="_blank" rel="noopener" class="icon-link">
+      <a href="https://orcid.org/0009-0007-3824-4384" target="_blank" rel="noopener" class="icon-link">
         <img src="https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID">
       </a>
-      <a href="https://dblp.org/pid/347/4397.html" target="_blank" rel="noopener" class="icon-link">
+      <a href="https://dblp.org/pid/359/9192.html" target="_blank" rel="noopener" class="icon-link">
         <img src="https://img.shields.io/badge/DBLP-004F9F?style=for-the-badge&logo=dblp&logoColor=white" alt="DBLP">
       </a>
       <a href="https://openreview.net/profile?id=~MD_Shafikul_Islam1" target="_blank" rel="noopener" class="icon-link">

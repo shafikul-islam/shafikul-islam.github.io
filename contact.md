@@ -41,7 +41,7 @@ permalink: /contact/
         <a class="contact-chip" href="https://www.linkedin.com/in/md-shafikul-islam-sohan/" target="_blank" rel="noopener">LinkedIn</a>
         <a class="contact-chip" href="https://shafikul-islam.github.io/" target="_blank" rel="noopener">Website</a>
         <a class="contact-chip" href="https://scholar.google.com/citations?user=A8KOQBEAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
-        <a class="contact-chip" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a class="contact-chip" href="https://github.com/shafikul-islam" target="_blank" rel="noopener">GitHub</a>
         <a class="contact-chip" href="https://www.facebook.com/mdshafikulislam.sohan/" target="_blank" rel="noopener">Facebook</a>
         <a class="contact-chip" href="https://medium.com/@sohan11807044" target="_blank" rel="noopener">Medium</a>
         <a class="contact-chip" href="https://kaggle.com/mdshafikulislamsohan" target="_blank" rel="noopener">Kaggle</a>
