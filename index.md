@@ -187,7 +187,7 @@ toc: true
   <div class="hscroll">
     <div class="highlight-card">
       <div class="highlight-media">
-        <img src="{{ '/assets/images/gallery/Best_Paper.png' | relative_url }}" alt="Best Paper Award">
+        <img src="{{ '/assets/images/gallery/Best_paper.png' | relative_url }}" alt="Best Paper Award">
         <div class="video-chip chip-amber">Research</div>
       </div>
       <div class="highlight-body">
