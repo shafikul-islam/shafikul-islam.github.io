@@ -1200,10 +1200,12 @@ h3,
 }
 
 .education-page .intro,
-.exp-page .intro {
+.exp-page .intro,
+.contact-page .intro {
   margin: 0 0 14px !important;
   padding: 0 !important;
   color: var(--muted);
+  display: block;
 }
 
 .education-page .degree-section {
