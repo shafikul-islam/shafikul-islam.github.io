@@ -1674,3 +1674,10 @@ footer a,
     font-size: 1rem;
   }
 }
+
+/* Specific Override for Contact Page Intro (User Requested) */
+.contact-page .intro {
+  margin: 0 0 14px !important;
+  padding: 0 !important;
+  display: block;
+}
