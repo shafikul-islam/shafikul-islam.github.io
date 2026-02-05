@@ -1,0 +1,30 @@
+main:
+  - name: "Research"
+    url: "/research/"
+    weight: 1
+  - name: "Publications"
+    url: "/publications/"
+    weight: 2
+  - name: "Education"
+    url: "/education/"
+    weight: 3
+  - name: "Experience"
+    url: "/experience/"
+    weight: 4
+  - name: "Others"
+    url: "/others/"
+    weight: 5
+  - name: "CV"
+    url: "/resume.pdf"
+    weight: 6
+
+footer:
+  - name: "Publications"
+    url: "/publications/"
+    weight: 1
+  - name: "Research"
+    url: "/research/"
+    weight: 2
+  - name: "Contact"
+    url: "/contact/"
+    weight: 3

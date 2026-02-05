@@ -1,0 +1,8 @@
+__site/
+vendor/
+.bundle/
+.DS__Store
+__MACOSX
+Thumbs.db
+Desktop.ini
+_backup/

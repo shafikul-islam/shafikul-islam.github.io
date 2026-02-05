@@ -1,0 +1,52 @@
+// assets/css/style.scss is where Jekyll loads the main stylesheet
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1300px,
+);
+
+$container-max-widths: (
+  sm: 566px,
+  md: 740px,
+  lg: 960px,
+  xl: 1140px,
+);
+
+$grid-gutter-width: 30px;
+
+$spacer: 1rem;
+$spacers: (
+);
+$spacers: map-merge((0: 0,
+      1: 10px,
+      2: 20px,
+      3: 30px,
+      4: 40px,
+      5: 50px,
+      6: 60px,
+      7: 70px,
+      8: 80px,
+      9: 90px,
+      10: 100px,
+    ),
+    $spacers);
+
+// Theme Color Variables
+$white-offset: #f8f9fa;
+$black: #000;
+$steel: #6e7a89;
+
+// Footer Variables
+$footer-background-color: #fafafa;
+$footer-text-color: #666;
+$sub-footer-background-color: #fff;
+$sub-footer-text-color: #333;
+
+// Font Variables  
+$font-family-sans-serif: 'Sora', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-serif: 'Fraunces', Georgia, "Times New Roman", serif;
+$font-family-base: $font-family-sans-serif;
+$font-family-heading: $font-family-serif;

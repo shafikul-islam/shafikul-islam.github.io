@@ -1,0 +1,19 @@
+<div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="{{ '/' | relative_url }}" class="logo-link">
+        <img width="{{ site.logo.desktop_width }}" height="{{ site.logo.desktop_height }}" alt="{{ site.title }}"
+          src="{{ site.logo.desktop | relative_url }}" class="logo-img" />
+        <span class="logo-text">{{ site.author }}</span>
+      </a>
+    </div>
+    <div class="logo-mobile">
+      <a href="{{ '/' | relative_url }}" class="logo-link">
+        <img width="{{ site.logo.mobile_width }}" height="{{ site.logo.mobile_height }}" alt="{{ site.title }}"
+          src="{{ site.logo.mobile | relative_url }}" class="logo-img" />
+      </a>
+    </div>
+    {% include main-menu.html %}
+    {% include hamburger.html %}
+  </div>
+</div>

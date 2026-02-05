@@ -1,0 +1,53 @@
+baseurl: ''
+permalink: pretty
+title: 'MD Shafikul Islam'
+author: 'MD Shafikul Islam'
+description: 'PhD Student in Mechanical and Industrial Engineering at Louisiana State University'
+
+logo:
+  mobile: "assets/images/profile.png"
+  mobile_height: "38px"
+  mobile_width: "38px"
+  desktop: "assets/images/profile.png"
+  desktop_height: "40px"
+  desktop_width: "40px"
+
+home: 
+  limit_services: 6
+
+collections:
+  services:
+    output: true
+    sort_by: weight
+  team:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "services"
+    values:
+      layout: "service"
+  - scope:
+      path: ""
+      type: "team"
+    values:
+      layout: "team"
+
+sass:
+  style: compressed # possible values: nested expanded compact compressed
+
+plugins:
+  - jekyll-environment-variables
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - LICENSE.md
+  - LICENSE
+  - README.md
