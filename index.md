@@ -38,7 +38,7 @@ toc: true
       <a href="mailto:misla79@lsu.edu" class="icon-link">
         <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
       </a>
-      <a href="https://scholar.google.com/citations?user=X6J6m84AAAAJ&hl=en" target="_blank" rel="noopener" class="icon-link">
+      <a href="https://scholar.google.com/citations?user=A8KOQBEAAAAJ&hl=en" target="_blank" rel="noopener" class="icon-link">
         <img src="https://img.shields.io/badge/Google%20Scholar-4285F4?style=for-the-badge&logo=google-scholar&logoColor=white" alt="Google Scholar">
       </a>
       <a href="https://github.com/mdshafikul" target="_blank" rel="noopener" class="icon-link">
