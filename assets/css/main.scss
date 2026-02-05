@@ -1593,6 +1593,21 @@ h3,
   }
 }
 
+@media (max-width: 720px) {
+
+  .contact-grid,
+  .project-grid,
+  .interest-grid,
+  .pubs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pub-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 /* Buttons */
 .btn {
   display: inline-block;
