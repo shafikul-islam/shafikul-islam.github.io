@@ -25,11 +25,23 @@
         event.preventDefault();
         var card = link.closest('.research-body');
         if (!card) return;
+        var teaser = qs('.abstract-teaser', card);
         var full = qs('.abstract-full', card);
+        var paragraph = qs('.abstract-paragraph', card);
         if (!full) return;
 
         var isHidden = full.hasAttribute('hidden');
         if (isHidden) {
+          if (teaser) teaser.setAttribute('hidden', '');
+          if (paragraph && teaser) {
+            var teaserText = teaser.textContent.trim();
+            var remainder = paragraph.getAttribute('data-remainder');
+            if (!remainder) {
+              remainder = paragraph.textContent.trim();
+              paragraph.setAttribute('data-remainder', remainder);
+            }
+            paragraph.textContent = teaserText ? (teaserText + ' ' + remainder) : remainder;
+          }
           full.removeAttribute('hidden');
           qsa('[data-abstract-toggle]', card).forEach(function (toggle) {
             toggle.setAttribute('aria-expanded', 'true');
@@ -37,6 +49,11 @@
           full.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         } else {
           full.setAttribute('hidden', '');
+          if (teaser) teaser.removeAttribute('hidden');
+          if (paragraph) {
+            var originalRemainder = paragraph.getAttribute('data-remainder');
+            if (originalRemainder) paragraph.textContent = originalRemainder;
+          }
           qsa('[data-abstract-toggle]', card).forEach(function (toggle) {
             toggle.setAttribute('aria-expanded', 'false');
           });
