@@ -236,20 +236,21 @@ h3,
 .header-actions {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .theme-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  justify-content: center;
   border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.8);
   color: var(--ink);
   border-radius: 999px;
-  padding: 7px 12px;
-  font-size: .85rem;
-  font-weight: 700;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  flex: 0 0 44px;
   cursor: pointer;
   box-shadow: var(--shadow-soft);
   transition: transform .15s ease, box-shadow .15s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
@@ -1904,14 +1905,6 @@ footer a,
   .header .container {
     border-radius: var(--radius-lg);
     padding: 8px 12px;
-  }
-
-  .theme-toggle {
-    padding: 7px 10px;
-  }
-
-  .theme-toggle .theme-label {
-    display: none;
   }
 
   .logo-text {
