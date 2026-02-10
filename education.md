@@ -71,25 +71,20 @@ nav_order: 30
       I have completed substantial graduate coursework at LSU. Key completed courses include:
     </p>
     <ul class="course-list">
-      <li><strong>CSC 4343G - Applied Deep Learning</strong> (B+)</li>
-      <li><strong>IE 7361 - IE Research Methods</strong> (A+)</li>
-      <li><strong>EE 7700 - Machine Learning for Security in Cyber-Physical Systems</strong> (A)</li>
-      <li><strong>IE 7722 - Artificial Intelligence in Manufacturing / Special Topics in IE</strong> (A+)</li>
-      <li><strong>IE 7724 - Independent Study in IE</strong> (A)</li>
-      <li><strong>ENGL 1004 - English Composition</strong> (Pass)</li>
+      <li>CSC 4343G - Applied Deep Learning</li>
+      <li>IE 7361 - IE Research Methods</li>
+      <li>EE 7700 - Machine Learning for Security in Cyber-Physical Systems</li>
+      <li>IE 7722 - Artificial Intelligence in Manufacturing</li>
+      <li>IE 7724 - Independent Study in IE</li>
+      <li>IE 7722 - Special Topics in Industrial Engineering: Healthcare AI</li>
     </ul>
     <p class="section-desc">
       Current in-progress courses:
     </p>
     <ul class="course-list">
-      <li><strong>CSC 4700G - Special Topics in Computer Science:</strong> AI and LLM Development</li>
-      <li><strong>IE 7722 - Special Topics in Industrial Engineering:</strong> Healthcare AI</li>
-      <li><strong>IE 7460 - Applied Occupational Ergonomics</strong></li>
-      <li><strong>ME 7953 - Optimal Control</strong></li>
+      <li>CSC 4700G - AI and LLM Development</li>
+      <li>ME 7953 - Optimal Control</li>
     </ul>
-    <p class="section-desc">
-      Research credits: IE 9000 (Dissertation Research) and IE 8000 (Thesis Research).
-    </p>
   </div>
   <!-- Industrial Training & Internships -->
   <div class="training-section">
