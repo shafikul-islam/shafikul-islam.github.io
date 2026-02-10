@@ -1293,6 +1293,87 @@ h3,
   border-color: rgba(22, 163, 74, 0.22);
 }
 
+/* CV Page */
+.cv-page {
+  margin-top: 20px;
+  margin-bottom: 24px;
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(15, 118, 110, 0.08), rgba(255, 255, 255, 0.95));
+  box-shadow: var(--shadow-soft);
+}
+
+.cv-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 14px;
+}
+
+.cv-head .page-title {
+  margin: 0;
+  font-size: clamp(2.1rem, 2.8vw, 2.6rem);
+}
+
+.cv-actions {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.cv-actions .btn {
+  margin: 0;
+}
+
+.cv-frame-wrap {
+  margin-top: 12px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #e2e8f0;
+  box-shadow: var(--shadow-soft);
+}
+
+.cv-frame-wrap iframe {
+  display: block;
+  width: 100%;
+  height: min(76vh, 880px);
+  min-height: 520px;
+  border: 0;
+  background: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .cv-page {
+    padding: 14px;
+  }
+
+  .cv-head .page-title {
+    font-size: clamp(1.8rem, 7vw, 2.2rem);
+  }
+
+  .cv-frame-wrap iframe {
+    height: 70vh;
+    min-height: 420px;
+  }
+}
+
+[data-theme="dark"] .cv-page {
+  background: linear-gradient(180deg, rgba(34, 211, 238, 0.1), rgba(17, 26, 46, 0.96));
+}
+
+[data-theme="dark"] .cv-frame-wrap {
+  border-color: var(--border);
+  background: #0f172a;
+}
+
+[data-theme="dark"] .cv-frame-wrap iframe {
+  background: #0b1120;
+}
+
 /* Education Page */
 .education-page,
 .exp-page {
