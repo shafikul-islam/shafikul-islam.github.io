@@ -44,8 +44,9 @@ toc: true
       <a href="https://github.com/shafikul-islam" target="_blank" rel="noopener" class="icon-link">
         <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
       </a>
-      <a href="https://www.linkedin.com/in/md-shafikul-islam-sohan/" target="_blank" rel="noopener" class="icon-link">
-        <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+      <a href="https://www.linkedin.com/in/md-shafikul-islam-sohan/" target="_blank" rel="noopener" class="icon-link icon-pill icon-pill-linkedin" aria-label="LinkedIn">
+        <span class="pill-icon pill-icon-linkedin" aria-hidden="true"></span>
+        <span class="pill-text">LinkedIn</span>
       </a>
       <a href="https://orcid.org/0009-0007-3824-4384" target="_blank" rel="noopener" class="icon-link">
         <img src="https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID">
@@ -53,8 +54,9 @@ toc: true
       <a href="https://dblp.org/pid/359/9192.html" target="_blank" rel="noopener" class="icon-link">
         <img src="https://img.shields.io/badge/DBLP-004F9F?style=for-the-badge&logo=dblp&logoColor=white" alt="DBLP">
       </a>
-      <a href="https://openreview.net/profile?id=~MD_Shafikul_Islam1" target="_blank" rel="noopener" class="icon-link">
-        <img src="https://img.shields.io/badge/OpenReview-8C1B13?style=for-the-badge&logo=openreview&logoColor=white" alt="OpenReview">
+      <a href="https://openreview.net/profile?id=~MD_Shafikul_Islam1" target="_blank" rel="noopener" class="icon-link icon-pill icon-pill-openreview" aria-label="OpenReview">
+        <span class="pill-icon pill-icon-openreview" aria-hidden="true"></span>
+        <span class="pill-text">OpenReview</span>
       </a>
     </div>
   </div>
