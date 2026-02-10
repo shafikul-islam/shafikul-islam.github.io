@@ -94,6 +94,7 @@
 
 body {
   font-family: var(--font-body);
+  font-size: 15.5px;
   color: var(--ink);
   background:
     radial-gradient(900px circle at 10% -10%, rgba(15, 118, 110, 0.16), transparent 40%),
@@ -128,7 +129,7 @@ a:hover {
 
 p {
   color: var(--muted);
-  line-height: 1.7;
+  line-height: 1.65;
 }
 
 h1,
