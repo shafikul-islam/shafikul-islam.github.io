@@ -124,50 +124,50 @@ nav_order: 20
 .pubs-section--journal{
   --section-accent: #2563eb;
   --section-tint: rgba(37,99,235,0.08);
-  --card-accent: #f97316;
-  --card-tint-a: rgba(255,237,213,0.98);
-  --card-tint-b: rgba(255,226,179,0.98);
-  --card-border: rgba(234,88,12,0.32);
-  --card-border-hover: rgba(234,88,12,0.50);
-  --badge-bg: rgba(249,115,22,0.22);
-  --badge-border: rgba(249,115,22,0.42);
-  --badge-ink: #7c2d12;
+  --card-accent: #8b5cf6;
+  --card-tint-a: rgba(245,243,255,0.97);
+  --card-tint-b: rgba(237,233,254,0.97);
+  --card-border: rgba(139,92,246,0.24);
+  --card-border-hover: rgba(139,92,246,0.40);
+  --badge-bg: rgba(139,92,246,0.16);
+  --badge-border: rgba(139,92,246,0.34);
+  --badge-ink: #5b21b6;
 }
 .pubs-section--conf{
   --section-accent: #f97316;
   --section-tint: rgba(249,115,22,0.10);
-  --card-accent: #2563eb;
-  --card-tint-a: rgba(219,234,254,0.98);
-  --card-tint-b: rgba(191,219,254,0.98);
-  --card-border: rgba(37,99,235,0.30);
-  --card-border-hover: rgba(37,99,235,0.48);
-  --badge-bg: rgba(37,99,235,0.22);
-  --badge-border: rgba(37,99,235,0.42);
-  --badge-ink: #1e40af;
+  --card-accent: #0891b2;
+  --card-tint-a: rgba(236,254,255,0.97);
+  --card-tint-b: rgba(207,250,254,0.97);
+  --card-border: rgba(14,165,233,0.24);
+  --card-border-hover: rgba(14,165,233,0.40);
+  --badge-bg: rgba(14,165,233,0.16);
+  --badge-border: rgba(14,165,233,0.34);
+  --badge-ink: #075985;
 }
 .pubs-section--poster{
   --section-accent: #16a34a;
   --section-tint: rgba(22,163,74,0.10);
-  --card-accent: #7c3aed;
-  --card-tint-a: rgba(237,233,254,0.98);
-  --card-tint-b: rgba(221,214,254,0.98);
-  --card-border: rgba(124,58,237,0.30);
-  --card-border-hover: rgba(124,58,237,0.48);
-  --badge-bg: rgba(124,58,237,0.22);
-  --badge-border: rgba(124,58,237,0.42);
-  --badge-ink: #5b21b6;
+  --card-accent: #e11d48;
+  --card-tint-a: rgba(255,241,242,0.97);
+  --card-tint-b: rgba(254,205,211,0.97);
+  --card-border: rgba(244,63,94,0.24);
+  --card-border-hover: rgba(244,63,94,0.40);
+  --badge-bg: rgba(244,63,94,0.16);
+  --badge-border: rgba(244,63,94,0.34);
+  --badge-ink: #9f1239;
 }
 .pubs-section--preprint{
-  --section-accent: #3b82f6;
-  --section-tint: rgba(59,130,246,0.10);
-  --card-accent: #0f766e;
-  --card-tint-a: rgba(209,250,229,0.98);
-  --card-tint-b: rgba(167,243,208,0.98);
-  --card-border: rgba(5,150,105,0.32);
-  --card-border-hover: rgba(5,150,105,0.50);
-  --badge-bg: rgba(15,118,110,0.22);
-  --badge-border: rgba(15,118,110,0.42);
-  --badge-ink: #115e59;
+  --section-accent: #6366f1;
+  --section-tint: rgba(99,102,241,0.10);
+  --card-accent: #f59e0b;
+  --card-tint-a: rgba(255,251,235,0.97);
+  --card-tint-b: rgba(254,243,199,0.97);
+  --card-border: rgba(245,158,11,0.26);
+  --card-border-hover: rgba(245,158,11,0.42);
+  --badge-bg: rgba(245,158,11,0.18);
+  --badge-border: rgba(245,158,11,0.36);
+  --badge-ink: #92400e;
 }
 .pubs-section-header{
   display: flex;
@@ -479,43 +479,43 @@ nav_order: 20
 }
 
 [data-theme="dark"] .pubs-section--journal{
-  --card-tint-a: rgba(154,52,18,0.52);
-  --card-tint-b: rgba(194,65,12,0.46);
-  --card-border: rgba(251,146,60,0.46);
-  --card-border-hover: rgba(254,215,170,0.62);
-  --badge-bg: rgba(234,88,12,0.34);
-  --badge-border: rgba(253,186,116,0.54);
-  --badge-ink: #fff7ed;
+  --card-tint-a: rgba(76,29,149,0.42);
+  --card-tint-b: rgba(109,40,217,0.36);
+  --card-border: rgba(167,139,250,0.40);
+  --card-border-hover: rgba(196,181,253,0.58);
+  --badge-bg: rgba(124,58,237,0.30);
+  --badge-border: rgba(196,181,253,0.48);
+  --badge-ink: #f5f3ff;
 }
 
 [data-theme="dark"] .pubs-section--conf{
-  --card-tint-a: rgba(30,58,138,0.52);
-  --card-tint-b: rgba(29,78,216,0.46);
-  --card-border: rgba(96,165,250,0.46);
-  --card-border-hover: rgba(147,197,253,0.62);
-  --badge-bg: rgba(37,99,235,0.34);
-  --badge-border: rgba(147,197,253,0.54);
-  --badge-ink: #eff6ff;
+  --card-tint-a: rgba(8,47,73,0.44);
+  --card-tint-b: rgba(14,116,144,0.36);
+  --card-border: rgba(103,232,249,0.40);
+  --card-border-hover: rgba(165,243,252,0.58);
+  --badge-bg: rgba(14,165,233,0.30);
+  --badge-border: rgba(125,211,252,0.48);
+  --badge-ink: #ecfeff;
 }
 
 [data-theme="dark"] .pubs-section--preprint{
-  --card-tint-a: rgba(6,95,70,0.52);
-  --card-tint-b: rgba(5,150,105,0.46);
-  --card-border: rgba(45,212,191,0.46);
-  --card-border-hover: rgba(94,234,212,0.62);
-  --badge-bg: rgba(15,118,110,0.34);
-  --badge-border: rgba(94,234,212,0.54);
-  --badge-ink: #ecfdf5;
+  --card-tint-a: rgba(120,53,15,0.42);
+  --card-tint-b: rgba(146,64,14,0.36);
+  --card-border: rgba(251,191,36,0.42);
+  --card-border-hover: rgba(253,224,71,0.60);
+  --badge-bg: rgba(245,158,11,0.30);
+  --badge-border: rgba(252,211,77,0.50);
+  --badge-ink: #fffbeb;
 }
 
 [data-theme="dark"] .pubs-section--poster{
-  --card-tint-a: rgba(91,33,182,0.52);
-  --card-tint-b: rgba(124,58,237,0.46);
-  --card-border: rgba(167,139,250,0.46);
-  --card-border-hover: rgba(196,181,253,0.62);
-  --badge-bg: rgba(124,58,237,0.34);
-  --badge-border: rgba(196,181,253,0.54);
-  --badge-ink: #f5f3ff;
+  --card-tint-a: rgba(136,19,55,0.44);
+  --card-tint-b: rgba(159,18,57,0.36);
+  --card-border: rgba(251,113,133,0.40);
+  --card-border-hover: rgba(253,164,175,0.58);
+  --badge-bg: rgba(244,63,94,0.30);
+  --badge-border: rgba(251,113,133,0.48);
+  --badge-ink: #fff1f2;
 }
 
 [data-theme="dark"] .pub-card{
