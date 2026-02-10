@@ -68,8 +68,12 @@ nav_order: 30
   <div class="courses-section">
     <h2 class="section-title">📚 Coursework</h2>
     <p class="section-desc">
-      I have not taken formal graduate coursework yet. This section will be updated as I complete courses and certifications.
+      I am actively completing graduate coursework. Current special-topics courses include:
     </p>
+    <ul class="course-list">
+      <li><strong>Special Topics in Computer Science:</strong> AI and LL/LLM development.</li>
+      <li><strong>Special Topics in Industrial Engineering:</strong> Healthcare AI.</li>
+    </ul>
   </div>
 
   <!-- Industrial Training & Internships -->
