@@ -16,10 +16,7 @@ permalink: /contact/
       <ul class="contact-list">
         <li><strong>Academic:</strong> <a href="mailto:misla79@lsu.edu">misla79@lsu.edu</a></li>
         <li><strong>Personal:</strong> <a href="mailto:sohan11807044@gmail.com">sohan11807044@gmail.com</a></li>
-      </ul>
-      <h3>Phone</h3>
-      <ul class="contact-list">
-        <li><a href="tel:+12252204029">+1 (225) 220-4029</a></li>
+        <li><strong>Phone:</strong> <a href="tel:+12252204029">+1 (225) 220-4029</a></li>
       </ul>
     </div>
 
