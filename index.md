@@ -44,9 +44,11 @@ toc: true
       <a href="https://github.com/shafikul-islam" target="_blank" rel="noopener" class="icon-link">
         <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
       </a>
-      <a href="https://www.linkedin.com/in/md-shafikul-islam-sohan/" target="_blank" rel="noopener" class="icon-link icon-pill icon-pill-linkedin" aria-label="LinkedIn">
-        <span class="pill-icon pill-icon-linkedin" aria-hidden="true"></span>
-        <span class="pill-text">LinkedIn</span>
+      <a href="https://www.linkedin.com/in/md-shafikul-islam-sohan/" target="_blank" rel="noopener" class="icon-link" aria-label="LinkedIn"
+        style="display:inline-flex;align-items:center;gap:8px;height:28px;padding:0 12px;border-radius:10px;background:#0077b5;text-decoration:none;box-shadow:var(--shadow-soft);">
+        <img src="{{ site.baseurl }}/assets/linkedin.svg" alt="" aria-hidden="true"
+          style="width:14px;height:14px;display:block;filter:brightness(0) invert(1);">
+        <span style="color:#fff;font-size:.81rem;font-weight:800;letter-spacing:1.7px;text-transform:uppercase;line-height:1;">LinkedIn</span>
       </a>
       <a href="https://orcid.org/0009-0007-3824-4384" target="_blank" rel="noopener" class="icon-link">
         <img src="https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID">
@@ -54,9 +56,11 @@ toc: true
       <a href="https://dblp.org/pid/359/9192.html" target="_blank" rel="noopener" class="icon-link">
         <img src="https://img.shields.io/badge/DBLP-004F9F?style=for-the-badge&logo=dblp&logoColor=white" alt="DBLP">
       </a>
-      <a href="https://openreview.net/profile?id=~MD_Shafikul_Islam1" target="_blank" rel="noopener" class="icon-link icon-pill icon-pill-openreview" aria-label="OpenReview">
-        <span class="pill-icon pill-icon-openreview" aria-hidden="true"></span>
-        <span class="pill-text">OpenReview</span>
+      <a href="https://openreview.net/profile?id=~MD_Shafikul_Islam1" target="_blank" rel="noopener" class="icon-link" aria-label="OpenReview"
+        style="display:inline-flex;align-items:center;gap:8px;height:28px;padding:0 12px;border-radius:10px;background:#8c1b13;text-decoration:none;box-shadow:var(--shadow-soft);">
+        <img src="{{ site.baseurl }}/assets/openreview.png" alt="" aria-hidden="true"
+          style="width:14px;height:14px;display:block;filter:brightness(0) invert(1);">
+        <span style="color:#fff;font-size:.81rem;font-weight:800;letter-spacing:1.7px;text-transform:uppercase;line-height:1;">OpenReview</span>
       </a>
     </div>
   </div>
