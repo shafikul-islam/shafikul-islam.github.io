@@ -201,23 +201,45 @@ h3,
 
 .main-menu {
   margin-left: auto;
+  min-width: 0;
 }
 
 .main-menu>ul {
-  gap: 4px;
-  flex-wrap: wrap;
+  gap: 2px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   padding: 6px;
   background: linear-gradient(90deg, rgba(15, 118, 110, 0.16), rgba(249, 115, 22, 0.14));
   border: 1px solid rgba(15, 118, 110, 0.22);
   border-radius: 16px;
 }
 
+.main-menu>ul::-webkit-scrollbar {
+  display: none;
+}
+
+.main-menu ul li {
+  flex: 0 0 auto;
+}
+
 .main-menu ul li a {
   font-weight: 600 !important;
-  padding: 8px 14px;
+  padding: 8px 10px;
+  font-size: 0.95rem;
   border-radius: 12px;
   transition: all 0.2s ease;
   color: var(--ink);
+}
+
+@media (max-width: 1300px) {
+  .main-menu ul li a {
+    padding: 7px 8px;
+    font-size: 0.9rem;
+  }
 }
 
 .main-menu ul li a:hover {
