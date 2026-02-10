@@ -213,10 +213,10 @@ h3,
   overflow-y: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  padding: 6px;
+  padding: 8px 9px;
   background: linear-gradient(90deg, rgba(15, 118, 110, 0.16), rgba(249, 115, 22, 0.14));
   border: 1px solid rgba(15, 118, 110, 0.22);
-  border-radius: 16px;
+  border-radius: 18px;
 }
 
 .main-menu>ul::-webkit-scrollbar {
@@ -229,8 +229,8 @@ h3,
 
 .main-menu ul li a {
   font-weight: 600 !important;
-  padding: 6px 8px;
-  font-size: 0.86rem;
+  padding: 7px 9px;
+  font-size: 0.9rem;
   border-radius: 12px;
   transition: all 0.2s ease;
   color: var(--ink);
@@ -238,8 +238,8 @@ h3,
 
 @media (max-width: 1400px) {
   .main-menu ul li a {
-    padding: 6px 7px;
-    font-size: 0.82rem;
+    padding: 7px 8px;
+    font-size: 0.87rem;
   }
 }
 
