@@ -1559,6 +1559,14 @@ h3,
   margin: 10px 0 0;
 }
 
+.courses-section .section-desc {
+  margin: 0 0 6px;
+}
+
+.courses-section .section-desc + .course-list {
+  margin-top: 2px;
+}
+
 .degree-links .btn {
   margin-top: 6px;
 }
