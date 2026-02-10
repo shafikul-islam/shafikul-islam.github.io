@@ -4,6 +4,9 @@
   padding: 10px 0 10px 10px;
   cursor: pointer;
   z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hamburger-box {
@@ -49,4 +52,10 @@
 
 .hamburger.is-active .hamburger-inner::after {
   transform: translateY(-7px) rotate(-45deg);
+}
+
+@include media-breakpoint-up(md) {
+  .hamburger {
+    display: none;
+  }
 }

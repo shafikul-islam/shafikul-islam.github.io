@@ -1657,6 +1657,11 @@ footer a,
 
 @media (max-width: 720px) {
 
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   .news-header,
   .section-head {
     flex-direction: column;

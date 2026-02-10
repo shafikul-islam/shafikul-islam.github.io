@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const toggle = document.getElementById("toggle-main-menu-mobile");
     const menu = document.getElementById("main-menu-mobile");
+    const desktopQuery = window.matchMedia("(min-width: 768px)");
 
     if (!toggle || !menu) return;
 
@@ -18,5 +19,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     menu.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", closeMenu);
+    });
+
+    const syncMenuForViewport = () => {
+        if (desktopQuery.matches) closeMenu();
+    };
+
+    if (desktopQuery.addEventListener) {
+        desktopQuery.addEventListener("change", syncMenuForViewport);
+    } else if (desktopQuery.addListener) {
+        desktopQuery.addListener(syncMenuForViewport);
+    }
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") closeMenu();
     });
 });

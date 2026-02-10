@@ -146,6 +146,11 @@ nav_order: 20
   padding-left: 10px;
   margin-bottom: 12px;
 }
+.pubs-section-header,
+.pub-card-top,
+.pub-card-footer{
+  min-width: 0;
+}
 .pubs-section-header h2{
   margin: 0;
   font-size: 20px;
@@ -307,6 +312,12 @@ nav_order: 20
   font-size: 12px;
   transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s ease;
 }
+.pubs-section-header h2,
+.pub-title,
+.pub-meta,
+.pub-link{
+  overflow-wrap: anywhere;
+}
 .pub-link--doi{ background: rgba(37,99,235,0.08); border-color: rgba(37,99,235,0.28); color: #1e3a8a; }
 .pub-link--slides{ background: rgba(124,58,237,0.08); border-color: rgba(124,58,237,0.28); color: #5b21b6; }
 .pub-link--site{ background: rgba(15,118,110,0.08); border-color: rgba(15,118,110,0.28); color: #0f766e; }
@@ -368,6 +379,81 @@ nav_order: 20
   background: #ffffff;
   border: 1px dashed #cbd5e1;
   color: #374151;
+}
+
+@media (max-width: 760px){
+  .pubs-overview-title{
+    font-size: 20px;
+  }
+
+  .pubs-controls{
+    padding: 12px;
+    margin: 10px 0 18px;
+  }
+
+  .pubs-filters{
+    gap: 6px;
+  }
+
+  .chip{
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+
+  .pubs-section{
+    padding: 14px;
+    margin: 16px 0;
+  }
+
+  .pubs-section::before,
+  .pub-card::before{
+    display: none;
+  }
+
+  .pubs-section-header{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding-left: 0;
+  }
+
+  .pubs-section-header h2{
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .pubs-count{
+    align-self: flex-start;
+  }
+
+  .pubs-section-sub,
+  .pubs-grid,
+  .pub-card-top,
+  .pub-meta,
+  .pub-card-footer{
+    padding-left: 0;
+  }
+
+  .pub-card{
+    padding: 14px;
+  }
+
+  .pub-card-top{
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .pub-badge{
+    align-self: flex-start;
+  }
+
+  .pub-actions{
+    width: 100%;
+  }
+
+  .pub-link{
+    max-width: 100%;
+  }
 }
 </style>
 
