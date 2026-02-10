@@ -27,7 +27,7 @@ permalink: /contact/
       <h2>Mailing Address</h2>
       <p class="contact-address">
         Patrick F. Taylor Hall<br/>
-        Louisiana State University (LSU)<br/>
+        <a href="https://www.lsu.edu/" target="_blank" rel="noopener">Louisiana State University (LSU)</a><br/>
         Baton Rouge, LA 70803, USA
       </p>
     </div>

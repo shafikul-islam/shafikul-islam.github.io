@@ -23,7 +23,7 @@ nav_order: 30
     <div class="degree-card">
       <div class="degree-header">
         <h3>Ph.D. in Mechanical & Industrial Engineering</h3>
-        <span class="degree-institution">Louisiana State University (LSU)</span>
+        <span class="degree-institution"><a href="https://www.lsu.edu/" target="_blank" rel="noopener">Louisiana State University (LSU)</a></span>
         <span class="degree-dates">Jan&nbsp;2025&nbsp;–&nbsp;Present</span>
       </div>
       <p class="degree-meta">
@@ -40,16 +40,13 @@ nav_order: 30
         <li><strong>Physics-Informed ML for Process Defect Detection & Fatigue Modeling:</strong> Co-authored an NSF‑funded proposal, developed sensor-integrated WAAM platforms, and built PI‑CNN and LSTM models for porosity and fatigue prediction.</li>
         <li><strong>ArcAssist:</strong> Building an edge‑AI co‑pilot using NVIDIA Jetson to estimate melt pool state, flag risks, and suggest corrective actions for Wire Arc Additive Manufacturing.</li>
       </ul>
-      <p class="degree-links">
-        <a href="{{ '/assets/transcripts/LSU_Transcript.pdf' | relative_url }}" class="btn btn-sm">View Transcript</a>
-      </p>
     </div>
 
     <!-- Bachelor -->
     <div class="degree-card">
       <div class="degree-header">
         <h3>B.Sc. in Industrial & Production Engineering</h3>
-        <span class="degree-institution">Shahjalal University of Science & Technology (SUST)</span>
+        <span class="degree-institution"><a href="https://www.sust.edu/" target="_blank" rel="noopener">Shahjalal University of Science & Technology (SUST)</a></span>
         <span class="degree-dates">Jan&nbsp;2019&nbsp;–&nbsp;Mar&nbsp;2024</span>
       </div>
       <p class="degree-meta">
@@ -64,26 +61,15 @@ nav_order: 30
         <li><strong>Research Project:</strong> Developed an automated timetabling system using genetic algorithms under a SUST Research Center grant.</li>
         <li>Recipient of the University Merit Scholarship (Top 5% of class) for four consecutive years (2020–2024).</li>
       </ul>
-      <p class="degree-links">
-        <a href="{{ '/assets/transcripts/Academic_transcript.pdf' | relative_url }}" class="btn btn-sm">View Academic Transcript</a>
-      </p>
     </div>
   </div>
 
   <!-- Courses & Certifications -->
   <div class="courses-section">
-    <h2 class="section-title">📚 Courses & Certifications</h2>
+    <h2 class="section-title">📚 Coursework</h2>
     <p class="section-desc">
-      Complementary to my formal degrees, I completed a number of professional and online courses in optimization,
-      programming, data science, and other specialized topics. These programs strengthen my ability to develop data-driven
-      solutions for complex manufacturing problems.
+      I have not taken formal graduate coursework yet. This section will be updated as I complete courses and certifications.
     </p>
-    <ul class="course-list">
-      <li><strong>Optimization:</strong> Operations Research Models & Applications, Algorithms & Complexity, Gurobi Training (Optimization 101 for Data Scientists), Optimization On‑Ramp.</li>
-      <li><strong>Programming:</strong> Python for Everybody (Coursera), Python Fundamental Track (LinkedIn Learning).</li>
-      <li><strong>Data Science:</strong> Data Analyst (365 Data Science), Machine Learning and Applied ML courses.</li>
-      <li><strong>Miscellaneous:</strong> Game Theory, Supply Chain Management, Academic Writing, Project Management.</li>
-    </ul>
   </div>
 
   <!-- Industrial Training & Internships -->

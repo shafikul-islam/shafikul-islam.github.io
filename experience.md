@@ -15,13 +15,13 @@ nav_order: 40
 
   <section class="exp-block exp-blue">
     <div class="exp-head">
-      <h2 class="exp-title">🧪 Graduate Research Assistant, AnalyticsIQ Lab (LSU)</h2>
+      <h2 class="exp-title">🧪 Graduate Research Assistant, <a href="https://www.lsu.edu/eng/mie/people/faculty/bappy.php" target="_blank" rel="noopener">AnalyticsIQ Lab</a> (<a href="https://www.lsu.edu/" target="_blank" rel="noopener">LSU</a>)</h2>
       <span class="exp-date-location">Jan&nbsp;2025&nbsp;–&nbsp;Present &mdash; Baton Rouge, LA, USA</span>
     </div>
 
     <p class="exp-desc">
       My doctoral research focuses on enabling trustworthy autonomy for cyber-physical systems in metal additive manufacturing.
-      I co-authored a successful NSF proposal and support experimental infrastructure that integrates thermal, optical,
+      I co-authored a successful <a href="https://www.nsf.gov/" target="_blank" rel="noopener">NSF</a> proposal and support experimental infrastructure that integrates thermal, optical,
       and electrical sensors on a Wire Arc Additive Manufacturing (WAAM) platform.
     </p>
 
@@ -42,7 +42,7 @@ nav_order: 40
 
   <section class="exp-block exp-purple">
     <div class="exp-head">
-      <h2 class="exp-title">🚀 Research Assistant (Co-founder), CIOL</h2>
+      <h2 class="exp-title">🚀 Research Assistant (Co-founder), <a href="https://github.com/ciol-researchlab" target="_blank" rel="noopener">CIOL</a></h2>
       <span class="exp-date-location">Aug&nbsp;2022&nbsp;–&nbsp;Present &mdash; Bangladesh (Remote)</span>
     </div>
 
@@ -60,7 +60,7 @@ nav_order: 40
 
   <section class="exp-block exp-green">
     <div class="exp-head">
-      <h2 class="exp-title">🧩 Undergraduate Research Assistant, SUST Research Centre</h2>
+      <h2 class="exp-title">🧩 Undergraduate Research Assistant, <a href="https://www.sust.edu/" target="_blank" rel="noopener">SUST</a> Research Centre</h2>
       <span class="exp-date-location">Jan&nbsp;2021&nbsp;–&nbsp;Mar&nbsp;2023 &mdash; Sylhet, Bangladesh</span>
     </div>
 

@@ -15,6 +15,6 @@ nav_order: 60
   </div>
 
   <div style="border:1px solid var(--border); border-radius:14px; overflow:hidden;">
-    <iframe src="{{ site.baseurl }}/resume.pdf" width="100%" height="900" style="border:0; background: var(--panel2);"></iframe>
+    <iframe src="{{ site.baseurl }}/resume.pdf" width="100%" height="900" style="border:0; background: var(--surface);"></iframe>
   </div>
 </div>

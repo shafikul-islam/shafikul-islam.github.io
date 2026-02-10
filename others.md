@@ -13,14 +13,14 @@ nav_order: 50
   <section class="others-section section-awards">
     <h2 class="section-title">🏆 Awards & Achievements</h2>
     <ul class="others-emoji-list">
-      <li>🥇 <strong>Champion — IISE Innovative Design Competition</strong> (IISE Annual Conference & Expo, 2025) — “Hearth AI – Meaningful Connection at your Fingertips”.</li>
-      <li>🥈 <strong>Runner-up — Stakeholder Engagement Data Challenge</strong> (INFORMS Annual Meeting, 2025).</li>
+      <li>🥇 <strong>Champion — <a href="https://www.iise.org/Annual/" target="_blank" rel="noopener">IISE Innovative Design Competition</a></strong> (IISE Annual Conference & Expo, 2025) — “Hearth AI – Meaningful Connection at your Fingertips”.</li>
+      <li>🥈 <strong>Runner-up — Stakeholder Engagement Data Challenge</strong> (<a href="https://www.informs.org/Meetings-Conferences/INFORMS-Conference-Calendar" target="_blank" rel="noopener">INFORMS Annual Meeting</a>, 2025).</li>
       <li>🥉 <strong>2nd Runner-up — QCRE Data Challenge</strong> (IISE Annual Conference & Expo, 2025).</li>
       <li>🏅 <strong>Best Graduate Oral Presentation</strong> (Louisiana Academy of Sciences, 99th Annual Meeting, 2025).</li>
       <li>✈️ <strong>NSF Student Travel Award</strong> (NAMRC, 2025).</li>
       <li>✈️ <strong>NSF Student Travel Award</strong> (IISE Annual Conference & Expo, 2025).</li>
       <li>🎙️ <strong>Best Technical Presentation (Merit-based)</strong> (IEEE ICCIT, 2024).</li>
-      <li>🎓 <strong>University Merit Scholarship</strong> (SUST, 2020–2024) — Top 5% for four consecutive years.</li>
+      <li>🎓 <strong>University Merit Scholarship</strong> (<a href="https://www.sust.edu/" target="_blank" rel="noopener">SUST</a>, 2020–2024) — Top 5% for four consecutive years.</li>
     </ul>
   </section>
 
@@ -28,7 +28,7 @@ nav_order: 50
     <h2 class="section-title">🧾 Grant Proposal Writing</h2>
     <ul class="others-emoji-list">
       <li>✅ <strong>Physics-Informed ML for Process Defect Detection and Fatigue Modeling in WAAM</strong> — NSF LAMDA Seed Grant (Aug 2025) <strong>(Funded)</strong>.</li>
-      <li>⭐ <strong>Cross-Modality Domain Adaptation for Anomaly Detection in LPBF Systems</strong> — NASA EPSCoR CAN (Aug 2025) <strong>(Recommended)</strong>.</li>
+      <li>⭐ <strong>Cross-Modality Domain Adaptation for Anomaly Detection in LPBF Systems</strong> — <a href="https://www.nasa.gov/epscor/" target="_blank" rel="noopener">NASA EPSCoR CAN</a> (Aug 2025) <strong>(Recommended)</strong>.</li>
       <li>🚀 <strong>Privacy-preserving Certification Framework for AMaaS Platforms</strong> — NSF Southwest I-Corps IdeaLaunch (Feb–Mar 2025) <strong>(Selected; Entrepreneurial Lead)</strong>.</li>
       <li>🧭 <strong>Crowd-Sourced Data with ML for Road Condition Monitoring</strong> — LTRC TIRE Program (Jan 2025) <strong>(Not Funded)</strong>.</li>
     </ul>

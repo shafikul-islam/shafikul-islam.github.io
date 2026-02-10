@@ -13,7 +13,7 @@ toc: true
     </div>
 
     <p class="hero-lead">
-      I am a PhD student in Mechanical and Industrial Engineering at Louisiana State University. My research targets
+      I am a PhD student in Mechanical and Industrial Engineering at <a href="https://www.lsu.edu/" target="_blank" rel="noopener">Louisiana State University</a> and currently serve as a <strong>Graduate Research Assistant</strong> in the <a href="https://www.lsu.edu/eng/mie/people/faculty/bappy.php" target="_blank" rel="noopener">AnalyticsIQ Lab</a>. My research targets
       <strong>cyber-physical intelligence for additive manufacturing</strong>—moving from <em>post-build inspection</em>
       to <strong>predictive, safety-aware, and adaptive process autonomy</strong>.
     </p>
@@ -283,7 +283,7 @@ toc: true
         </div>
 
         <div class="action-row">
-          <a class="btn-mini" href="{{ '/publications/' | relative_url }}#journal-papers">📌 Related publications</a>
+          <a class="btn-mini" href="{{ '/publications/' | relative_url }}#sec-journals">📌 Related publications</a>
         </div>
       </div>
     </div>
@@ -318,7 +318,7 @@ toc: true
         </div>
 
         <div class="action-row">
-          <a class="btn-mini" href="{{ '/publications/' | relative_url }}#conference-papers">📌 Related publications</a>
+          <a class="btn-mini" href="{{ '/publications/' | relative_url }}#sec-conf">📌 Related publications</a>
         </div>
       </div>
     </div>
