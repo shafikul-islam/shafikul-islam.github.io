@@ -381,6 +381,95 @@ nav_order: 20
   color: #374151;
 }
 
+[data-theme="dark"] .pubs-overview-title,
+[data-theme="dark"] .pubs-section-header h2,
+[data-theme="dark"] .pub-title,
+[data-theme="dark"] .pub-meta,
+[data-theme="dark"] .pub-badge,
+[data-theme="dark"] .pub-link{
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .pubs-lead,
+[data-theme="dark"] .pubs-section-sub{
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .pubs-controls{
+  background: #111a2e;
+  border-color: rgba(148,163,184,0.32);
+  box-shadow: 0 12px 24px rgba(2,6,23,0.45);
+}
+
+[data-theme="dark"] .pubs-search{
+  background: #17233c;
+  color: #e2e8f0;
+  border-color: rgba(148,163,184,0.35);
+}
+
+[data-theme="dark"] .pubs-search::placeholder{
+  color: #94a3b8;
+}
+
+[data-theme="dark"] .chip{
+  background: rgba(148,163,184,0.12);
+  border-color: rgba(148,163,184,0.35);
+  color: #cbd5e1;
+}
+
+[data-theme="dark"] .chip:hover{
+  background: rgba(148,163,184,0.2);
+}
+
+[data-theme="dark"] .chip.is-active{
+  background: rgba(96,165,250,0.22);
+  border-color: rgba(96,165,250,0.5);
+  color: #dbeafe;
+}
+
+[data-theme="dark"] .pubs-section{
+  border-color: rgba(148,163,184,0.35);
+  background: linear-gradient(180deg, var(--section-tint), rgba(17,26,46,0.95));
+}
+
+[data-theme="dark"] .section-icon{
+  background: rgba(15,23,42,0.7);
+  border-color: rgba(148,163,184,0.35);
+}
+
+[data-theme="dark"] .pubs-count{
+  color: #cbd5e1;
+  background: rgba(15,23,42,0.6);
+  border-color: rgba(96,165,250,0.35);
+}
+
+[data-theme="dark"] .pub-card{
+  background: linear-gradient(180deg, rgba(15,23,42,0.78), rgba(15,23,42,0.92));
+  border-color: rgba(148,163,184,0.28);
+  box-shadow: 0 10px 24px rgba(2,6,23,0.5);
+}
+
+[data-theme="dark"] .pub-card:hover{
+  border-color: rgba(148,163,184,0.45);
+  box-shadow: 0 14px 30px rgba(2,6,23,0.6);
+}
+
+[data-theme="dark"] .pub-link{
+  background: rgba(15,23,42,0.7);
+  border-color: rgba(148,163,184,0.3);
+}
+
+[data-theme="dark"] .pub-link .link-icon{
+  background: rgba(148,163,184,0.22);
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .pubs-empty{
+  background: #111a2e;
+  border-color: rgba(148,163,184,0.35);
+  color: #cbd5e1;
+}
+
 @media (max-width: 760px){
   .pubs-overview-title{
     font-size: 20px;
