@@ -48,7 +48,7 @@ toc: true
         style="display:inline-flex;align-items:center;gap:8px;height:28px;padding:0 12px;border-radius:10px;background:#0077b5;text-decoration:none;box-shadow:var(--shadow-soft);">
         <img src="{{ site.baseurl }}/assets/linkedin.svg" alt="" aria-hidden="true"
           style="width:14px;height:14px;display:block;filter:brightness(0) invert(1);">
-        <span style="color:#fff;font-size:.74rem;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;line-height:1;">LinkedIn</span>
+        <span style="color:#fff;font-size:.65rem;font-family:Verdana,Geneva,DejaVu Sans,sans-serif;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;line-height:1;">LinkedIn</span>
       </a>
       <a href="https://orcid.org/0009-0007-3824-4384" target="_blank" rel="noopener" class="icon-link icon-link-orcid">
         <img src="https://img.shields.io/badge/ORCID-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" alt="ORCID">
@@ -60,7 +60,7 @@ toc: true
         style="display:inline-flex;align-items:center;gap:8px;height:28px;padding:0 12px;border-radius:10px;background:#8c1b13;text-decoration:none;box-shadow:var(--shadow-soft);">
         <img src="{{ site.baseurl }}/assets/openreview.png" alt="" aria-hidden="true"
           style="width:14px;height:14px;display:block;filter:brightness(0) invert(1);">
-        <span style="color:#fff;font-size:.81rem;font-weight:800;letter-spacing:1.7px;text-transform:uppercase;line-height:1;">OpenReview</span>
+        <span style="color:#fff;font-size:.65rem;font-family:Verdana,Geneva,DejaVu Sans,sans-serif;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;line-height:1;">OpenReview</span>
       </a>
     </div>
   </div>
