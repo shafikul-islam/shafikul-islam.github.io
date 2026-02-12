@@ -22,7 +22,7 @@ nav_order: 10
       </div>
     </div>
     <div class="research-hero-media">
-      <img src="{{ site.baseurl }}/assets/images/digital-twin-hero.png" alt="Digital twin and cyber-physical intelligence concept">
+      <img src="{{ site.baseurl }}/assets/images/research-overview-collage.png" alt="Research overview collage spanning machine learning, cyber-physical systems, and additive manufacturing">
     </div>
   </div>
 </section>
