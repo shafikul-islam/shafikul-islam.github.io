@@ -343,7 +343,8 @@ h3,
 
 .hero-media {
   float: right;
-  width: min(250px, 34%);
+  width: 34%;
+  max-width: 250px;
   margin: 4px 0 8px 16px;
 }
 
@@ -551,7 +552,8 @@ h3,
 
   .hero-media {
     float: none;
-    width: min(360px, 100%);
+    width: 100%;
+    max-width: 360px;
     margin: 0 0 16px;
   }
 }
@@ -1411,7 +1413,8 @@ h3,
 .cv-frame-wrap iframe {
   display: block;
   width: 100%;
-  height: min(76vh, 880px);
+  height: 76vh;
+  max-height: 880px;
   min-height: 520px;
   border: 0;
   background: #ffffff;
