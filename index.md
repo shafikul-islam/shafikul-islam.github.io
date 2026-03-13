@@ -302,13 +302,17 @@ toc: true
 
       <div class="research-body">
         <p class="research-title">
-          Beyond Local Receptive Fields: Vision Transformers for Real-Time Surface Defect Detection in FDM
+          Beyond local receptive fields: vision transformers for real-time surface defect detection in FDM
         </p>
 
         <div class="tagrow">
           <span class="tag tag-rose">Vision Transformers</span>
+          <span class="tag tag-green">Manufacturing</span>
           <span class="tag tag-amber">Real-Time</span>
-          <span class="tag tag-teal">FDM</span>
+        </div>
+
+        <div class="action-row">
+          <a class="btn-mini" href="https://doi.org/10.1007/s00170-026-17846-8" target="_blank" rel="noopener">DOI</a>
         </div>
 
         <p class="abstract-teaser">

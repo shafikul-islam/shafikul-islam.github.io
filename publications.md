@@ -661,6 +661,26 @@ nav_order: 20
 
       <article class="pub-card pub-item"
         data-type="journal"
+        data-tags="Manufacturing,Computer Vision"
+        data-search="Beyond local receptive fields vision transformers real-time surface defect detection FDM Islam Bappy Tushar International Journal of Advanced Manufacturing Technology Int J Adv Manuf Technol 2026 10.1007/s00170-026-17846-8 J9">
+        <div class="pub-card-top">
+          <h3 class="pub-title">Beyond local receptive fields: vision transformers for real-time surface defect detection in FDM</h3>
+          <div class="pub-badge">J9</div>
+        </div>
+        <p class="pub-meta"><b>Islam, M. S.</b>, Bappy, M. M., Tushar, S. R. et al. <span class="dot">&middot;</span> <i>International Journal of Advanced Manufacturing Technology</i> (2026)</p>
+        <div class="pub-card-footer">
+          <div class="pub-tags">
+            <span class="tag-btn tag--manufacturing" data-tag="Manufacturing">Manufacturing</span>
+            <span class="tag-btn tag--cv" data-tag="Computer Vision">Computer Vision</span>
+          </div>
+          <div class="pub-actions">
+            <a class="pub-link pub-link--doi" href="https://doi.org/10.1007/s00170-026-17846-8" target="_blank" rel="noopener"><span class="link-icon">&#128279;</span>DOI</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="pub-card pub-item"
+        data-type="journal"
         data-tags="Computer Vision,Manufacturing"
         data-search="Fracture Finder Computer-Aided Real-Time Diagnosis Vertebral Fractures Thoracic Spine X-Rays YOLOv8 Weighted Box Fusion Islam Anik Wasi Bappy IISE Transactions on Healthcare Systems Engineering 2026 10.1080/24725579.2025.2598578 J8">
         <div class="pub-card-top">
