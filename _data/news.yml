@@ -1,0 +1,149 @@
+# Newest first. type: paper | award | talk | milestone | service | research
+- date: "Sep 2026"
+  type: research
+  text: >-
+    Built a <strong>digital twin of our robotic wire arc additive manufacturing cell</strong> in NVIDIA Isaac Sim.
+- date: "Aug 14, 2026"
+  type: milestone
+  text: >-
+    Earned the <strong>M.S. in Industrial Engineering</strong> (thesis option) at LSU. Thesis: <em>Trustworthy Artificial Intelligence for Real-Time Quality Assurance in Additive Manufacturing</em>.
+- date: "Jul 11, 2026"
+  type: paper
+  text: >-
+    <em>InvariantBench: Can Large Language Models Exhibit Inherent Reasoning Across Equivalent Transformations?</em> presented as a poster at the <strong>3rd AI for Math Workshop, ICML 2026</strong>.
+- date: "Jun 26, 2026"
+  type: talk
+  text: >-
+    Presented the poster <em>Entropy-Aware Model Predictive Control for Transient Quality Mitigation in Metal Additive Manufacturing</em> at the <strong>LSU Control Systems Symposium</strong> (doi: 10.31390/lsucontrol.26.12).
+- date: "Jun 2026"
+  type: talk
+  text: >-
+    Presented three works (healthcare, data analytics, and AI) at the <strong>IISE Annual Conference and Expo 2026</strong>.
+- date: "May 26, 2026"
+  type: award
+  text: >-
+    <strong>2nd Place, Best Track Paper Award</strong> (Health Systems Track), IISE Annual Conference 2026, for <em>Multimodal Vision-Language Models for Automated and Explainable Postoperative Complication Risk Stratification</em>.
+- date: "May 2026"
+  type: award
+  text: >-
+    <strong>3rd Place, IISE DAIS Student Data Analytics Competition</strong>, IISE Annual Conference and Expo 2026.
+- date: "Apr 2026"
+  type: service
+  text: >-
+    Served as a <strong>judge</strong> for the Louisiana Science and Engineering Fair, Senior Division.
+- date: "Apr 2026"
+  type: paper
+  text: >-
+    Feature-aware anisotropic local differential privacy paper for metal AM is under <strong>major revision at ASME JCISE</strong>; preprint posted (<a href="https://arxiv.org/abs/2604.05077" target="_blank" rel="noopener">arXiv:2604.05077</a>).
+- date: "2026"
+  type: paper
+  text: >-
+    New journal papers in the <strong>International Journal of Production Research</strong>, <strong>Digital Twins and Applications</strong>, <strong>IISE Transactions on Healthcare Systems Engineering</strong>, and the <strong>International Journal of System Assurance Engineering and Management</strong>.
+- date: "Dec 16, 2025"
+  type: talk
+  text: >-
+    All three IISE submissions (healthcare, data analytics, and AI) were accepted for <strong>oral presentation</strong> at <strong>IISE Annual Conference & Expo 2026</strong>.
+- date: "Nov 29, 2025"
+  type: paper
+  text: >-
+    Paper <em>“Fracture Finder: Computer-Aided Real-Time Diagnosis of Vertebral Fractures in Thoracic Spine X-Rays Using YOLOv8 with Weighted Box Fusion and Augmentation Strategies”</em> accepted in <em>IISE Transactions on Healthcare Systems Engineering</em>.
+- date: "Nov 2025"
+  type: paper
+  text: >-
+    Paper <em>“Interpretable Forecasting of Dissolved Oxygen Leveraging Foundation Model for Proactive Aeration in Rural Wastewater Treatment Systems”</em> published in <em>Water Research</em> (2025).
+- date: "Oct 25, 2025"
+  type: award
+  text: >-
+    Runner-up, <strong>Stakeholder Engagement Data Challenge</strong> at <strong>INFORMS Annual Meeting 2025</strong>, for large-scale stakeholder analytics supporting strategy design for professional societies.
+- date: "Oct 25, 2025"
+  type: talk
+  text: >-
+    Presented <em>“Privacy-Aware Porosity Prediction in Metal Additive Manufacturing using Hierarchical Graph Attention Networks”</em> at <strong>INFORMS Annual Meeting 2025</strong>.
+- date: "Sep 2025"
+  type: research
+  text: >-
+    Proposal recommended: <em>“Cross-Modality Domain Adaptation for Anomaly Detection in LPBF Systems”</em> (NASA EPSCoR CAN, Aug 2025).
+- date: "Aug 01, 2025"
+  type: service
+  text: >-
+    Sports Secretary, <strong>Bangladeshi Student Association (BSA), LSU</strong>. Leading sports committees to foster community engagement among international students.
+- date: "Aug 01, 2025"
+  type: paper
+  text: >-
+    Three papers published in <em>Manufacturing Letters</em> (Q1).
+- date: "Jul 01, 2025"
+  type: award
+  text: >-
+    Grant awarded: <strong>NSF LAMDA Seed Grant</strong>: <em>“Physics-Informed ML for Process Defect Detection and Fatigue Modeling in WAAM”</em>.
+- date: "Jun 25, 2025"
+  type: talk
+  text: >-
+    Presented three works at <strong>NAMRC 2025</strong>.
+- date: "Jun 5, 2025"
+  type: award
+  text: >-
+    <strong>NSF Student Travel Award</strong>, <strong>NAMRC 2025</strong>, supporting conference attendance.
+- date: "Jun 03, 2025"
+  type: award
+  text: >-
+    <strong>Champion</strong>, <strong>IISE Innovative Design Competition</strong>, IISE Annual Conference & Expo 2025, for “Hearth AI: Meaningful Connection at your Fingertips”.
+- date: "Jun 02, 2025"
+  type: award
+  text: >-
+    2nd Runner-up, <strong>QCRE Data Challenge</strong>, IISE Annual Conference & Expo 2025.
+- date: "May 31, 2025"
+  type: talk
+  text: >-
+    Presented two works at <strong>IISE 2025</strong> on <strong>graph neural networks</strong> and <strong>vision transformers</strong>.
+- date: "Apr 2025"
+  type: award
+  text: >-
+    <strong>NSF Student Travel Award</strong>, IISE Annual Conference & Expo 2025.
+- date: "Feb-Mar 2025"
+  type: research
+  text: >-
+    NSF Southwest I-Corps IdeaLaunch Program: <strong>Privacy-preserving certification framework</strong> for AMaaS platforms (Role: Entrepreneurial Lead).
+- date: "Mar 15, 2025"
+  type: award
+  text: >-
+    Best graduate oral presentation award for <em>“Foundation Model-Driven Predictive and Interpretable Modeling for Critical Materials in Renewable Energy Applications”</em> (Materials Science/Engineering Division).
+- date: "Jan 28, 2025"
+  type: paper
+  text: >-
+    Abstract accepted at the <strong>99th Annual Meeting</strong> of the Louisiana Academy of Sciences.
+- date: "Jan 04, 2025"
+  type: service
+  text: >-
+    Started the Ph.D. program in Industrial Engineering at LSU (Department of Mechanical and Industrial Engineering).
+- date: "Dec 25, 2024"
+  type: award
+  text: >-
+    Best Technical Presentation (Session ICCIT-2024) for “Predict Students’ Performance and Optimize Preparatory Leave: An Integrated Deep Learning and Dynamic Programming Approach”.
+- date: "Dec 26, 2024"
+  type: talk
+  text: >-
+    Served as an instructor for the CIOL Winter ML Bootcamp.
+- date: "Dec 16, 2024"
+  type: talk
+  text: >-
+    Two IISE abstracts accepted for oral presentation at IISE Annual Conference & Expo 2025.
+- date: "Oct 01, 2024"
+  type: paper
+  text: >-
+    Two mentored works accepted at DigiTwin 2024 Conference.
+- date: "Apr 2024"
+  type: award
+  text: >-
+    University Merit Scholarship, Shahjalal University of Science and Technology (2020 to 2024), Top 5% for four consecutive years.
+- date: "Jan 2024"
+  type: paper
+  text: >-
+    Paper accepted at an AAAI-24 workshop.
+- date: "Oct 2023"
+  type: paper
+  text: >-
+    Paper accepted at a NeurIPS’23 workshop.
+- date: "Mar 2022"
+  type: milestone
+  text: >-
+    Founded CIOL to bridge Industrial & Production Engineering and AI through research.

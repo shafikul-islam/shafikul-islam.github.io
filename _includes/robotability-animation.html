@@ -1,0 +1,147 @@
+{%- comment -%}
+"Designing a world robots can work in": five-scene loop (about 24 s).
+Drawn as one inline SVG; assets/js/robotability.js computes every frame from
+the timeline position, so scene dots can jump anywhere. No numbers or results
+are shown on purpose: the gauge is only a bar.
+{%- endcomment -%}
+<figure class="rb" id="robotability" aria-labelledby="rb-title">
+  <div class="rb-stage">
+    <svg viewBox="0 0 800 384" class="rb-svg" role="img" aria-labelledby="rb-title rb-desc">
+      <title id="rb-title">Designing a world robots can work in</title>
+      <desc id="rb-desc">A robot fails to insert a part in a cluttered, dim cell. The environment is then redesigned: lighting, camera pose, clutter, part presentation, fixture chamfer and layout. A digital twin tests many cell designs in simulation, the best design is validated on the real robot, and real data recalibrates the twin.</desc>
+      <defs>
+        <marker id="rb-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+          <path d="M0 0L10 5L0 10z" fill="currentColor"/>
+        </marker>
+        <filter id="rb-glow" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="2.2" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      <!-- ===== Real cell (left) ===== -->
+      <g id="rb-real">
+        <!-- lamp and light -->
+        <path d="M70 0V26" class="rb-ink"/>
+        <path d="M50 40h40l-8-14H58z" class="rb-lamp"/>
+        <polygon id="rb-light" points="54,40 86,40 250,250 -40,250" class="rb-lightcone"/>
+
+        <!-- table -->
+        <rect x="30" y="250" width="370" height="10" rx="2" class="rb-table"/>
+        <path d="M44 260v62M386 260v62" class="rb-ink" stroke-width="5"/>
+
+        <!-- clutter -->
+        <g id="rb-clutter">
+          <rect x="204" y="236" width="14" height="14" class="rb-wood"/>
+          <rect x="220" y="236" width="14" height="14" class="rb-wood"/>
+          <rect x="212" y="222" width="14" height="14" class="rb-wood" transform="rotate(8 219 229)"/>
+          <rect x="364" y="238" width="12" height="12" class="rb-wood" transform="rotate(-10 370 244)"/>
+        </g>
+
+        <!-- nest that presents the part upright -->
+        <rect id="rb-nest" x="163" y="250" width="24" height="0" rx="2" class="rb-nest"/>
+
+        <!-- fixture plate with one square pocket; slides to the center of reach -->
+        <g id="rb-fixture">
+          <path id="rb-pocket-sharp" d="M290 232H316V244H334V232H360V250H290Z" class="rb-fixture"/>
+          <path id="rb-pocket-chamfer" d="M290 232H312L316 236V244H334V236L338 232H360V250H290Z" class="rb-fixture" opacity="0"/>
+          <circle id="rb-seat" cx="350" cy="241" r="3.5" class="rb-seat"/>
+          <circle id="rb-flash" cx="325" cy="234" r="16" class="rb-flash" opacity="0"/>
+        </g>
+
+        <!-- part -->
+        <rect id="rb-part" x="-7" y="-10" width="14" height="20" rx="2" class="rb-part"/>
+
+        <!-- robot -->
+        <rect x="76" y="226" width="48" height="24" rx="4" class="rb-robot"/>
+        <line id="rb-l1" class="rb-link" x1="100" y1="200" x2="100" y2="100"/>
+        <line id="rb-l2" class="rb-link rb-link2" x1="100" y1="100" x2="200" y2="100"/>
+        <circle cx="100" cy="200" r="13" class="rb-robot"/>
+        <circle id="rb-j2" cx="100" cy="100" r="10" class="rb-robot"/>
+        <g id="rb-wrist">
+          <circle cx="0" cy="0" r="7" class="rb-robot"/>
+          <rect x="-4" y="5" width="8" height="12" class="rb-robot"/>
+          <path id="rb-finger-l" d="M-3 17v9" class="rb-finger"/>
+          <path id="rb-finger-r" d="M3 17v9" class="rb-finger"/>
+        </g>
+
+        <!-- camera on a stand -->
+        <path d="M392 250V128" class="rb-ink" stroke-width="3"/>
+        <g id="rb-cam">
+          <polygon id="rb-fov" points="384,124 270,236 330,250" class="rb-fov" opacity="0"/>
+          <rect x="384" y="114" width="26" height="16" rx="3" class="rb-cam"/>
+          <rect x="376" y="117" width="9" height="10" rx="2" class="rb-cam"/>
+        </g>
+
+        <rect id="rb-dim" x="0" y="0" width="800" height="384" class="rb-dim"/>
+
+        <!-- fix labels (scene 2) -->
+        <g class="rb-labels">
+          <text id="rb-lab-0" x="100" y="58">lighting</text>
+          <text id="rb-lab-1" x="330" y="96">camera pose</text>
+          <text id="rb-lab-2" x="219" y="206">clutter</text>
+          <text id="rb-lab-3" x="175" y="284">presentation</text>
+          <text id="rb-lab-4" x="300" y="284">fixture design</text>
+          <text id="rb-lab-5" x="300" y="304">layout</text>
+        </g>
+      </g>
+
+      <!-- ===== Robotability gauge ===== -->
+      <g id="rb-gauge" opacity="0">
+        <rect x="418" y="70" width="16" height="160" rx="8" class="rb-gauge-bg"/>
+        <rect id="rb-gauge-fill" x="418" y="230" width="16" height="0" rx="8" class="rb-gauge-fill"/>
+        <text x="426" y="252" class="rb-sym">R(e)</text>
+        <text x="426" y="60" class="rb-small">robotability</text>
+      </g>
+
+      <!-- ===== Digital twin (right) ===== -->
+      <g id="rb-ghosts"></g>
+      <g id="rb-twin" opacity="0" filter="url(#rb-glow)">
+        <g class="rb-wire">
+          <path d="M480 250h300M494 250v40M766 250v40"/>
+          <path d="M526 226h48v24h-48z"/>
+          <path d="M550 200L583 112L668 152"/>
+          <circle cx="550" cy="200" r="11"/><circle cx="583" cy="112" r="8"/><circle cx="668" cy="152" r="6"/>
+          <path d="M668 158v14M665 172v8M671 172v8"/>
+          <path d="M650 232h22l4 4v8h18v-8l4-4h22v18h-70z"/>
+          <path d="M770 250V128M762 118h22v14h-22z"/>
+          <path d="M508 40h36l-7-12h-22z"/>
+        </g>
+        <text x="630" y="26" class="rb-twin-label">Digital twin</text>
+      </g>
+      <rect id="rb-gold" x="472" y="14" width="316" height="290" rx="12" class="rb-gold" opacity="0"/>
+
+      <!-- ===== Loop arrows ===== -->
+      <path id="rb-arrow-down" d="M600 40 Q 455 -16 320 52" class="rb-arrow" marker-end="url(#rb-head)"/>
+      <g id="rb-arrow-back-g" opacity="0">
+        <path id="rb-arrow-back" d="M290 344 Q 450 384 610 344" class="rb-arrow rb-arrow-dash" marker-end="url(#rb-head)"/>
+        <text x="450" y="378" class="rb-small rb-center">real data recalibrates the twin</text>
+      </g>
+
+      <!-- ===== Closing frame labels ===== -->
+      <g id="rb-loop" opacity="0" class="rb-loop">
+        <text x="215" y="342">Physical experiments</text>
+        <text x="630" y="328">Digital twin</text>
+        <text x="450" y="16">Environment co-design</text>
+      </g>
+
+      <rect id="rb-fade" x="0" y="0" width="800" height="384" class="rb-fadebg" opacity="0"/>
+    </svg>
+  </div>
+  <figcaption class="rb-bar">
+    <p class="rb-caption" id="rb-caption" aria-live="polite">Same robot. Same AI. Hostile environment.</p>
+    <div class="rb-controls">
+      <button type="button" class="icon-btn rb-play" id="rb-play" aria-label="Pause animation">
+        <svg class="icon rb-i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg>
+        <svg class="icon rb-i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5v14l12-7z"/></svg>
+      </button>
+      <div class="rb-dots" role="group" aria-label="Jump to scene">
+        <button type="button" data-scene="0" aria-label="Scene 1: a hostile cell"></button>
+        <button type="button" data-scene="1" aria-label="Scene 2: redesign the environment"></button>
+        <button type="button" data-scene="2" aria-label="Scene 3: the digital twin"></button>
+        <button type="button" data-scene="3" aria-label="Scene 4: sim to real"></button>
+        <button type="button" data-scene="4" aria-label="Scene 5: closing frame"></button>
+      </div>
+    </div>
+  </figcaption>
+</figure>

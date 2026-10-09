@@ -1,0 +1,145 @@
+---
+layout: page
+title: Research
+eyebrow: Research
+heading: Physical AI for manufacturing
+lead: >-
+  I build machines that <strong>sense, predict, and correct themselves</strong>. My work connects multimodal in-situ
+  sensing, learned process dynamics and digital twins, and predictive control, first for metal additive manufacturing
+  (WAAM, DED, LPBF) and now for the robots and robot cells that run it.
+description: Research on multimodal sensing, digital twins, predictive control, sim to real and robot cell design for manufacturing.
+---
+{%- assign r = site.data.research -%}
+{%- assign tints = "blue,yellow,green,rose,violet" | split: "," -%}
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Framework</div>
+        <h2>Sense, predict, act</h2>
+        <p>Every project fits one closed loop: <strong>measure</strong> the process, <strong>estimate</strong> its hidden state, <strong>predict</strong> quality, and <strong>choose a safe correction</strong> within machine limits.</p>
+      </div>
+    </div>
+    <div class="grid grid-4">
+      {%- for item in r.pillars %}{% assign ti = forloop.index0 | modulo: 5 %}
+      <article class="card tint-{{ tints[ti] }} pillar">
+        <div class="card-icon">{% include icon.html name=item.icon %}</div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container split">
+    <div>
+      <div class="eyebrow">Animation 1</div>
+      <h2>A robotic WAAM cell that watches itself</h2>
+      <p>In <strong>wire arc additive manufacturing</strong>, an industrial robot carries a welding torch and builds a metal part one bead at a time. Each layer reheats the ones below, so heat, bead shape, and porosity drift during the build.</p>
+      <p>My cell adds the senses a human welder uses: a <strong>camera</strong> on the melt pool, an <strong>acoustic sensor</strong> listening to the arc, and electrical and thermal signals. Learned models turn these signals into a process state, predict defect risk, and suggest a <strong>bounded correction</strong> to heat input or travel speed before the defect is printed.</p>
+      <ul class="tags"><li class="tag tag-blue">Sense: vision, sound, thermal</li><li class="tag tag-violet">Predict: defect risk</li><li class="tag tag-accent">Act: heat and speed</li></ul>
+    </div>
+    <div class="anim-frame">
+      <div class="anim-caption"><span class="live-dot">Robotic WAAM cell</span><span>Illustration</span></div>
+      {% include waam-robot.html %}
+    </div>
+  </div>
+</section>
+
+<section class="section" id="poster">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Research highlight</div>
+        <h2>{{ r.poster.title }}</h2>
+        <p>{{ r.poster.authors }} &middot; {{ r.poster.venue }}</p>
+      </div>
+    </div>
+    <div class="poster-grid">
+      <figure class="figure poster-img">
+        <a href="{{ r.poster.pdf | relative_url }}" target="_blank" rel="noopener"><img src="{{ r.poster.image | relative_url }}" alt="Poster: {{ r.poster.title }}" loading="lazy" width="1800" height="1350"></a>
+        <figcaption>The symposium poster. Click to open the PDF.</figcaption>
+      </figure>
+      <div class="poster-side">
+        <figure class="figure"><img src="{{ r.poster.photo | relative_url }}" alt="MD Shafikul Islam presenting the poster at the LSU Control Systems Symposium" loading="lazy" width="1265" height="952"><figcaption>Presenting at the LSU Control Systems Symposium.</figcaption></figure>
+        <div class="card tint-yellow tldr-box">
+          <div class="eyebrow">TL;DR</div>
+          <p>{{ r.poster.tldr }}</p>
+          <div class="btn-row">
+            <a class="btn btn-primary btn-sm" href="{{ '/research/entropy-mpc/' | relative_url }}">Plain-language summary {% include icon.html name="arrow-right" %}</a>
+            <a class="btn btn-sm" href="{{ r.poster.pdf | relative_url }}" target="_blank" rel="noopener">{% include icon.html name="file" %} Poster PDF</a>
+            <a class="btn btn-sm" href="https://doi.org/{{ r.poster.doi }}" target="_blank" rel="noopener">{% include icon.html name="link" %} DOI</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h3 style="margin-top:28px;">Results at a glance <span class="status status-accent">Simulation and surrogate-model study</span></h3>
+    <div class="stats">
+      {%- for s in r.poster.stats %}
+      <div class="stat"><div class="stat-value">{{ s.value }}<small>{{ s.unit }}</small></div><div class="stat-label">{{ s.label }}</div></div>
+      {%- endfor %}
+    </div>
+    <p class="muted" style="margin-top:12px;font-size:.9rem;">These numbers come from simulation with learned surrogate models (DMDc and SINDy), not from physical experiments.</p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Animation 2 &middot; Current work</div>
+        <h2>Designing a world robots can work in</h2>
+        <p>Robots fail less when the factory is designed for them. I <strong>measure</strong> how much the environment matters, <strong>model</strong> it, and <strong>design better cells in a digital twin</strong> before building them for real. Then real trials recalibrate the twin (<strong>sim to real</strong> and back).</p>
+      </div>
+    </div>
+    {% include robotability-animation.html %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Directions</div>
+        <h2>Research directions</h2>
+      </div>
+    </div>
+    <div class="grid grid-3">
+      {%- for d in r.directions %}
+      <article class="card card-rule-{% cycle 'blue', 'accent', 'yellow' %}">
+        <div class="card-icon icon-{% cycle 'blue', 'rose', 'yellow' %}">{% include icon.html name=d.icon %}</div>
+        <h3>{{ d.title }}</h3>
+        <p>{{ d.text }}</p>
+        <ul class="tags">{% for t in d.tags %}<li class="tag">{{ t }}</li>{% endfor %}</ul>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Projects</div>
+        <h2>Current projects</h2>
+        <p>Work in progress is labeled as such. Results appear here only after they are measured.</p>
+      </div>
+    </div>
+    <div class="grid grid-3">
+      {%- for d in r.projects %}
+      <article class="card card-hover tint-{{ d.tint }}">
+        <div class="card-icon">{% include icon.html name=d.icon %}</div>
+        <span class="status status-accent" style="margin:0 0 8px;">{{ d.status }}</span>
+        <h3>{{ d.title }}</h3>
+        <p>{{ d.text }}</p>
+        <ul class="tags">{% for t in d.tags %}<li class="tag" style="background:var(--bg-elev);">{{ t }}</li>{% endfor %}</ul>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+<script src="{{ '/assets/js/robotability.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

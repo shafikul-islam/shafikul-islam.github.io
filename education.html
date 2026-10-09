@@ -1,0 +1,74 @@
+---
+layout: page
+title: Education
+eyebrow: Education
+heading: Education and training
+lead: Ph.D. (in progress), M.S., and B.Sc. degrees in industrial engineering, graduate coursework in control, learning, and manufacturing AI, and hands-on industrial training.
+---
+{%- assign e = site.data.education -%}
+<section class="section">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">Degrees</div><h2>Degrees</h2></div></div>
+    <ol class="timeline">
+      {%- for d in e.degrees %}
+      <li>
+        <div class="card tint-{{ d.tint }}">
+          <div class="tl-head"><h3>{{ d.degree }}</h3><span class="tl-when">{{ d.when }}</span></div>
+          <p class="tl-org"><a href="{{ d.url }}" target="_blank" rel="noopener">{{ d.school }}</a> &middot; {{ d.dept }} &middot; {{ d.location }}</p>
+          <p style="margin:-4px 0 12px;"><span class="status status-{% if d.status contains 'progress' %}accent{% else %}ok{% endif %}" style="margin:0;">{{ d.status }}</span></p>
+          <dl class="kv">{% for m in d.meta %}<dt>{{ m[0] }}</dt><dd>{{ m[1] }}</dd>{% endfor %}</dl>
+          {% if d.text %}<p>{{ d.text }}</p>{% endif %}
+          {% if d.bullets %}<ul>{% for b in d.bullets %}<li>{{ b }}</li>{% endfor %}</ul>{% endif %}
+        </div>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">Coursework</div><h2>Graduate coursework at LSU</h2></div></div>
+    <div class="grid grid-2">
+      <div class="card card-flat card-rule-blue">
+        <h3>Completed</h3>
+        <ul class="item-list">
+          {%- for c in e.coursework.completed %}
+          <li><span class="item-icon icon-blue">{% include icon.html name="book" %}</span><span>{{ c[1] }}<span class="item-meta">{{ c[0] }}</span></span></li>
+          {%- endfor %}
+        </ul>
+      </div>
+      <div class="card card-flat card-rule-accent">
+        <h3>In progress <span class="status status-accent">{{ e.coursework.in_progress_term }}</span></h3>
+        <ul class="item-list">
+          {%- for c in e.coursework.in_progress %}
+          <li><span class="item-icon">{% include icon.html name="activity" %}</span><span>{{ c[1] }}<span class="item-meta">{{ c[0] }}</span></span></li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid grid-2">
+    <div>
+      <div class="eyebrow">Training</div>
+      <h2>Industrial training and internships</h2>
+      <ul class="item-list">
+        {%- for t in e.training %}
+        <li><span class="item-icon">{% include icon.html name="factory" %}</span><span><strong>{{ t.title }}</strong><span class="item-meta">{{ t.when }}</span>{{ t.text }}</span></li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <div>
+      <div class="eyebrow">Projects</div>
+      <h2>Key course projects</h2>
+      <ul class="item-list">
+        {%- for t in e.projects %}
+        <li><span class="item-icon">{% include icon.html name="code" %}</span><span><strong>{{ t.title }}</strong><br>{{ t.text }}</span></li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

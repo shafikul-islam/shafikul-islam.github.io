@@ -1,0 +1,60 @@
+---
+layout: page
+title: Publications
+eyebrow: Publications
+heading: Publications
+lead: 13 journal articles, 11 conference and workshop papers, 8 preprints, and 2 posters (as of the July 2026 CV). Search by title, venue, author, or keyword, or filter by type and topic.
+description: Publications of MD Shafikul Islam in manufacturing AI, computer vision, graph learning and digital twins.
+---
+{%- assign pubs = site.data.publications -%}
+{%- assign types = "journal|Journal articles,conf|Conference and workshop papers,preprint|Preprints,poster|Posters" | split: "," -%}
+{%- assign topics = "Manufacturing,Computer Vision,Graph Neural Networks,Digital Twins,Healthcare AI,Control,Privacy,Supply Chain,Time Series,Optimization,LLMs" | split: "," -%}
+<div class="container" id="pubs">
+  <div class="pubs-controls">
+    <div class="input-wrap">
+      {% include icon.html name="search" %}
+      <label for="pub-search" class="sr-only">Search publications</label>
+      <input id="pub-search" class="input" type="search" placeholder="Search, for example: vision transformer, Manufacturing Letters, graph attention">
+    </div>
+    <div class="filter-row" role="group" aria-label="Filter by type">
+      <span class="filter-label">Type</span>
+      <button class="chip" type="button" data-filter-type="all" aria-pressed="true">All <span class="count">{{ pubs.size }}</span></button>
+      {%- for t in types %}{% assign kv = t | split: "|" %}{% assign n = pubs | where: "type", kv[0] | size %}
+      <button class="chip" type="button" data-filter-type="{{ kv[0] }}" aria-pressed="false">{{ kv[1] | split: " " | first }} <span class="count">{{ n }}</span></button>
+      {%- endfor %}
+    </div>
+    <div class="filter-row" role="group" aria-label="Filter by topic">
+      <span class="filter-label">Topic</span>
+      <button class="chip" type="button" data-filter-topic="all" aria-pressed="true">All</button>
+      {%- for t in topics %}
+      <button class="chip" type="button" data-filter-topic="{{ t }}" aria-pressed="false">{{ t }}</button>
+      {%- endfor %}
+    </div>
+  </div>
+
+  {%- for t in types %}{% assign kv = t | split: "|" %}
+  {%- assign group = pubs | where: "type", kv[0] %}
+  <section class="pub-group" data-group="{{ kv[0] }}" id="{{ kv[0] }}">
+    <h2>{{ kv[1] }} <span class="count" data-count>{{ group.size }}</span></h2>
+    <div class="card card-flat card-rule-{% cycle 'blue', 'accent', 'yellow', 'blue' %}" style="padding-top:4px;padding-bottom:4px;">
+      {%- for p in group %}
+      <article class="pub" data-type="{{ p.type }}" data-tags="{{ p.tags | join: '|' }}">
+        <div class="pub-id">{{ p.id }}</div>
+        <div>
+          <h3 class="pub-title">{{ p.title }}{% if p.status == "workshop" %} <span class="status status-accent">Workshop</span>{% elsif p.status == "major revision" %} <span class="status status-accent">Major revision</span>{% endif %}</h3>
+          <p class="pub-authors">{{ p.authors | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+          <p class="pub-venue">{{ p.venue }}{% if p.year %}, {{ p.year }}{% endif %}</p>
+          {% if p.note %}<p class="pub-note">{% include icon.html name="trophy" %} {{ p.note }}</p>{% endif %}
+          <div class="pub-foot">
+            {% if p.links %}<div class="pub-links">{% for l in p.links %}{% if l.label == "Plain summary" %}<a class="pub-tldr" href="{{ l.url | relative_url }}">{% include icon.html name="spark" %}TL;DR</a>{% else %}<a href="{{ l.url | relative_url }}" target="_blank" rel="noopener">{% include icon.html name="external" %}{{ l.label }}</a>{% endif %}{% endfor %}</div>{% endif %}
+            <ul class="tags">{% for tg in p.tags %}<li class="tag">{{ tg }}</li>{% endfor %}</ul>
+          </div>
+        </div>
+      </article>
+      {%- endfor %}
+    </div>
+  </section>
+  {%- endfor %}
+  <p id="pub-empty" class="muted" hidden style="padding:32px 0;">No matching items. Try another search or clear the filters.</p>
+</div>
+<div style="height:48px"></div>

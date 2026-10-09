@@ -1,0 +1,115 @@
+---
+layout: default
+---
+<section class="page-hero tldr-hero">
+  <div class="container">
+    <a class="text-link" href="{{ '/research/' | relative_url }}" style="margin-bottom:14px;">&larr; Research</a>
+    <div class="eyebrow">Plain-language summary &middot; {{ page.kind }}</div>
+    <h1>{{ page.short_title }}</h1>
+    <p class="lead" style="margin-bottom:14px;">{{ page.paper_title }}</p>
+    <p class="tl-org" style="margin:0;">{{ page.authors }}</p>
+    <p class="item-meta" style="margin-top:4px;">{{ page.venue }}{% if page.status %} &middot; <span class="status status-accent">{{ page.status }}</span>{% endif %}</p>
+    <div class="card tint-yellow tldr-box" style="margin-top:22px;">
+      <div class="eyebrow">TL;DR</div>
+      <p style="margin:0;">{{ page.tldr }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="anim-frame">
+      <div class="anim-caption"><span class="live-dot">{{ page.visual_title }}</span><span>{{ page.visual_note | default: "Illustration" }}</span></div>
+      {% include {{ page.visual }} %}
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="container grid grid-2">
+    <article class="card tint-rose">
+      <div class="card-icon">{% include icon.html name="flag" %}</div>
+      <h2 class="tldr-h">The problem</h2>
+      <p>{{ page.problem }}</p>
+    </article>
+    <article class="card tint-blue">
+      <div class="card-icon">{% include icon.html name="spark" %}</div>
+      <h2 class="tldr-h">The idea</h2>
+      <p>{{ page.idea }}</p>
+    </article>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">Method</div><h2>How it works, step by step</h2></div></div>
+    <ol class="steps">
+      {%- for s in page.steps %}
+      <li class="step" style="--i:{{ forloop.index0 }};">
+        <span class="step-n">{{ forloop.index }}</span>
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.text }}</p>
+      </li>
+      {%- endfor %}
+    </ol>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Results</div>
+        <h2>What we found</h2>
+        {% if page.results_note %}<p><span class="status status-accent" style="margin:0;">{{ page.results_note }}</span></p>{% endif %}
+      </div>
+    </div>
+    {% if page.stats %}
+    <div class="stats" style="margin-bottom:20px;">
+      {%- for s in page.stats %}
+      <div class="stat"><div class="stat-value">{{ s.value }}<small>{{ s.unit }}</small></div><div class="stat-label">{{ s.label }}</div></div>
+      {%- endfor %}
+    </div>
+    {% endif %}
+    <ul class="item-list card card-rule-blue">
+      {%- for f in page.findings %}
+      <li><span class="item-icon icon-green">{% include icon.html name="shield" %}</span><span>{{ f }}</span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="container grid grid-2">
+    <article class="card tint-green">
+      <div class="card-icon">{% include icon.html name="factory" %}</div>
+      <h2 class="tldr-h">Why it matters</h2>
+      <p>{{ page.why }}</p>
+    </article>
+    <article class="card">
+      <div class="card-icon icon-violet">{% include icon.html name="book" %}</div>
+      <h2 class="tldr-h">Read the work</h2>
+      <p>{{ page.authors }}. "{{ page.paper_title }}." {{ page.venue }}.</p>
+      <div class="btn-row">
+        {%- for l in page.links %}
+        <a class="btn btn-sm{% if forloop.first %} btn-primary{% endif %}" href="{{ l.url | relative_url }}"{% if l.url contains 'http' or l.url contains '.pdf' %} target="_blank" rel="noopener"{% endif %}>{% include icon.html name="external" %} {{ l.label }}</a>
+        {%- endfor %}
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head"><div><div class="eyebrow">More summaries</div><h2>Other plain-language summaries</h2></div></div>
+    <div class="grid grid-3">
+      {%- for f in site.data.research.featured %}{% unless f.tldr == page.url %}
+      <a class="card card-hover tldr-link" href="{{ f.tldr | relative_url }}">
+        <span class="eyebrow" style="margin-bottom:6px;">TL;DR</span>
+        <strong>{{ f.title }}</strong>
+        <span class="text-link" style="margin-top:10px;">Open {% include icon.html name="arrow-right" %}</span>
+      </a>
+      {%- endunless %}{% endfor %}
+    </div>
+  </div>
+</section>

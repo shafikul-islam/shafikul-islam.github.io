@@ -1,32 +1,25 @@
-baseurl: ''
-url: 'https://shafikul-islam.github.io'
+title: MD Shafikul Islam
+author: MD Shafikul Islam
+description: >-
+  PhD researcher at Louisiana State University building Physical AI for manufacturing:
+  multimodal sensing, digital twins, predictive control and robotics for metal additive manufacturing.
+url: https://shafikul-islam.github.io
+baseurl: ""
 permalink: pretty
-title: 'MD Shafikul Islam'
-author: 'MD Shafikul Islam'
-description: 'PhD Student in Mechanical and Industrial Engineering at Louisiana State University'
-
-logo:
-  mobile: "assets/images/profile.png"
-  mobile_height: "38px"
-  mobile_width: "38px"
-  desktop: "assets/images/profile.png"
-  desktop_height: "40px"
-  desktop_width: "40px"
+lang: en
 
 sass:
-  style: compressed # possible values: nested expanded compact compressed
+  style: compressed
 
 plugins:
-  - jekyll-environment-variables
+  - jekyll-redirect-from
 
 exclude:
   - Gemfile
   - Gemfile.lock
+  - vendor
   - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
-  - LICENSE.md
   - LICENSE
   - README.md
+  - CLAUDE.md
+  - REDESIGN_BRIEF.md

@@ -1,0 +1,381 @@
+# Source: CV dated July 7, 2026. Author lists are copied from the CV; my name is in **bold**.
+# type: journal | conf | preprint | poster.  status: published | workshop | major revision | preprint | poster
+
+# ---------- Journal articles ----------
+- id: J13
+  type: journal
+  status: published
+  title: Multimodal vision-language models for automated and explainable postoperative complication risk stratification
+  authors: Wasi, A. T., Anik, M. A., **Islam, M. S.**, Ahsan, M. M.
+  venue: <i>IISE Transactions on Healthcare Systems Engineering</i>, pp. 1-16
+  year: 2026
+  tags: [Computer Vision, Healthcare AI]
+  note: 2nd Place, Best Track Paper Award (Health Systems Track), IISE Annual Conference 2026
+- id: J12
+  type: journal
+  status: published
+  title: Advancing industry 4.0 and lean-driven ergonomic insights for sustainable textile manufacturing
+  authors: Hosen, M. I., Mithun, A. C., Tushar, S. R., Alam, M. F. B., **Islam, M. D.**, Bappy, M. M.
+  venue: <i>International Journal of System Assurance Engineering and Management</i>, pp. 1-31
+  year: 2026
+  tags: [Manufacturing]
+- id: J11
+  type: journal
+  status: published
+  title: "GRAPHINE: enhancing spatiotemporal supply chain forecasting using virtual node-augmented graph diffusion for improved fuel efficiency"
+  authors: Alshehri, A. S., Wasi, A. T., Anik, M. A., **Islam, M. D. S.**, Hadj-Kali, M. K.
+  venue: <i>International Journal of Production Research</i>, pp. 1-26
+  year: 2026
+  tags: [Graph Neural Networks, Supply Chain, Time Series]
+- id: J10
+  type: journal
+  status: published
+  title: "Digital Twin-Enabled Additive Manufacturing: A Comprehensive Review of Architectures, Integration Layers and Operational Maturity"
+  authors: Anik, M. A., Rahman, A., **Islam, M. D. S.**, Khan, M. I., Ahsan, M. M., Wasi, A. T.
+  venue: <i>Digital Twins and Applications</i> (Wiley), vol. 3, no. 1, e70039
+  year: 2026
+  tags: [Digital Twins, Manufacturing]
+- id: J9
+  type: journal
+  status: published
+  title: "Beyond local receptive fields: Vision transformers for real-time surface defect detection in FDM"
+  authors: "**Islam, M. S.**, Bappy, M. M., Tushar, S. R., et al."
+  venue: <i>The International Journal of Advanced Manufacturing Technology</i>, pp. 1-22
+  year: 2026
+  tags: [Manufacturing, Computer Vision]
+  links:
+  - label: DOI
+    url: https://doi.org/10.1007/s00170-026-17846-8
+  - label: Plain summary
+    url: /research/vit-fdm/
+- id: J8
+  type: journal
+  status: published
+  title: "Fracture Finder: Computer-Aided Real-Time Diagnosis of Vertebral Fractures in Thoracic Spine X-Rays Using YOLOv8 with Weighted Box Fusion and Augmentation Strategies"
+  authors: "**Islam, M. S.**, Anik, M. A., Wasi, A. T., Bappy, M. M."
+  venue: <i>IISE Transactions on Healthcare Systems Engineering</i>, pp. 1-18
+  year: 2026
+  tags: [Computer Vision, Healthcare AI]
+  links:
+  - label: DOI
+    url: https://doi.org/10.1080/24725579.2025.2598578
+  - label: Plain summary
+    url: /research/fracture-finder/
+- id: J7
+  type: journal
+  status: published
+  title: "AI-Enabled Modeling for Smart Rural Wastewater Treatment Systems: Current Practices and Remaining Gaps"
+  authors: De La Hoz, J. L. M., Bappy, M. M., **Islam, M. S.**, Marcantel, M., Hayes, M. P.
+  venue: <i>Applied Water Science</i>
+  year: 2026
+  tags: [Time Series]
+  links:
+  - label: DOI
+    url: https://doi.org/10.1007/s13201-025-02698-6
+- id: J6
+  type: journal
+  status: published
+  title: Comprehensive and Comparative Characterizations of Tensile Properties and Fracture Mechanisms of 3D Printed Multifunctional Carbon-Fiber and Metal-Filled PLA Composite Parts
+  authors: Pan, D., Al Mamun, A., Zhou, R., Bappy, M. M., **Islam, M. S.**
+  venue: <i>Polymer Composites</i>, vol. 47, no. 3, pp. 2282-2300
+  year: 2026
+  tags: [Manufacturing]
+  links:
+  - label: DOI
+    url: https://doi.org/10.1002/pc.70281
+- id: J5
+  type: journal
+  status: published
+  title: "A Fuzzy Data-Driven Framework for Enhanced Risk Management Decision-Making in Manufacturing: A Case Study"
+  authors: Shakibaei, H., **Islam, M. S.**, Bappy, M. M.
+  venue: <i>Manufacturing Letters</i>, vol. 44, pp. 1681-1688
+  year: 2025
+  tags: [Manufacturing, Optimization]
+  links:
+  - label: DOI
+    url: https://doi.org/10.1016/j.mfglet.2025.06.187
+- id: J4
+  type: journal
+  status: published
+  title: Interpretable CNN models for Computationally Efficient Bearing Fault Diagnosis Using Learnable Gaussian/Sinc Filters
+  authors: Biswas, S., Al Mamun, A., **Islam, M. S.**, Bappy, M. M.
+  venue: <i>Manufacturing Letters</i>, vol. 44, pp. 110-120
+  year: 2025
+  tags: [Manufacturing, Computer Vision]
+  links:
+  - label: DOI
+    url: https://doi.org/10.1016/j.mfglet.2025.06.015
+- id: J3
+  type: journal
+  status: published
+  title: "Generative Modeling in Smart Manufacturing: Applications, Challenges, and Future Directions"
+  authors: Ahsan, M. N., **Islam, M. S.**, Bappy, M. M.
+  venue: <i>Manufacturing Letters</i>, vol. 44, pp. 1285-1295
+  year: 2025
+  tags: [Manufacturing]
+  links:
+  - label: DOI
+    url: https://doi.org/10.1016/j.mfglet.2025.06.148
+- id: J2
+  type: journal
+  status: published
+  title: Interpretable Forecasting of Dissolved Oxygen Leveraging Foundation Model for Proactive Aeration in Rural Wastewater Treatment Systems
+  authors: De La Hoz, J. L. M., Bappy, M. M., **Islam, M. S.**, Marcantel, M., Hayes, M. P.
+  venue: <i>Water Research</i>, 124931
+  year: 2025
+  tags: [Time Series]
+  links:
+  - label: DOI
+    url: https://doi.org/10.1016/j.watres.2025.124931
+- id: J1
+  type: journal
+  status: published
+  title: "Evaluating Challenges to the Adoption of Smart Textiles in Readymade Garment Industries: Implications for Sustainable Business Development"
+  authors: "**Islam, M. S.**, Tushar, S. R., Bappy, M. M., Ali, M., Al Nadim, A."
+  venue: <i>Green Technologies and Sustainability</i>, vol. 3, no. 3, 100225
+  year: 2025
+  tags: [Manufacturing, Optimization]
+  links:
+  - label: DOI
+    url: https://doi.org/10.1016/j.grets.2025.100225
+
+# ---------- Conference and workshop papers ----------
+- id: C11
+  type: conf
+  status: workshop
+  title: "InvariantBench: Can Large Language Models Exhibit Inherent Reasoning Across Equivalent Transformations?"
+  authors: Wasi, A. T., Khan, M. A., Rahman, A., Faisal, W., Saha, S., Bhuiyan, S., **Islam, M. D. S.**
+  venue: "Workshop paper, <i>3rd AI for Math Workshop: Toward Self-Evolving Scientific Agents</i>, ICML 2026"
+  year: 2026
+  tags: [LLMs]
+- id: C10
+  type: conf
+  status: published
+  title: Virtual Node-Augmented Diffusion Recurrent Networks for Spatiotemporal Supply Chain Forecasting
+  authors: Alshehri, A. S., Wasi, A. T., Anik, M. A., **Islam, M. S.**, Hadj-Kali, M. K.
+  venue: <i>2025 8th International Conference on Algorithms, Computing and Artificial Intelligence (ACAI)</i>
+  year: 2025
+  tags: [Supply Chain, Graph Neural Networks, Time Series]
+  links:
+  - label: Website
+    url: http://www.acai-conf.net/
+- id: C9
+  type: conf
+  status: published
+  title: Privacy-Aware Porosity Prediction in Metal Additive Manufacturing using Hierarchical Graph Attention Networks
+  authors: "**Islam, M. S.**, Bappy, M. M."
+  venue: <i>INFORMS Annual Meeting</i>
+  year: 2025
+  tags: [Manufacturing, Graph Neural Networks, Privacy]
+  links:
+  - label: Slides
+    url: https://drive.google.com/file/d/1C9_OywNGRFTo3NkrM9h7bl9viEQqztRU/view?usp=drive_link
+- id: C8
+  type: conf
+  status: published
+  title: "Inference-Driven Strategy Design for Professional Societies: A Hybrid Machine Learning and Scenario Simulation Framework"
+  authors: "**Islam, M. S.**, Bappy, M. M."
+  venue: <i>INFORMS Annual Meeting</i>
+  year: 2025
+  tags: [Optimization]
+  links:
+  - label: Slides
+    url: https://drive.google.com/file/d/1jUvuFSTsbs7Lt55Bv3P4hEjKnYM5DUQn/view?usp=drive_link
+- id: C7
+  type: conf
+  status: published
+  title: "FRACTURE FINDER: Vertebral Fracture Localization for Spine X-Ray Analysis"
+  authors: "**Islam, M. S.**, Bappy, A. M. A., Wasi, A. T., Mohammad, M."
+  venue: <i>IISE Annual Conference and Expo</i>
+  year: 2025
+  tags: [Computer Vision, Healthcare AI]
+  links:
+  - label: Slides
+    url: https://drive.google.com/file/d/1QemVr53oX3_XeB7nOsWrA18GR_CYipDE/view?usp=drive_link
+- id: C6
+  type: conf
+  status: published
+  title: Explainable Vision Transformer-Based Real-Time Anomaly Detection for Fused Deposition Modeling
+  authors: "**Islam, M. S.**, Bappy, M. M."
+  venue: <i>IISE Annual Conference and Expo</i>
+  year: 2025
+  tags: [Manufacturing, Computer Vision]
+  links:
+  - label: Slides
+    url: https://drive.google.com/file/d/1xNWu-22pGRzdqOanLTqpSoT45uzyt49T/view?usp=drive_link
+- id: C5
+  type: conf
+  status: published
+  title: Foundation Model-Driven Predictive and Interpretable Modeling for Critical Materials in Renewable Energy Applications
+  authors: "**Islam, M. S.**, Bappy, M. M."
+  venue: <i>Proceedings of the 99th Annual Meeting of the Louisiana Academy of Sciences (LAS)</i>
+  year: 2025
+  tags: [Time Series]
+  links:
+  - label: SSRN
+    url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5248814
+  note: Best Graduate Oral Presentation, Materials Science and Engineering division
+- id: C4
+  type: conf
+  status: published
+  title: "Predict Students' Performance and Optimize Preparatory Leave: An Integrated Deep Learning and Dynamic Programming Approach"
+  authors: "**Islam, M. S.**, Mukaddes, A. M. M., Uddin, M."
+  venue: <i>27th International Conference on Computer and Information Technology (ICCIT)</i>
+  year: 2024
+  tags: [Optimization]
+  links:
+  - label: IEEE
+    url: https://ieeexplore.ieee.org/abstract/document/11021881
+- id: C3
+  type: conf
+  status: workshop
+  title: "SupplyGraph: A Benchmark Dataset for Supply Chain Planning using Graph Neural Networks"
+  authors: Wasi, A. T., **Islam, M. S.**, Akib, A. R.
+  venue: "Workshop paper, <i>Graphs and more Complex structures for Learning and Reasoning Workshop</i>, AAAI 2024"
+  year: 2024
+  tags: [Supply Chain, Graph Neural Networks]
+  links:
+  - label: Paper
+    url: https://github.com/CIOL-SUST/SupplyGraph
+- id: C2
+  type: conf
+  status: workshop
+  title: "Optimizing Inventory Routing: A Decision-Focused Learning Approach using Neural Networks"
+  authors: "**Islam, M. S.**, Wasi, A. T."
+  venue: "Workshop short paper, <i>New in Machine Learning Workshop</i>, NeurIPS 2023"
+  year: 2023
+  tags: [Supply Chain, Optimization]
+  links:
+  - label: arXiv
+    url: https://arxiv.org/abs/2311.00983
+- id: C1
+  type: conf
+  status: published
+  title: "Multivariate Time Series Analysis and Forecasting on Air Quality Index with Industrial Statistics: A Case Study of Bangladesh"
+  authors: "**Islam, M. S.**, Wasi, A. T."
+  venue: <i>7th International Conference on Engineering Research, Innovation and Education (ICERIE)</i>
+  year: 2023
+  tags: [Time Series]
+
+# ---------- Preprints and working papers ----------
+- id: P8
+  type: preprint
+  status: major revision
+  title: Feature-Aware Anisotropic Local Differential Privacy for Utility-Preserving Graph Representation Learning in Metal Additive Manufacturing
+  authors: "**Islam, M. S.**, Bappy, M. M., Tushar, S. R., Arifuzzaman, M."
+  venue: "Major revision at <i>ASME Journal of Computing and Information Science in Engineering (JCISE)</i>, arXiv:2604.05077"
+  year: 2026
+  tags: [Manufacturing, Graph Neural Networks, Privacy]
+  links:
+  - label: arXiv
+    url: https://arxiv.org/abs/2604.05077
+  - label: Plain summary
+    url: /research/private-graph-am/
+- id: P7
+  type: preprint
+  status: preprint
+  title: "Responsible Innovation in AI-Driven Operations and Supply Chain Management: An Institutional Theory Framework"
+  authors: Wasi, A. T., Rahman, A., Priti, R. N., Khan, M. A., **Islam, M. D. S.**
+  venue: <i>Engineering Archive (engrXiv)</i> preprint
+  year: 2025
+  tags: [Supply Chain]
+- id: P6
+  type: preprint
+  status: preprint
+  title: "A Theoretical Ecosystem Framework for Human-Centric AI in Multi-Tier Supply Chains: Aligning Incentives and Value Co-Creation"
+  authors: Wasi, A. T., Khan, M. A., Priti, R. N., Rahman, A., **Islam, M. S.**
+  venue: <i>Engineering Archive (engrXiv)</i> preprint
+  year: 2025
+  tags: [Supply Chain]
+- id: P5
+  type: preprint
+  status: preprint
+  title: An Integrated Decision-Support Framework for Energy Benchmarking, Anomaly Detection, and Proxy Setpoint Optimization in Data-Limited Retail Portfolios
+  authors: Monteiro, C., Bappy, M. M., Nahmens, I., **Islam, M. S.**
+  venue: <i>SSRN</i> working paper, SSRN 6410730
+  year: 2026
+  tags: [Optimization, Time Series]
+  links:
+  - label: SSRN
+    url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6410730
+
+- id: P4
+  type: preprint
+  status: preprint
+  title: A Theoretical Framework for Graph-based Digital Twins for Supply Chain Management and Optimization
+  authors: Wasi, A. T., Anik, M. A., Rahman, A., Hoque, M. I., **Islam, M. S.**, Ahsan, M. M.
+  venue: "<i>arXiv</i>, arXiv:2504.03692"
+  year: 2025
+  tags:
+  - Digital Twins
+  - Supply Chain
+  - Graph Neural Networks
+  links:
+  - label: arXiv
+    url: https://arxiv.org/abs/2504.03692
+- id: P3
+  type: preprint
+  status: preprint
+  title: 'Graph Neural Networks in Supply Chain Analytics and Optimization: Concepts, Perspectives, Dataset and Benchmarks'
+  authors: Wasi, A. T., **Islam, M. S.**, Akib, A. R., Bappy, M. M.
+  venue: "<i>arXiv</i>, arXiv:2411.08550"
+  year: 2024
+  tags:
+  - Supply Chain
+  - Graph Neural Networks
+  links:
+  - label: arXiv
+    url: https://arxiv.org/abs/2411.08550
+- id: P2
+  type: preprint
+  status: preprint
+  title: 'Biotwinmine: Digital Twin-Based Optimization of Biomining for Sustainable Rare Earth Element Production'
+  authors: Anik, M. A., Rahman, A., Hoque, M. I., Wasi, A. T., **Islam, M. S.**, Ahsan, M. M.
+  venue: "<i>SSRN</i>, SSRN: 5258720"
+  year: 2025
+  tags:
+  - Digital Twins
+  - Optimization
+  links:
+  - label: SSRN
+    url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5258720
+- id: P1
+  type: preprint
+  status: preprint
+  title: Foundation Model-Driven Predictive and Interpretable Modeling for Critical Materials in Renewable Energy Applications
+  authors: "**Islam, M. S.**, Bappy, M. M., De La Hoz, D., Martinez, J. L., Chowdhury, S."
+  venue: "<i>SSRN</i>, SSRN: 5248814"
+  year: 2025
+  tags:
+  - Manufacturing
+  - Time Series
+  links:
+  - label: SSRN
+    url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5248814
+
+# ---------- Posters ----------
+- id: PS2
+  type: poster
+  status: poster
+  title: Entropy-Aware Model Predictive Control for Transient Quality Mitigation in Metal Additive Manufacturing
+  authors: "**Islam, M. S.**, Bappy, M. M., Tushar, S. R."
+  venue: Poster, <i>LSU Control Systems Symposium</i>, doi:10.31390/lsucontrol.26.12
+  year: 2026
+  tags: [Manufacturing, Control]
+  links:
+  - label: DOI
+    url: https://doi.org/10.31390/lsucontrol.26.12
+  - label: Poster PDF
+    url: /assets/docs/entropy-mpc-poster.pdf
+  - label: Plain summary
+    url: /research/entropy-mpc/
+- id: PS1
+  type: poster
+  status: poster
+  title: Sustainable Management of Rare Earth Elements for Clean Energy Using Prescriptive Digital Twins
+  authors: Anik, M., Hoque, I., **Islam, M. S.**, Wasi, A. T., Bappy, M. M., Ahsan, M. M.
+  venue: "<i>Digital Twin for Manufacturing Sustainability, Safety, and Resilience</i>, Purdue University"
+  year: 2024
+  tags:
+  - Digital Twins
+  - Optimization

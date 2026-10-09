@@ -1,0 +1,16 @@
+---
+layout: page
+title: CV
+eyebrow: Curriculum vitae
+heading: Curriculum vitae
+lead: The full CV with publications, awards, and service. Open it in a new tab or download the PDF.
+---
+<section class="section">
+  <div class="container">
+    <div class="btn-row" style="margin-bottom:20px;">
+      <a class="btn btn-primary" href="{{ '/resume.pdf' | relative_url }}" download>{% include icon.html name="download" %} Download PDF</a>
+      <a class="btn" href="{{ '/resume.pdf' | relative_url }}" target="_blank" rel="noopener">{% include icon.html name="external" %} Open in new tab</a>
+    </div>
+    <iframe class="cv-frame" src="{{ '/resume.pdf' | relative_url }}" title="Curriculum vitae of {{ site.data.profile.name }} (PDF)" loading="lazy"></iframe>
+  </div>
+</section>

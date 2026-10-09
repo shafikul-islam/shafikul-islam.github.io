@@ -1,0 +1,171 @@
+{%- comment -%}
+Industrial (FANUC-style) six-axis robot welding a WAAM wall.
+Joint angles come from inverse kinematics so the torch tip moves in a straight
+line along the wall. Pauses for reduced motion (see site.js).
+{%- endcomment -%}
+{%- assign kt = "0;0.0625;0.125;0.1875;0.25;0.3125;0.375;0.4375;0.5;0.5625;0.625;0.6875;0.75;0.8125;0.875;0.9375;1" -%}
+{%- assign dur = "8s" -%}
+<svg class="waam-robot anim" viewBox="0 0 640 430" role="img" aria-labelledby="waam-title waam-desc">
+  <title id="waam-title">Robotic wire arc additive manufacturing cell</title>
+  <desc id="waam-desc">A yellow industrial robot moves a welding torch along a metal wall that it builds layer by layer. Sparks fly from the arc while a camera and an acoustic sensor monitor the melt pool.</desc>
+  <defs>
+    <radialGradient id="wGlow">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".12" stop-color="#cfe8ff"/>
+      <stop offset=".3" stop-color="#ffd27a"/>
+      <stop offset=".6" stop-color="#ff7a33" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#ff7a33" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wHot" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff5a1f" stop-opacity="0"/>
+      <stop offset=".7" stop-color="#ff7a33" stop-opacity=".95"/>
+      <stop offset="1" stop-color="#ffe08a"/>
+    </linearGradient>
+    <linearGradient id="wYellow" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffcf33"/><stop offset="1" stop-color="#e3a800"/>
+    </linearGradient>
+    <linearGradient id="wSteel" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#7d8792"/><stop offset="1" stop-color="#4a525c"/>
+    </linearGradient>
+    <linearGradient id="wLayer" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#d9dde2"/><stop offset="1" stop-color="#a9b0b8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- floor -->
+  <rect x="0" y="410" width="640" height="20" class="w-floor"/>
+  <path d="M0 410h640" class="w-line"/>
+  <g class="w-floor-mark"><path d="M30 418h40M110 418h40M190 418h40M270 418h40M350 418h40M430 418h40M510 418h40M590 418h40"/></g>
+
+  <!-- HUD -->
+  <g transform="translate(470 22)">
+    <rect width="150" height="98" rx="10" class="w-panel"/>
+    <text x="14" y="22" class="w-txt w-strong">PHYSICAL AI LOOP</text>
+    <g class="hud-step s1"><circle cx="19" cy="42" r="4" fill="#4f8fe0"/><text x="31" y="46" class="w-txt">SENSE</text></g>
+    <g class="hud-step s2"><circle cx="19" cy="62" r="4" fill="#9a7cf0"/><text x="31" y="66" class="w-txt">PREDICT</text></g>
+    <g class="hud-step s3"><circle cx="19" cy="82" r="4" fill="#ff7a33"/><text x="31" y="86" class="w-txt">ACT</text></g>
+  </g>
+
+  <!-- worktable -->
+  <g>
+    <rect x="288" y="380" width="240" height="10" rx="2" fill="url(#wSteel)" class="w-edge"/>
+    <path d="M300 390v20M516 390v20" class="w-line" stroke-width="6"/>
+  </g>
+  <rect x="300" y="372" width="144" height="8" rx="1.5" fill="#8b949e" class="w-edge"/>
+
+  <!-- deposited wall: cooler gray below, hot layers on top -->
+  <g class="w-edge">
+    <rect x="316" y="363" width="112" height="10" rx="5" fill="url(#wLayer)"/>
+    <rect x="316" y="354" width="112" height="10" rx="5" fill="url(#wLayer)"/>
+    <rect x="316" y="345" width="112" height="10" rx="5" fill="url(#wLayer)"/>
+    <rect x="316" y="336" width="112" height="10" rx="5" fill="url(#wLayer)"/>
+    <rect x="316" y="327" width="112" height="10" rx="5" fill="#c9b8a6"/>
+    <rect x="316" y="318" width="112" height="10" rx="5" fill="#e3b48a"/>
+    <rect x="316" y="309" width="112" height="10" rx="5" fill="#f2a76a"/>
+    <rect x="316" y="300" width="112" height="10" rx="5" fill="#ff9a52"/>
+  </g>
+  <g>
+    <rect x="334" y="300" width="42" height="10" rx="5" fill="url(#wHot)"/>
+    <animateTransform attributeName="transform" type="translate" dur="{{ dur }}" repeatCount="indefinite" calcMode="linear" keyTimes="{{ kt }}"
+      values="-46 0;-42.5 0;-32.53 0;-17.6 0;0 0;17.6 0;32.53 0;42.5 0;46 0;42.5 0;32.53 0;17.6 0;0 0;-17.6 0;-32.53 0;-42.5 0;-46 0"/>
+  </g>
+
+  <!-- vision sensor -->
+  <path d="M478 240 L318 302 L426 302 Z" fill="#4f8fe0" opacity=".12"/>
+  <path d="M478 240 L318 302M478 240 L426 302" stroke="#4f8fe0" stroke-width="1.4" stroke-dasharray="5 4" fill="none"/>
+  <path d="M506 380V256" class="w-line" stroke-width="4"/>
+  <g transform="rotate(-20 492 240)">
+    <rect x="470" y="228" width="48" height="24" rx="5" fill="#1f5fa8" class="w-edge"/>
+    <rect x="461" y="233" width="11" height="14" rx="2" fill="#0f2f57" class="w-edge"/>
+    <circle cx="510" cy="240" r="3" fill="#7fd8a4"/>
+  </g>
+
+  <!-- acoustic sensor -->
+  <path d="M292 380v-20" class="w-line" stroke-width="3"/>
+  <rect x="285" y="340" width="14" height="22" rx="7" fill="#9a7cf0" class="w-edge"/>
+  <g class="sound"><path d="M305 344a10 10 0 0 1 0 14" class="w1"/><path d="M310 339a17 17 0 0 1 0 24" class="w2"/></g>
+
+  <!-- labels -->
+  <g class="w-txt">
+    <path d="M430 334h34" class="w-leader"/><text x="468" y="338">WAAM WALL</text>
+    <path d="M520 226l14-14" class="w-leader"/><text x="512" y="204">VISION</text>
+    <path d="M285 344l-20-22" class="w-leader"/><text x="218" y="314">ACOUSTIC</text>
+  </g>
+
+  <!-- robot base (J1) -->
+  <g class="w-edge">
+    <rect x="86" y="388" width="108" height="22" rx="4" fill="#3b424b"/>
+    <rect x="100" y="352" width="80" height="40" rx="6" fill="url(#wSteel)"/>
+    <path d="M96 342h88a8 8 0 0 1 8 8v6H88v-6a8 8 0 0 1 8-8z" fill="url(#wYellow)"/>
+  </g>
+
+  <!-- arm -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" dur="{{ dur }}" repeatCount="indefinite" calcMode="linear" keyTimes="{{ kt }}"
+      values="-15.60 140 312;-14.42 140 312;-11.07 140 312;-6.04 140 312;0 140 312;6.29 140 312;11.99 140 312;16.12 140 312;17.66 140 312;16.12 140 312;11.99 140 312;6.29 140 312;0 140 312;-6.04 140 312;-11.07 140 312;-14.42 140 312;-15.60 140 312"/>
+    <!-- lower arm (J2) -->
+    <line x1="140" y1="312" x2="205" y2="160" stroke="#1f242b" stroke-width="40" stroke-linecap="round"/>
+    <line x1="140" y1="312" x2="205" y2="160" stroke="url(#wYellow)" stroke-width="36" stroke-linecap="round"/>
+    <line x1="152" y1="270" x2="190" y2="182" stroke="#ffe27a" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+    <!-- shoulder motor -->
+    <circle cx="140" cy="312" r="28" fill="url(#wYellow)" class="w-edge"/>
+    <circle cx="140" cy="312" r="15" fill="url(#wSteel)" class="w-edge"/>
+    <circle cx="140" cy="312" r="4" fill="#1f242b"/>
+
+    <g>
+      <animateTransform attributeName="transform" type="rotate" dur="{{ dur }}" repeatCount="indefinite" calcMode="linear" keyTimes="{{ kt }}"
+        values="19.71 205 160;18.36 205 160;14.40 205 160;8.10 205 160;0 205 160;-9.04 205 160;-17.72 205 160;-24.28 205 160;-26.78 205 160;-24.28 205 160;-17.72 205 160;-9.04 205 160;0 205 160;8.10 205 160;14.40 205 160;18.36 205 160;19.71 205 160"/>
+      <!-- J3 counter motor behind the elbow -->
+      <rect x="150" y="146" width="42" height="28" rx="6" fill="url(#wSteel)" class="w-edge"/>
+      <!-- forearm, tapering toward the wrist -->
+      <path d="M205 140 L360 182 A12 12 0 0 1 360 204 L205 182 Z" fill="#1f242b"/>
+      <path d="M205 143 L359 184.5 A9 9 0 0 1 359 201 L205 179 Z" fill="url(#wYellow)"/>
+      <path d="M220 152 L340 184" stroke="#ffe27a" stroke-width="3" stroke-linecap="round" opacity=".8"/>
+      <!-- wire spool and feeder -->
+      <circle cx="252" cy="130" r="16" fill="#b45f2a" class="w-edge"/>
+      <circle cx="252" cy="130" r="9" fill="#e08a4a" class="w-edge"/>
+      <circle cx="252" cy="130" r="2.5" fill="#1f242b"/>
+      <path d="M252 146 L262 160" class="w-line" stroke-width="3"/>
+      <path d="M268 112 C 340 96, 386 130, 376 214" fill="none" stroke="#2b2f36" stroke-width="3"/>
+      <!-- elbow (J3) -->
+      <circle cx="205" cy="160" r="24" fill="url(#wYellow)" class="w-edge"/>
+      <circle cx="205" cy="160" r="11" fill="url(#wSteel)" class="w-edge"/>
+
+      <g>
+        <animateTransform attributeName="transform" type="rotate" dur="{{ dur }}" repeatCount="indefinite" calcMode="linear" keyTimes="{{ kt }}"
+          values="-4.11 372 192;-3.94 372 192;-3.33 372 192;-2.06 372 192;0 372 192;2.75 372 192;5.73 372 192;8.16 372 192;9.12 372 192;8.16 372 192;5.73 372 192;2.75 372 192;0 372 192;-2.06 372 192;-3.33 372 192;-3.94 372 192;-4.11 372 192"/>
+        <!-- wrist (J4 to J6) -->
+        <circle cx="372" cy="192" r="15" fill="url(#wYellow)" class="w-edge"/>
+        <circle cx="372" cy="192" r="6" fill="url(#wSteel)" class="w-edge"/>
+        <rect x="362" y="205" width="20" height="14" rx="3" fill="#3b424b" class="w-edge"/>
+        <!-- welding torch -->
+        <path d="M364 219h16l-3 52h-10z" fill="#2b2f36" class="w-edge"/>
+        <rect x="366" y="271" width="12" height="11" rx="2" fill="#c97a3a" class="w-edge"/>
+        <path d="M372 282v9" stroke="#c0c6cc" stroke-width="1.8"/>
+        <!-- arc and sparks -->
+        <circle cx="372" cy="297" r="32" fill="url(#wGlow)" class="arc-glow"/>
+        <circle cx="372" cy="297" r="4" fill="#ffffff"/>
+        <g class="sparks">
+          <circle cx="372" cy="298" r="2.0" fill="#ffd36b" class="pt" style="--dx:-18px;--dy:38px;--up:-18px;animation-delay:0.10s"/>
+          <circle cx="372" cy="298" r="1.3" fill="#fff1b8" class="pt" style="--dx:39px;--dy:21px;--up:-18px;animation-delay:0.26s"/>
+          <circle cx="372" cy="298" r="2.0" fill="#ffd36b" class="pt" style="--dx:-56px;--dy:46px;--up:-9px;animation-delay:0.64s"/>
+          <circle cx="372" cy="298" r="1.3" fill="#fff1b8" class="pt" style="--dx:-40px;--dy:22px;--up:-18px;animation-delay:0.59s"/>
+          <circle cx="372" cy="298" r="1.6" fill="#ffb347" class="pt" style="--dx:10px;--dy:21px;--up:-21px;animation-delay:0.11s"/>
+          <circle cx="372" cy="298" r="1.6" fill="#fff1b8" class="pt" style="--dx:10px;--dy:33px;--up:-25px;animation-delay:0.51s"/>
+          <circle cx="372" cy="298" r="1.3" fill="#ffb347" class="pt" style="--dx:-16px;--dy:23px;--up:-17px;animation-delay:0.63s"/>
+          <circle cx="372" cy="298" r="1.3" fill="#ffd36b" class="pt" style="--dx:56px;--dy:27px;--up:-11px;animation-delay:0.56s"/>
+          <circle cx="372" cy="298" r="2.0" fill="#ffd36b" class="pt" style="--dx:-30px;--dy:31px;--up:-24px;animation-delay:0.63s"/>
+          <circle cx="372" cy="298" r="1.3" fill="#fff1b8" class="pt" style="--dx:-30px;--dy:36px;--up:-25px;animation-delay:0.92s"/>
+          <circle cx="372" cy="298" r="2.0" fill="#ff8a3d" class="pt" style="--dx:-4px;--dy:20px;--up:-20px;animation-delay:0.64s"/>
+          <circle cx="372" cy="298" r="1.3" fill="#ff8a3d" class="pt" style="--dx:-9px;--dy:45px;--up:-14px;animation-delay:1.03s"/>
+          <circle cx="372" cy="298" r="1.3" fill="#ff8a3d" class="pt" style="--dx:16px;--dy:25px;--up:-15px;animation-delay:0.81s"/>
+          <circle cx="372" cy="298" r="2.0" fill="#fff1b8" class="pt" style="--dx:51px;--dy:23px;--up:-10px;animation-delay:0.31s"/>
+          <circle cx="372" cy="298" r="2.0" fill="#ff8a3d" class="pt" style="--dx:-11px;--dy:39px;--up:-25px;animation-delay:0.97s"/>
+          <circle cx="372" cy="298" r="1.3" fill="#ffb347" class="pt" style="--dx:-33px;--dy:25px;--up:-19px;animation-delay:0.53s"/>
+          <circle cx="372" cy="298" r="2.0" fill="#ff8a3d" class="pt" style="--dx:-20px;--dy:31px;--up:-25px;animation-delay:0.62s"/>
+          <circle cx="372" cy="298" r="1.6" fill="#ffd36b" class="pt" style="--dx:27px;--dy:37px;--up:-22px;animation-delay:0.99s"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

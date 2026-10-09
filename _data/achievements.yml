@@ -1,0 +1,114 @@
+milestones:
+  - title: M.S. in Industrial Engineering (Thesis Option)
+    meta: Louisiana State University, conferred August 14, 2026
+    text: 'Thesis: <em>Trustworthy Artificial Intelligence for Real-Time Quality Assurance in Additive Manufacturing</em>.'
+
+awards:
+  - icon: trophy
+    title: 2nd Place, Best Track Paper Award (Health Systems Track)
+    meta: IISE Annual Conference and Expo, 2026
+    text: For the paper "Multimodal Vision-Language Models for Automated and Explainable Postoperative Complication Risk Stratification".
+  - icon: medal
+    title: 3rd Place, DAIS Student Data Analytics Competition
+    meta: IISE Annual Conference and Expo, 2026
+    text: National recognition by the IISE Data Analytics and Information Systems (DAIS) Division.
+  - icon: trophy
+    title: Champion, IISE Innovative Design Competition
+    meta: IISE Annual Conference and Expo, 2025
+    text: '"Hearth AI: Meaningful Connection at your Fingertips".'
+  - icon: medal
+    title: Runner-up, Stakeholder Engagement Data Challenge
+    meta: INFORMS Annual Meeting, 2025
+  - icon: medal
+    title: 2nd Runner-up, QCRE Data Challenge
+    meta: IISE Annual Conference and Expo, 2025
+  - icon: mic
+    title: Best Graduate Oral Presentation
+    meta: Louisiana Academy of Sciences, 99th Annual Meeting, 2025
+    text: Materials Science and Engineering division.
+  - icon: plane
+    title: NSF Student Travel Award
+    meta: NAMRC, 2025
+  - icon: plane
+    title: NSF Student Travel Award
+    meta: IISE Annual Conference and Expo, 2025
+  - icon: mic
+    title: Best Technical Presentation (merit-based)
+    meta: IEEE ICCIT, 2024
+  - icon: grad
+    title: University Merit Scholarship
+    meta: SUST, 2020 to 2024
+    text: Top 5% for four consecutive years.
+
+grants:
+  - title: Physics-Informed ML for Process Defect Detection and Fatigue Modeling in WAAM
+    meta: NSF LAMDA Seed Grant, Aug 2025
+    status: Funded
+    status_class: status-ok
+  - title: Cross-Modality Domain Adaptation for Anomaly Detection in LPBF Systems
+    meta: NASA EPSCoR CAN, Aug 2025
+    status: Recommended
+    status_class: status-accent
+  - title: Privacy-preserving Certification Framework for AMaaS Platforms
+    meta: NSF Southwest I-Corps IdeaLaunch, Feb to Mar 2025
+    status: Selected, Entrepreneurial Lead
+    status_class: status-accent
+  - title: Crowd-Sourced Data with ML for Road Condition Monitoring
+    meta: LTRC TIRE Program, Jan 2025
+    status: Not funded
+
+service:
+  - icon: flag
+    title: Judge, Louisiana Science and Engineering Fair (LSEF), Senior Division
+    meta: Apr 2026
+  - icon: mic
+    title: Invited talk, CeRoM, LSU
+    meta: Dec 12, 2025
+    text: '"Application of Machine Learning Methods in Grease Manufacturing under Data Scarcity." <a href="https://drive.google.com/file/d/1C9_OywNGRFTo3NkrM9h7bl9viEQqztRU/view?usp=drive_link" target="_blank" rel="noopener">Slides</a>'
+  - icon: review
+    title: Reviewer, Digital Twins and Applications (Wiley), Elsevier Heliyon, and 2026 MSEC Conference
+    meta: 2025 to present
+  - icon: users
+    title: Session Chair, 2025 IISE Annual Conference and Expo
+    meta: May 2025
+
+leadership:
+  - icon: flag
+    title: Sports Secretary, Bangladeshi Student Association (BSA), LSU
+    meta: Jun 2025 to present
+    text: Lead organizing committees for sporting events and community engagement.
+  - icon: users
+    title: Founder and Director, Computational Intelligence and Operations Lab (CIOL)
+    meta: Jan 2022 to present
+    text: 'An open research and learning community at the intersection of optimization and machine learning. <a href="https://github.com/ciol-researchlab/CIOL-Winter-ML-Bootcamp" target="_blank" rel="noopener">Bootcamp materials</a>'
+  - icon: grad
+    title: Seminar Organizer, CIOL
+    meta: Nov 2023
+    text: 'Higher-education research seminar with 50+ attendees. <a href="https://youtu.be/QvSKnodvAbY?si=fgS55CbQcrpNkshf" target="_blank" rel="noopener">Video</a>'
+
+skills:
+  - group: Programming
+    items: [Python, MATLAB, C, Julia, SQL]
+  - group: Machine learning
+    items: [PyTorch, PyTorch Geometric, TensorFlow, Scikit-learn, PyCaret, DeepXDE, Hugging Face Transformers]
+  - group: Optimization
+    items: [Gurobi, Pyomo, CVXPy, JuMP]
+  - group: Data science
+    items: [Pandas, NumPy, Matplotlib, Seaborn, Tableau, Jupyter]
+  - group: Tools
+    items: [LaTeX, Git, Docker, AutoCAD, Arena, SolidWorks, Microsoft Office]
+  - group: Languages
+    items: [English (fluent), Bengali (native)]
+
+memberships:
+  - Institute of Industrial and Systems Engineers (IISE), Member, 2025 to 2027
+
+press:
+  - IISE Innovative Design Competition 2025, winner highlight
+  - LSU Mechanical and Industrial Engineering reposted an award-winning update (LinkedIn)
+  - INFORMS Data Mining Society posted the Stakeholder Data Challenge results (LinkedIn)
+
+personal: >-
+  I enjoy organizing community sports, mentoring students, and building practical ML systems that connect real-world
+  sensing with trustworthy decision-making. Outside work, I enjoy cricket, badminton and soccer, writing technical blogs,
+  and designing clean research visuals for papers and presentations.

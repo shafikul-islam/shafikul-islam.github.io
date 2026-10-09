@@ -1,0 +1,120 @@
+// Design tokens. Every color, radius, shadow and font lives here.
+// Light theme: warm cream paper with navy ink. Dark theme: deep navy with warm white ink.
+// One accent: welding-arc orange.
+
+:root {
+  // Illustration palette (same in both themes)
+  --il-robot: #9aa3ad;
+  --il-robot-edge: #3b424b;
+  --il-fixture: #c9a77c;
+  --il-part: #d4537e;
+  --il-wood: #b98b5a;
+  --il-ok: #2fa866;
+  --il-fail: #e04848;
+  --il-twin: #4f8fe0;
+  --il-gold: #e3b341;
+  --il-light: #ffd36b;
+
+  --font-head: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --container: 1160px;
+  --gutter: clamp(16px, 4vw, 32px);
+  --header-h: 64px;
+
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
+
+@mixin light-theme {
+  color-scheme: light;
+  --bg: #f7f4ec;
+  --bg-elev: #fffdf8;
+  --bg-sunken: #efe9dc;
+  --bg-header: rgba(247, 244, 236, .86);
+  --ink: #142030;
+  --ink-2: #3a4555;
+  --ink-3: #5f6977;
+  --line: #e3dccb;
+  --line-strong: #cbc1ab;
+  --accent: #e2570f;
+  --accent-ink: #b0400a;
+  --accent-soft: #fbe5d6;
+  --accent-contrast: #ffffff;
+  --steel: #3f5f80;
+  --steel-soft: #e1e8ef;
+  --ok: #2f7a4b;
+  --ok-soft: #dff0e4;
+  --grid: rgba(20, 32, 48, .055);
+  --shadow: 0 1px 2px rgba(20, 32, 48, .05), 0 6px 20px rgba(20, 32, 48, .06);
+  --shadow-lg: 0 2px 6px rgba(20, 32, 48, .06), 0 18px 48px rgba(20, 32, 48, .10);
+  --robot-body: #fffdf8;
+  --robot-joint: #142030;
+  --tint-blue: #eaf1fb;
+  --tint-blue-ink: #1f5fa8;
+  --tint-yellow: #fcf3d9;
+  --tint-yellow-ink: #8a6100;
+  --tint-green: #e5f3ea;
+  --tint-green-ink: #23794a;
+  --tint-rose: #fbe8ec;
+  --tint-rose-ink: #b23a5a;
+  --tint-violet: #efeafb;
+  --tint-violet-ink: #5b45a8;
+  --navy: #16325c;
+  --hero-wash: linear-gradient(135deg, #eaf1fb 0%, #f7f4ec 45%, #fcf3d9 100%);
+  --robot-yellow: #f2b705;
+  --robot-yellow-dark: #c99400;
+  --robot-gray: #5d6670;
+}
+
+@mixin dark-theme {
+  color-scheme: dark;
+  --bg: #0c131d;
+  --bg-elev: #131c2a;
+  --bg-sunken: #0a0f17;
+  --bg-header: rgba(12, 19, 29, .82);
+  --ink: #ece7dc;
+  --ink-2: #bcc3cd;
+  --ink-3: #8f99a6;
+  --line: #222e40;
+  --line-strong: #34445c;
+  --accent: #ff7a33;
+  --accent-ink: #ff9d63;
+  --accent-soft: rgba(255, 122, 51, .13);
+  --accent-contrast: #1a0d05;
+  --steel: #8fb3d6;
+  --steel-soft: rgba(143, 179, 214, .12);
+  --ok: #6fcf97;
+  --ok-soft: rgba(111, 207, 151, .12);
+  --grid: rgba(143, 179, 214, .07);
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 6px 20px rgba(0, 0, 0, .25);
+  --shadow-lg: 0 2px 6px rgba(0, 0, 0, .35), 0 18px 48px rgba(0, 0, 0, .4);
+  --robot-body: #1a2537;
+  --robot-joint: #ece7dc;
+  --tint-blue: rgba(96, 156, 230, .12);
+  --tint-blue-ink: #8dbbf2;
+  --tint-yellow: rgba(242, 183, 5, .11);
+  --tint-yellow-ink: #f2c94c;
+  --tint-green: rgba(111, 207, 151, .11);
+  --tint-green-ink: #7fd8a4;
+  --tint-rose: rgba(236, 110, 146, .12);
+  --tint-rose-ink: #f29ab3;
+  --tint-violet: rgba(160, 136, 240, .13);
+  --tint-violet-ink: #b9a8f5;
+  --navy: #8dbbf2;
+  --hero-wash: linear-gradient(135deg, rgba(96,156,230,.10) 0%, #0c131d 50%, rgba(242,183,5,.07) 100%);
+  --robot-yellow: #f2b705;
+  --robot-yellow-dark: #b88a00;
+  --robot-gray: #8a95a3;
+}
+
+:root { @include light-theme; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { @include dark-theme; }
+}
+
+:root[data-theme="dark"] { @include dark-theme; }

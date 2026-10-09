@@ -1,0 +1,28 @@
+# Public profile links shown in the hero, footer and contact page.
+name: MD Shafikul Islam
+short_name: Sohan
+tagline: Physical AI · Robotics · Metal AM
+location: Baton Rouge, LA
+email: misla79@lsu.edu
+links:
+  - name: Email
+    url: mailto:misla79@lsu.edu
+    icon: mail
+  - name: Google Scholar
+    url: https://scholar.google.com/citations?user=A8KOQBEAAAAJ&hl=en
+    icon: scholar
+  - name: GitHub
+    url: https://github.com/shafikul-islam
+    icon: github
+  - name: LinkedIn
+    url: https://www.linkedin.com/in/md-shafikul-islam-sohan/
+    icon: linkedin
+  - name: ORCID
+    url: https://orcid.org/0009-0007-3824-4384
+    icon: orcid
+  - name: DBLP
+    url: https://dblp.org/pid/359/9192.html
+    icon: book
+  - name: OpenReview
+    url: https://openreview.net/profile?id=~MD_Shafikul_Islam1
+    icon: review

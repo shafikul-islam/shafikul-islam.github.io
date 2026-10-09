@@ -1,24 +1,25 @@
-<div class='header'>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="site-header">
   <div class="container">
-    <div class="logo">
-      <a href="{{ '/' | relative_url }}" class="logo-link">
-        <img width="{{ site.logo.desktop_width }}" height="{{ site.logo.desktop_height }}" alt="{{ site.title }}"
-          src="{{ site.logo.desktop | relative_url }}" class="logo-img" />
-        <span class="logo-text">{{ site.author }}</span>
-      </a>
-    </div>
-    <div class="logo-mobile">
-      <a href="{{ '/' | relative_url }}" class="logo-link">
-        <img width="{{ site.logo.mobile_width }}" height="{{ site.logo.mobile_height }}" alt="{{ site.title }}"
-          src="{{ site.logo.mobile | relative_url }}" class="logo-img" />
-      </a>
-    </div>
-    {% include main-menu.html %}
-    <div class="header-actions">
-      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
-        <span class="theme-icon" aria-hidden="true"></span>
-      </button>
-      {% include hamburger.html %}
-    </div>
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.data.profile.name }}, home">
+      <img src="{{ '/assets/images/profile.png' | relative_url }}" alt="" width="36" height="36">
+      <span class="brand-text">
+        <span class="brand-name">{{ site.data.profile.name }}</span>
+        <span class="brand-sub">{{ site.data.profile.tagline }}</span>
+      </span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        {%- for item in site.data.menus.main %}
+        <li><a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.name }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+    <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark theme">
+      {% include icon.html name="moon" class="icon-moon" %}{% include icon.html name="sun" class="icon-sun" %}
+    </button>
+    <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+      {% include icon.html name="menu" class="icon-menu" %}{% include icon.html name="close" class="icon-close" %}
+    </button>
   </div>
-</div>
+</header>

@@ -1,19 +1,31 @@
-<div class="footer">
+<footer class="site-footer">
   <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="footer-inner">
-          <h2 class="footer-title">{{site.title}}</h2>
-          <ul>
-            {% assign footermenu = site.data.menus.footer | sort: 'weight'  %}
-            {% for item in footermenu %}
-            <li class="{% if item.url == page.url %}active{% endif %}">
-              <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-title">{{ site.data.profile.name }}</div>
+        <p>PhD researcher in Industrial Engineering at Louisiana State University, building Physical AI for manufacturing.</p>
+        <p class="mono" style="font-size:.78rem;">{% include icon.html name="pin" %} {{ site.data.profile.location }}</p>
+      </div>
+      <div>
+        <div class="footer-label">Pages</div>
+        <ul class="footer-links">
+          {%- for item in site.data.menus.main %}
+          <li><a href="{{ item.url | relative_url }}">{{ item.name }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
+      <div>
+        <div class="footer-label">Profiles</div>
+        <ul class="footer-links">
+          {%- for l in site.data.profile.links %}
+          <li><a href="{{ l.url }}"{% unless l.url contains 'mailto' %} target="_blank" rel="noopener"{% endunless %}>{{ l.name }}</a></li>
+          {%- endfor %}
+        </ul>
       </div>
     </div>
+    <div class="footer-bottom">
+      <span>&copy; {{ site.time | date: "%Y" }} {{ site.data.profile.name }}</span>
+      <span>Built with Jekyll &middot; Hosted on GitHub Pages</span>
+    </div>
   </div>
-</div>
+</footer>

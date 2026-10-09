@@ -1,0 +1,77 @@
+degrees:
+  - degree: Ph.D. in Industrial Engineering
+    school: Louisiana State University (LSU)
+    dept: Department of Mechanical and Industrial Engineering
+    url: https://www.lsu.edu/
+    when: Jan 2025 to present
+    location: Baton Rouge, LA, USA
+    status: In progress
+    tint: blue
+    meta:
+      - [GPA, "4.05"]
+      - [Advisor, '<a href="https://www.lsu.edu/eng/mie/people/faculty/bappy.php" target="_blank" rel="noopener">Dr. Mahathir Mohammad Bappy</a>, AnalyticsIQ Lab']
+    text: >-
+      Research focus: <strong>trustworthy and transferable autonomy for cyber-physical systems</strong>, geometry-invariant
+      melt pool control, and physics-informed generative AI for self-healing manufacturing.
+    bullets:
+      - "<strong>Physics-informed ML for process defect detection and fatigue modeling (NSF LAMDA):</strong> co-authored the funded proposal, built a sensor-integrated WAAM platform, and developed PI-CNN and physics-guided LSTM models for porosity and fatigue prediction."
+      - "<strong>ArcAssist:</strong> an edge-AI co-pilot on NVIDIA Jetson that estimates melt pool state, flags risks, and suggests corrective actions for wire arc additive manufacturing."
+  - degree: M.S. in Industrial Engineering (Thesis Option)
+    school: Louisiana State University (LSU)
+    dept: Department of Mechanical and Industrial Engineering
+    url: https://www.lsu.edu/
+    when: Jan 2025 to Aug 2026
+    location: Baton Rouge, LA, USA
+    status: Conferred August 14, 2026
+    tint: green
+    meta:
+      - [Thesis, "<em>Trustworthy Artificial Intelligence for Real-Time Quality Assurance in Additive Manufacturing</em>"]
+      - [Advisor, '<a href="https://www.lsu.edu/eng/mie/people/faculty/bappy.php" target="_blank" rel="noopener">Dr. Mahathir Mohammad Bappy</a>']
+  - degree: B.Sc. in Industrial and Production Engineering
+    school: Shahjalal University of Science and Technology (SUST)
+    dept: Department of Industrial and Production Engineering
+    url: https://www.sust.edu/
+    when: Jan 2019 to Mar 2024
+    location: Sylhet, Bangladesh
+    status: Completed 2024
+    tint: yellow
+    meta:
+      - [GPA, "3.74/4.00 (top 5% of 60 students)"]
+      - [Advisor, '<a href="https://www.sust.edu/d/ipe/faculty-profile-detail/310" target="_blank" rel="noopener">Dr. A. M. M. Mukaddes</a>']
+    bullets:
+      - '<strong>Thesis:</strong> "Predict Students'' Performance and Optimize Preparatory Leave: An Integrated Deep Learning and Dynamic Programming Approach."'
+      - "<strong>SUST Research Center project:</strong> automated timetabling software using a genetic algorithm."
+      - University Merit Scholarship (top 5% of class) for four consecutive years (2020 to 2024).
+
+coursework:
+  completed:
+    - [ME 7953, Optimal Control]
+    - [EE 7700, Machine Learning for Security in Cyber-Physical Systems]
+    - [IE 7722, Artificial Intelligence in Manufacturing]
+    - [CSC 4343G, Applied Deep Learning]
+    - [CSC 4700G, Special Topics in Computer Science]
+    - [EXST 7011, Nonparametric Statistics]
+    - [IE 7361, Industrial Engineering Research Methods]
+    - [IE 7460, Applied Occupational Ergonomics]
+  in_progress_term: Fall 2026
+  in_progress:
+    - [EE 7500, "Nonlinear, Adaptive, and Learning-Based Control of Robots"]
+    - [IE 7429, Analytics and Data Science in Industrial Engineering]
+    - [IE 7722, Agentic AI Systems]
+
+training:
+  - title: Information Technology Intern, IDLC Finance PLC
+    when: Sep to Dec 2024
+    text: Developed secure data workflows and contributed to IT operations.
+  - title: TICI Training Institute
+    when: Nov to Dec 2023
+    text: Practical sessions on operations processes, instrumentation and control, and industrial hazards and safety.
+  - title: BITAC
+    when: Dec 2022
+    text: Machine shop, industrial safety, and advanced manufacturing training.
+
+projects:
+  - title: Porosity detection
+    text: Neural-network anomaly detector to predict thermal-induced porosity in AM parts with 98% accuracy.
+  - title: Netflow optimization
+    text: Netflow model to minimize transportation costs while meeting demand and capacity constraints.

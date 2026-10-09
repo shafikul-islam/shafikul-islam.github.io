@@ -1,0 +1,66 @@
+research:
+  - role: Graduate Research Assistant
+    org: AnalyticsIQ Lab, Louisiana State University
+    url: https://www.lsu.edu/eng/mie/people/faculty/bappy.php
+    when: Jan 2025 to present
+    location: Baton Rouge, LA, USA
+    text: >-
+      Doctoral research on trustworthy autonomy for cyber-physical systems in metal additive manufacturing. Co-authored a
+      successful <a href="https://www.nsf.gov/" target="_blank" rel="noopener">NSF</a> proposal and support experimental
+      infrastructure that integrates thermal, optical, and electrical sensors on a wire arc additive manufacturing (WAAM) platform.
+    bullets:
+      - Developing a <strong>physics-informed convolutional neural network (PI-CNN)</strong> that fuses multimodal in-situ WAAM signals for real-time porosity detection, validated with <strong>X-ray computed tomography (XCT)</strong>.
+      - Formulating a <strong>physics-guided LSTM fatigue model</strong> that links process-induced defects to structural performance by combining fracture mechanics with deep learning.
+      - Building <strong>ArcAssist</strong>, an <strong>edge-AI co-pilot</strong> on NVIDIA Jetson that estimates melt-pool states, flags risks, and recommends bounded corrective actions.
+      - "<strong>DrinkSafe LA</strong> (National Academies Gulf Research Program and NOAA): built and debugged Python data pipelines for water-quality indicators and supported resilience modeling."
+    tags: [WAAM, Physics-informed ML, Edge AI, XCT]
+  - role: Founder and Director
+    org: Computational Intelligence and Operations Lab (CIOL)
+    url: https://github.com/ciol-researchlab
+    when: Jan 2022 to present
+    location: Sylhet, Bangladesh (remote)
+    text: >-
+      Founded an open research and learning lab connecting Industrial Engineering and AI. I mentor students and lead projects on graph
+      neural networks, optimization, and decision-focused learning for supply-chain and manufacturing problems.
+    bullets:
+      - Developed <strong>SupplyGraph</strong>, a benchmark dataset and framework for multi-echelon supply-chain planning with GNNs.
+      - Proposed a <strong>decision-focused learning</strong> pipeline for <strong>inventory routing</strong>, so neural models optimize downstream decisions under uncertainty.
+      - Organized seminars and bootcamps on explainable AI, higher-education pathways, and research translation.
+    tags: [Graph ML, Optimization, Mentoring]
+  - role: Undergraduate Researcher
+    org: Department of Industrial and Production Engineering, SUST
+    url: https://www.sust.edu/
+    when: Jun 2022 to Dec 2022
+    location: Sylhet, Bangladesh
+    text: Applied optimization and algorithm design to educational timetabling and scheduling systems.
+    bullets:
+      - Built an <strong>automated timetabling system</strong> with <strong>genetic algorithms</strong>, modeling hard and soft constraints for better schedules.
+      - Managed data processing, evaluation, and feasibility checks for conflict-free timetables.
+    tags: [Genetic Algorithms, Scheduling]
+
+mentoring:
+  - role: Undergraduate Research Mentor
+    org: AnalyticsIQ Lab, LSU
+    when: 2024 to present
+    text: Directing two undergraduate researchers in designing and running experiments for cyber-physical manufacturing systems, with hands-on guidance on AI-driven sensing, data pipelines, and manufacturing analytics.
+  - role: Instructor and Mentor
+    org: CIOL Winter ML Bootcamp
+    when: Jan 2024
+    text: Delivered sessions on explainable AI and translating code to research, and mentored a cohort of about 20 students.
+
+industry:
+  - role: Information Technology Intern
+    org: IDLC Finance PLC
+    when: Sep 2024 to Dec 2024
+    location: Dhaka, Bangladesh
+    text: Supported secure IT operations and workflow automation for enterprise finance systems.
+  - role: Industrial Trainee
+    org: Training Institute for Chemical Industries (TICI)
+    when: Dec 2023
+    location: Dhaka, Bangladesh
+    text: Hands-on training in operations processes, instrumentation and control, engineering materials, welding technology, and industrial safety.
+  - role: Industrial Training
+    org: BITAC
+    when: Dec 2022 (10-day program)
+    location: Bangladesh
+    text: Machine shop operations, industrial safety, and advanced manufacturing fundamentals.

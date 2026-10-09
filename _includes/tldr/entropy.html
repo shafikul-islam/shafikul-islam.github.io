@@ -1,0 +1,31 @@
+<svg class="tl-svg" viewBox="0 0 760 300" role="img" aria-label="Illustrative curves: after a restart, arc-sound entropy drops; entropy-aware MPC returns it to the stable band faster than a thermal-only controller by applying a short front-loaded heat pulse.">
+  <text x="20" y="22" class="tl-title">Arc-sound entropy after a cold restart</text>
+  <rect x="60" y="56" width="400" height="34" fill="var(--il-ok)" opacity=".13"/>
+  <text x="466" y="78" style="fill:var(--tint-green-ink)">stable band</text>
+  <path d="M60 230H460M60 40V230" class="tl-axis"/>
+  <text x="200" y="250">time after restart</text>
+  <text x="14" y="140" transform="rotate(-90 14 140)">entropy H(t)</text>
+  <path d="M60 70 L90 200 C130 190 170 160 220 120 S330 82 455 74" class="tl-draw" style="stroke:var(--il-robot);stroke-width:3;fill:none"/>
+  <path d="M60 70 L90 200 C110 140 130 90 165 76 S260 72 455 72" class="tl-draw" style="stroke:var(--accent);stroke-width:3.4;fill:none;animation-delay:.2s"/>
+  <g transform="translate(470 120)">
+    <rect width="12" height="4" y="-2" fill="var(--il-robot)"/><text x="18" y="4">thermal-only MPC</text>
+    <rect width="12" height="4" y="20" fill="var(--accent)"/><text x="18" y="26">entropy-aware MPC</text>
+  </g>
+  <text x="530" y="22" class="tl-title">Heat-input correction q(t)</text>
+  <path d="M530 230H740M530 120V230" class="tl-axis"/>
+  <g class="tl-pulse">
+    <rect x="540" y="140" width="22" height="90" fill="var(--accent)"/>
+    <rect x="566" y="170" width="22" height="60" fill="var(--accent)" opacity=".8"/>
+    <rect x="592" y="198" width="22" height="32" fill="var(--accent)" opacity=".6"/>
+    <rect x="618" y="214" width="22" height="16" fill="var(--accent)" opacity=".45"/>
+    <rect x="644" y="222" width="22" height="8" fill="var(--accent)" opacity=".3"/>
+  </g>
+  <text x="560" y="250">front-loaded pulse</text>
+  <text x="20" y="288" style="fill:var(--ink-3)">Shapes are illustrative. Measured curves are on the poster.</text>
+</svg>
+<style>
+.tl-pulse rect { transform-box: fill-box; transform-origin: bottom; animation: grow 3.2s var(--ease) infinite; }
+.tl-pulse rect:nth-child(2) { animation-delay: .15s } .tl-pulse rect:nth-child(3) { animation-delay: .3s }
+.tl-pulse rect:nth-child(4) { animation-delay: .45s } .tl-pulse rect:nth-child(5) { animation-delay: .6s }
+@keyframes grow { 0% { transform: scaleY(0); } 40%, 90% { transform: scaleY(1); } 100% { transform: scaleY(0); } }
+</style>

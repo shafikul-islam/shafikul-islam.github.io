@@ -1,0 +1,26 @@
+---
+layout: page
+title: Contact
+eyebrow: Contact
+heading: Get in touch
+lead: Email is the fastest way to reach me. I am happy to talk about research collaborations, internships and roles, speaking, and student mentorship.
+---
+{%- assign p = site.data.profile -%}
+<section class="section">
+  <div class="container grid grid-2">
+    <div class="card">
+      <h2 style="font-size:1.35rem;">Email</h2>
+      <div class="contact-row"><span class="item-icon">{% include icon.html name="mail" %}</span><span><span class="item-meta">Academic</span><a href="mailto:misla79@lsu.edu">misla79@lsu.edu</a></span></div>
+      <div class="contact-row"><span class="item-icon">{% include icon.html name="mail" %}</span><span><span class="item-meta">Personal</span><a href="mailto:sohan11807044@gmail.com">sohan11807044@gmail.com</a></span></div>
+      <div class="contact-row"><span class="item-icon">{% include icon.html name="pin" %}</span><span><span class="item-meta">Location</span>Louisiana State University, Baton Rouge, LA</span></div>
+    </div>
+    <div class="card">
+      <h2 style="font-size:1.35rem;">Profiles</h2>
+      <ul class="link-pills">
+        {%- for l in p.links %}{% unless l.icon == "mail" %}
+        <li><a class="link-pill" href="{{ l.url }}" target="_blank" rel="noopener">{% include icon.html name=l.icon %}{{ l.name }}</a></li>
+        {%- endunless %}{% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>

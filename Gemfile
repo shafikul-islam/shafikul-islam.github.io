@@ -1,7 +1,11 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 3.9.0"
-gem "kramdown-parser-gfm"
-gem "ffi", "~> 1.15.0"
-gem "jekyll-environment-variables"
-gem "jekyll-sass-converter"
+# Same gem set GitHub Pages uses to build the live site
+gem "github-pages", "~> 232", group: :jekyll_plugins
+
+# Needed for local preview on Ruby 3.x
+gem "webrick"
+gem "csv"
+gem "base64"
+gem "bigdecimal"
+gem "logger"

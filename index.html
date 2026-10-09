@@ -1,0 +1,145 @@
+---
+layout: default
+title: Home
+---
+{%- assign p = site.data.profile -%}
+{%- assign r = site.data.research -%}
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Ph.D. Researcher &middot; Louisiana State University</div>
+      <h1>{{ p.name }}</h1>
+      <p class="hero-role">Building <em>Physical AI for manufacturing</em>: machines that sense, predict, and correct themselves in real time.</p>
+      <p>
+        I am a Ph.D. student in Industrial Engineering at <a href="https://www.lsu.edu/" target="_blank" rel="noopener">Louisiana State University</a>
+        and a Graduate Research Assistant in the <a href="https://www.lsu.edu/eng/mie/people/faculty/bappy.php" target="_blank" rel="noopener">AnalyticsIQ Lab</a>.
+        My research connects <strong>in-situ monitoring, digital twins, and optimal control</strong> for metal additive manufacturing
+        (WAAM, DED, and LPBF), and I recently completed my <strong>M.S. in Industrial Engineering</strong> (August 2026). My current work extends this to <strong>robot cells, digital twins, and sim to real</strong>.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="{{ '/research/' | relative_url }}">Explore research {% include icon.html name="arrow-right" %}</a>
+        <a class="btn" href="{{ '/publications/' | relative_url }}">Publications</a>
+        <a class="btn" href="{{ '/cv/' | relative_url }}">{% include icon.html name="file" %} CV</a>
+      </div>
+      <ul class="link-pills" aria-label="Profiles">
+        {%- for l in p.links %}
+        <li><a class="link-pill" href="{{ l.url }}"{% unless l.url contains 'mailto' %} target="_blank" rel="noopener"{% endunless %}>{% include icon.html name=l.icon %}{{ l.name }}</a></li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <div class="hero-photo">
+      <img src="{{ '/assets/images/headshot.jpg' | relative_url }}" alt="Portrait of MD Shafikul Islam" width="720" height="720" fetchpriority="high">
+      <span class="photo-badge b1">{% include icon.html name="robot" %} Physical AI &amp; Robotics</span>
+      <span class="photo-badge b2">{% include icon.html name="grad" %} M.S. 2026 &middot; Ph.D. LSU</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Research focus</div>
+        <h2>Four pillars of my work</h2>
+        <p>Metal additive manufacturing can print complex parts, but it still struggles to detect process changes and correct defects during fabrication. I work on the full loop, from sensing to action.</p>
+      </div>
+      <a class="text-link" href="{{ '/research/' | relative_url }}">Research overview {% include icon.html name="arrow-right" %}</a>
+    </div>
+    <div class="grid grid-4">
+      {%- assign tints = "blue,yellow,green,rose,violet" | split: "," -%}
+      {%- for item in r.pillars %}{% assign ti = forloop.index0 | modulo: 5 %}
+      <article class="card card-hover pillar tint-{{ tints[ti] }}">
+        <div class="card-icon">{% include icon.html name=item.icon %}</div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Updates</div>
+        <h2>Selected news</h2>
+        <p>Papers, awards, talks, and milestones. Scroll inside the box for older items.</p>
+      </div>
+    </div>
+    <div class="card card-flat card-rule-accent">
+      <div class="news-scroll" tabindex="0" role="region" aria-label="All news, scrollable">
+        <ul class="news">
+          {%- for n in site.data.news %}
+          <li{% if forloop.index <= 6 %} class="is-new"{% endif %}><span class="news-date">{{ n.date }}</span><span class="news-text"><span class="news-badge nb-{{ n.type }}">{{ n.type }}</span>{{ n.text }}</span></li>
+          {%- endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Selected work</div>
+        <h2>Featured research</h2>
+        <p>Four papers, each with a <strong>visual, plain-language summary</strong>. The full list is on the <a href="{{ '/publications/' | relative_url }}">Publications</a> page.</p>
+      </div>
+    </div>
+    {%- for f in r.featured %}
+    <article class="card feature card-rule-{% cycle 'accent', 'blue', 'yellow', 'accent' %}">
+      <figure class="figure"><img src="{{ f.image | relative_url }}" alt="{{ f.alt }}" loading="lazy" width="800" height="600"></figure>
+      <div>
+        <ul class="tags">{% for t in f.tags %}<li class="tag tag-{% cycle 'blue', 'yellow', 'green' %}">{{ t }}</li>{% endfor %}</ul>
+        <h3>{{ f.title }}</h3>
+        {% if f.venue %}<p class="pub-venue">{{ f.venue }}</p>{% endif %}
+        <p>{{ f.teaser }}</p>
+        <div class="btn-row">
+          <a class="btn btn-primary btn-sm" href="{{ f.tldr | relative_url }}">TL;DR: visual summary {% include icon.html name="arrow-right" %}</a>
+          {%- for l in f.links %}
+          <a class="btn btn-sm" href="{{ l.url | relative_url }}"{% if l.url contains 'http' %} target="_blank" rel="noopener"{% endif %}>{% include icon.html name="link" %} {{ l.label }}</a>
+          {%- endfor %}
+        </div>
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Highlights</div>
+        <h2>Conferences and recognition</h2>
+      </div>
+      <a class="text-link" href="{{ '/achievements/' | relative_url }}">All achievements {% include icon.html name="arrow-right" %}</a>
+    </div>
+    <div class="rail" tabindex="0" aria-label="Highlights gallery, scrolls horizontally">
+      {%- for h in r.highlights %}
+      <figure class="photo-card">
+        <img src="{{ h.image | relative_url }}" alt="{{ h.title }}" loading="lazy" width="400" height="300">
+        <figcaption><span class="tag tag-accent" style="margin-bottom:6px;">{{ h.tag }}</span><strong>{{ h.title }}</strong>{{ h.caption }}</figcaption>
+      </figure>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="card" style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;">
+      <div style="max-width:640px;">
+        <div class="eyebrow">Get in touch</div>
+        <h2 style="margin-bottom:.3em;">Let us build machines that correct themselves</h2>
+        <p style="margin:0;">I welcome conversations about research collaborations, internships, and roles in Physical AI, robotics, manufacturing AI, and applied science. Email is the fastest way to reach me.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="mailto:{{ p.email }}">{% include icon.html name="mail" %} Email me</a>
+        <a class="btn" href="{{ '/contact/' | relative_url }}">Contact page</a>
+      </div>
+    </div>
+  </div>
+</section>
