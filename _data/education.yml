@@ -16,7 +16,6 @@ degrees:
       melt pool control, and physics-informed generative AI for self-healing manufacturing.
     bullets:
       - "<strong>Physics-informed ML for process defect detection and fatigue modeling (NSF LAMDA):</strong> co-authored the funded proposal, built a sensor-integrated WAAM platform, and developed PI-CNN and physics-guided LSTM models for porosity and fatigue prediction."
-      - "<strong>ArcAssist:</strong> an edge-AI co-pilot on NVIDIA Jetson that estimates melt pool state, flags risks, and suggests corrective actions for wire arc additive manufacturing."
   - degree: M.S. in Industrial Engineering (Thesis Option)
     emoji: "🎓"
     school: Louisiana State University (LSU)
@@ -52,10 +51,10 @@ coursework:
     - [EE 7700, Machine Learning for Security in Cyber-Physical Systems]
     - [IE 7722, Artificial Intelligence in Manufacturing]
     - [CSC 4343G, Applied Deep Learning]
-    - [CSC 4700G, Special Topics in Computer Science]
+    - [CSC 4700G, AI and LLM Development]
     - [EXST 7011, Nonparametric Statistics]
     - [IE 7361, Industrial Engineering Research Methods]
-    - [IE 7460, Applied Occupational Ergonomics]
+    - [IE 7722, AI for Healthcare Analytics]
   in_progress_term: Fall 2026
   in_progress:
     - [EE 7500, "Nonlinear, Adaptive, and Learning-Based Control of Robots"]

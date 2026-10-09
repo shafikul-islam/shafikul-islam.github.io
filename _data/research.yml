@@ -83,15 +83,6 @@ projects:
       Multimodal in-situ sensing (IR thermal, optical emission, electrical) for layer-wise melt-pool characterization,
       with a physics-informed CNN for porosity detection validated against X-ray CT.
     tags: [WAAM, In-situ Sensing, Physics-informed ML]
-  - title: ArcAssist, an edge-AI co-pilot for WAAM
-    emoji: "⚡"
-    icon: cpu
-    tint: green
-    status: In progress
-    text: >-
-      Real-time melt-pool state estimation on NVIDIA Jetson that flags risks and recommends bounded corrective actions
-      to the operator.
-    tags: [Edge AI, Jetson, Control]
   - title: Geometry-invariant melt-pool control
     emoji: "🎛️"
     icon: gauge

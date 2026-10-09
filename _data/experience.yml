@@ -12,7 +12,6 @@ research:
     bullets:
       - Developing a <strong>physics-informed convolutional neural network (PI-CNN)</strong> that fuses multimodal in-situ WAAM signals for real-time porosity detection, validated with <strong>X-ray computed tomography (XCT)</strong>.
       - Formulating a <strong>physics-guided LSTM fatigue model</strong> that links process-induced defects to structural performance by combining fracture mechanics with deep learning.
-      - Building <strong>ArcAssist</strong>, an <strong>edge-AI co-pilot</strong> on NVIDIA Jetson that estimates melt-pool states, flags risks, and recommends bounded corrective actions.
       - "<strong>DrinkSafe LA</strong> (National Academies Gulf Research Program and NOAA): built and debugged Python data pipelines for water-quality indicators and supported resilience modeling."
     tags: [WAAM, Physics-informed ML, Edge AI, XCT]
   - role: Founder and Director
