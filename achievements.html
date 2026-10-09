@@ -2,7 +2,7 @@
 layout: page
 title: Achievements
 redirect_from: /others/
-eyebrow: Achievements
+eyebrow: "🏆 Achievements"
 heading: Awards, grants, service, and leadership
 lead: Recognition for research and design work, grant proposals I helped write, and how I contribute to the research community.
 ---
@@ -10,13 +10,17 @@ lead: Recognition for research and design work, grant proposals I helped write, 
 <section class="section" style="padding-bottom:24px;">
   <div class="container">
     {%- for m in a.milestones %}
-    <article class="card tint-green milestone">
-      <div class="card-icon">{% include icon.html name="grad" %}</div>
+    <article class="card tint-green milestone-card">
       <div>
+        <div class="milestone-emoji" aria-hidden="true">🎓</div>
         <div class="eyebrow" style="margin-bottom:4px;">Milestone</div>
-        <h2 style="font-size:1.4rem;margin-bottom:.2em;">{{ m.title }}</h2>
-        <p class="item-meta" style="margin:0 0 8px;">{{ m.meta }}</p>
+        <h2 style="font-size:1.5rem;margin-bottom:.25em;">{{ m.title }}</h2>
+        <p class="item-meta" style="margin:0 0 10px;">{{ m.meta }}</p>
         <p style="margin:0;">{{ m.text }}</p>
+      </div>
+      <div class="milestone-photos">
+        <img src="{{ m.photo | relative_url }}" alt="MD Shafikul Islam in graduation gown at LSU" width="750" height="1000" loading="lazy">
+        <img src="{{ m.photo2 | relative_url }}" alt="MD Shafikul Islam at LSU graduation, holding his cap" width="690" height="1000" loading="lazy">
       </div>
     </article>
     {%- endfor %}
@@ -26,18 +30,18 @@ lead: Recognition for research and design work, grant proposals I helped write, 
 <section class="section">
   <div class="container grid grid-2">
     <div class="card card-rule-yellow">
-      <h2 style="font-size:1.35rem;">Awards and honors</h2>
+      <h2 style="font-size:1.35rem;">🏆 Awards and honors</h2>
       <ul class="item-list">
         {%- for i in a.awards %}
-        <li><span class="item-icon icon-{% cycle 'yellow', 'blue', 'rose', 'violet', 'green' %}">{% include icon.html name=i.icon %}</span><span><strong>{{ i.title }}</strong><span class="item-meta">{{ i.meta }}</span>{% if i.text %}{{ i.text }}{% endif %}</span></li>
+        <li><span class="item-icon icon-{% cycle 'yellow', 'blue', 'rose', 'violet', 'green' %}">{% if i.emoji %}<span class="item-emoji">{{ i.emoji }}</span>{% else %}{% include icon.html name=i.icon %}{% endif %}</span><span><strong>{{ i.title }}</strong><span class="item-meta">{{ i.meta }}</span>{% if i.text %}{{ i.text }}{% endif %}</span></li>
         {%- endfor %}
       </ul>
     </div>
     <div class="card card-rule-blue">
-      <h2 style="font-size:1.35rem;">Grant proposal writing</h2>
+      <h2 style="font-size:1.35rem;">💡 Grant proposal writing</h2>
       <ul class="item-list">
         {%- for i in a.grants %}
-        <li><span class="item-icon">{% include icon.html name="grant" %}</span><span><strong>{{ i.title }}</strong><span class="item-meta">{{ i.meta }}</span><span class="status {{ i.status_class }}" style="margin:6px 0 0;">{{ i.status }}</span></span></li>
+        <li><span class="item-icon icon-{% cycle 'green', 'yellow', 'blue', 'rose' %}"><span class="item-emoji">{{ i.emoji }}</span></span><span><strong>{{ i.title }}</strong><span class="item-meta">{{ i.meta }}</span><span class="status {{ i.status_class }}" style="margin:6px 0 0;">{{ i.status }}</span></span></li>
         {%- endfor %}
       </ul>
     </div>
@@ -47,20 +51,20 @@ lead: Recognition for research and design work, grant proposals I helped write, 
 <section class="section section-alt">
   <div class="container grid grid-2">
     <div>
-      <div class="eyebrow">Service</div>
+      <div class="eyebrow">🎤 Service</div>
       <h2>Professional service and invited talks</h2>
       <ul class="item-list">
         {%- for i in a.service %}
-        <li><span class="item-icon icon-{% cycle 'yellow', 'blue', 'rose', 'violet', 'green' %}">{% include icon.html name=i.icon %}</span><span><strong>{{ i.title }}</strong><span class="item-meta">{{ i.meta }}</span>{% if i.text %}{{ i.text }}{% endif %}</span></li>
+        <li><span class="item-icon icon-{% cycle 'yellow', 'blue', 'rose', 'violet', 'green' %}">{% if i.emoji %}<span class="item-emoji">{{ i.emoji }}</span>{% else %}{% include icon.html name=i.icon %}{% endif %}</span><span><strong>{{ i.title }}</strong><span class="item-meta">{{ i.meta }}</span>{% if i.text %}{{ i.text }}{% endif %}</span></li>
         {%- endfor %}
       </ul>
     </div>
     <div>
-      <div class="eyebrow">Leadership</div>
+      <div class="eyebrow">🤝 Leadership</div>
       <h2>Leadership and community</h2>
       <ul class="item-list">
         {%- for i in a.leadership %}
-        <li><span class="item-icon icon-{% cycle 'yellow', 'blue', 'rose', 'violet', 'green' %}">{% include icon.html name=i.icon %}</span><span><strong>{{ i.title }}</strong><span class="item-meta">{{ i.meta }}</span>{% if i.text %}{{ i.text }}{% endif %}</span></li>
+        <li><span class="item-icon icon-{% cycle 'yellow', 'blue', 'rose', 'violet', 'green' %}">{% if i.emoji %}<span class="item-emoji">{{ i.emoji }}</span>{% else %}{% include icon.html name=i.icon %}{% endif %}</span><span><strong>{{ i.title }}</strong><span class="item-meta">{{ i.meta }}</span>{% if i.text %}{{ i.text }}{% endif %}</span></li>
         {%- endfor %}
       </ul>
     </div>
@@ -69,7 +73,7 @@ lead: Recognition for research and design work, grant proposals I helped write, 
 
 <section class="section">
   <div class="container">
-    <div class="section-head"><div><div class="eyebrow">Skills</div><h2>Technical skills</h2></div></div>
+    <div class="section-head"><div><div class="eyebrow">🛠️ Skills</div><h2>Technical skills</h2></div></div>
     <div class="grid grid-3">
       {%- for s in a.skills %}
       {%- assign tints = "blue,yellow,green,rose,violet" | split: "," -%}{%- assign ti = forloop.index0 | modulo: 5 -%}
@@ -85,17 +89,17 @@ lead: Recognition for research and design work, grant proposals I helped write, 
 <section class="section section-alt">
   <div class="container grid grid-2">
     <div>
-      <div class="eyebrow">Memberships</div>
+      <div class="eyebrow">🏛️ Memberships</div>
       <ul class="item-list">{% for m in a.memberships %}<li><span class="item-icon">{% include icon.html name="users" %}</span><span>{{ m }}</span></li>{% endfor %}</ul>
     </div>
     <div>
-      <div class="eyebrow">Media and press</div>
+      <div class="eyebrow">📣 Media and press</div>
       <ul class="item-list">{% for m in a.press %}<li><span class="item-icon icon-violet">{% include icon.html name="mic" %}</span><span>{{ m }}</span></li>{% endfor %}</ul>
     </div>
   </div>
   <div class="container" style="margin-top:28px;">
     <div>
-      <div class="eyebrow">Beyond research</div>
+      <div class="eyebrow">🌱 Beyond research</div>
       <p>{{ a.personal }}</p>
     </div>
   </div>

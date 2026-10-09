@@ -1,0 +1,57 @@
+{%- comment -%}
+Small looping visual for pillar and direction cards.
+Usage: {% include mini-viz.html name="perception" %}
+Names: perception, twin, control, edge, monitor, robot. Colors follow the card tint.
+{%- endcomment -%}
+<svg class="mv mv-{{ include.name }}" viewBox="0 0 120 64" aria-hidden="true" focusable="false">
+{%- case include.name -%}
+{%- when "perception" -%}
+  <g class="mv-eye">
+    <path d="M6 32c8-12 30-12 38 0-8 12-30 12-38 0z" class="mv-line"/>
+    <circle cx="25" cy="32" r="6" class="mv-fill mv-pupil"/>
+  </g>
+  <path d="M50 14h44" class="mv-dash mv-w1"/>
+  <path d="M50 26h44" class="mv-dash mv-w2"/>
+  <path d="M50 38h44" class="mv-dash mv-w3"/>
+  <path d="M50 50h44" class="mv-dash mv-w4"/>
+  <text x="100" y="16" class="mv-t">IR</text><text x="100" y="28" class="mv-t">RGB</text>
+  <text x="100" y="40" class="mv-t">dB</text><text x="100" y="52" class="mv-t">V</text>
+{%- when "twin" -%}
+  <g class="mv-line"><path d="M14 22l14-8 14 8v18l-14 8-14-8z"/><path d="M14 22l14 8 14-8M28 30v18"/></g>
+  <g class="mv-line mv-wire"><path d="M78 22l14-8 14 8v18l-14 8-14-8z"/><path d="M78 22l14 8 14-8M92 30v18"/></g>
+  <circle r="3" class="mv-fill mv-dot1" cx="48" cy="26"/>
+  <circle r="3" class="mv-accent mv-dot2" cx="72" cy="38"/>
+  <path d="M48 26h24M48 38h24" class="mv-faint"/>
+{%- when "control" -%}
+  <path d="M24 52a36 36 0 0 1 72 0" class="mv-line" style="stroke-width:5px" stroke-linecap="round"/>
+  <path d="M60 16v6" class="mv-accent-line"/>
+  <g class="mv-needle"><path d="M60 52L60 24" class="mv-accent-line" style="stroke-width:3px"/></g>
+  <circle cx="60" cy="52" r="4" class="mv-fill"/>
+  <text x="66" y="14" class="mv-t" style="text-anchor:start">set point</text>
+{%- when "edge" -%}
+  <rect x="44" y="16" width="32" height="32" rx="5" class="mv-line"/>
+  <rect x="52" y="24" width="16" height="16" rx="2" class="mv-fill mv-core"/>
+  <g class="mv-faint"><path d="M6 24h38M6 40h38M76 24h38M76 40h38"/></g>
+  <circle r="3" class="mv-accent mv-p1" cx="6" cy="24"/>
+  <circle r="3" class="mv-accent mv-p2" cx="6" cy="40"/>
+  <circle r="3" class="mv-fill mv-p3" cx="76" cy="24"/>
+  <circle r="3" class="mv-fill mv-p4" cx="76" cy="40"/>
+{%- when "monitor" -%}
+  <path d="M4 52h112" class="mv-faint"/>
+  <path d="M4 38 C14 30 20 46 30 38 S46 30 54 38 S62 10 66 38 S80 46 90 38 S106 30 116 38" class="mv-line mv-trace"/>
+  <circle cx="64" cy="14" r="7" class="mv-alert"/>
+  <rect x="0" y="6" width="3" height="50" class="mv-accent mv-scan"/>
+{%- when "robot" -%}
+  <path d="M4 56h112" class="mv-faint"/>
+  <rect x="16" y="48" width="20" height="8" rx="2" class="mv-fill"/>
+  <g class="mv-arm1">
+    <path d="M26 48L40 22" class="mv-line" style="stroke-width:5px" stroke-linecap="round"/>
+    <g class="mv-arm2">
+      <path d="M40 22L66 28" class="mv-line" style="stroke-width:4px" stroke-linecap="round"/>
+      <path d="M66 28v8M63 36h6" class="mv-line"/>
+    </g>
+  </g>
+  <rect x="88" y="46" width="22" height="10" rx="2" class="mv-line"/>
+  <rect x="64" y="44" width="8" height="12" rx="1.5" class="mv-accent mv-part"/>
+{%- endcase -%}
+</svg>

@@ -1,98 +1,79 @@
 ---
 layout: page
 title: Research
-eyebrow: Research
-heading: Physical AI for manufacturing
+eyebrow: "🤖 Research"
+heading: Physical AI for robotic manufacturing
 lead: >-
-  I build machines that <strong>sense, predict, and correct themselves</strong>. My work connects multimodal in-situ
-  sensing, learned process dynamics and digital twins, and predictive control, first for metal additive manufacturing
-  (WAAM, DED, LPBF) and now for the robots and robot cells that run it.
-description: Research on multimodal sensing, digital twins, predictive control, sim to real and robot cell design for manufacturing.
+  My goal is <strong>robots that build parts reliably without constant human correction</strong>. I approach it from two
+  sides of the same robot: <span class="hl">improving the process</span> the robot runs, and <span class="hl">improving the
+  environment</span> the robot works in. Both rely on sensing, learned models, digital twins, and predictive control.
+description: Research on Physical AI for robotic manufacturing, process control in wire arc additive manufacturing, robot cell design, digital twins and sim to real.
 ---
 {%- assign r = site.data.research -%}
-{%- assign tints = "blue,yellow,green,rose,violet" | split: "," -%}
 
 <section class="section">
   <div class="container">
     <div class="section-head">
       <div>
-        <div class="eyebrow">Framework</div>
-        <h2>Sense, predict, act</h2>
-        <p>Every project fits one closed loop: <strong>measure</strong> the process, <strong>estimate</strong> its hidden state, <strong>predict</strong> quality, and <strong>choose a safe correction</strong> within machine limits.</p>
+        <div class="eyebrow">🧭 Directions</div>
+        <h2>Research directions</h2>
+        <p>Three directions that connect <strong>process observation</strong>, <strong>control</strong>, and <strong>robotic manufacturing</strong>.</p>
       </div>
     </div>
-    <div class="grid grid-4">
-      {%- for item in r.pillars %}{% assign ti = forloop.index0 | modulo: 5 %}
-      <article class="card tint-{{ tints[ti] }} pillar">
-        <div class="card-icon">{% include icon.html name=item.icon %}</div>
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.text }}</p>
+    <div class="grid grid-3">
+      {%- assign dt = "blue,rose,yellow" | split: "," -%}
+      {%- for d in r.directions %}{% assign t = dt[forloop.index0] %}
+      <article class="card tint-{{ t }} ink-{{ t }}">
+        <div class="mv-box">{% include mini-viz.html name=d.viz %}</div>
+        <h3>{{ d.title }}</h3>
+        <p>{{ d.text }}</p>
+        <ul class="tags">{% for tg in d.tags %}<li class="tag" style="background:var(--bg-elev);">{{ tg }}</li>{% endfor %}</ul>
       </article>
       {%- endfor %}
     </div>
   </div>
 </section>
 
-<section class="section section-alt">
+<section class="section section-blue">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">🎯 One goal, two levers</div>
+        <h2>Same robot, two ways to make it succeed</h2>
+        <p>A robot fails when the process drifts or when its surroundings work against it. My first focus makes the <strong>process</strong> watch and correct itself. My second focus redesigns the <strong>robot cell</strong> so the robot can succeed in the first place, and tests those designs in a digital twin before building them.</p>
+      </div>
+    </div>
+    <div class="levers">
+      <a class="lever tint-yellow" href="#focus-process"><span class="lever-n">1</span><span><strong>🔥 Improve the process</strong><br>Sense the weld, predict defects, correct heat and speed in real time.</span></a>
+      <span class="lever-plus" aria-hidden="true">+</span>
+      <a class="lever tint-green" href="#focus-environment"><span class="lever-n">2</span><span><strong>🏗️ Improve the environment</strong><br>Measure what makes a cell hard for robots, then design a better one.</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="focus-process">
   <div class="container split">
     <div>
-      <div class="eyebrow">Animation 1</div>
+      <div class="eyebrow">🔥 Research focus 1 &middot; Process</div>
       <h2>A robotic WAAM cell that watches itself</h2>
-      <p>In <strong>wire arc additive manufacturing</strong>, an industrial robot carries a welding torch and builds a metal part one bead at a time. Each layer reheats the ones below, so heat, bead shape, and porosity drift during the build.</p>
-      <p>My cell adds the senses a human welder uses: a <strong>camera</strong> on the melt pool, an <strong>acoustic sensor</strong> listening to the arc, and electrical and thermal signals. Learned models turn these signals into a process state, predict defect risk, and suggest a <strong>bounded correction</strong> to heat input or travel speed before the defect is printed.</p>
-      <ul class="tags"><li class="tag tag-blue">Sense: vision, sound, thermal</li><li class="tag tag-violet">Predict: defect risk</li><li class="tag tag-accent">Act: heat and speed</li></ul>
+      <p>In <strong>wire arc additive manufacturing (WAAM)</strong>, an industrial robot carries a welding torch and builds a metal part one bead at a time. Each new layer reheats the layers below, so <span class="hl">heat, bead shape, and porosity drift</span> during the build.</p>
+      <p>My cell adds the senses a skilled welder relies on: a <strong>camera</strong> on the melt pool, an <strong>acoustic sensor</strong> on the arc, and electrical and thermal signals. Learned models turn these signals into a process state, predict defect risk, and recommend a <strong>bounded correction</strong> to heat input or travel speed before a defect forms. One example is entropy-aware model predictive control for restart transients (<a href="{{ '/research/entropy-mpc/' | relative_url }}">summary</a>).</p>
+      <ul class="tags"><li class="tag tag-blue">👁️ Sense: vision, sound, thermal</li><li class="tag tag-violet">🧠 Predict: defect risk</li><li class="tag tag-accent">⚙️ Act: heat and speed</li></ul>
     </div>
     <div class="anim-frame">
-      <div class="anim-caption"><span class="live-dot">Robotic WAAM cell</span><span>Illustration</span></div>
+      <div class="anim-caption"><span class="live-dot">Robotic WAAM cell</span></div>
       {% include waam-robot.html %}
     </div>
   </div>
 </section>
 
-<section class="section" id="poster">
+<section class="section section-green" id="focus-environment">
   <div class="container">
     <div class="section-head">
       <div>
-        <div class="eyebrow">Research highlight</div>
-        <h2>{{ r.poster.title }}</h2>
-        <p>{{ r.poster.authors }} &middot; {{ r.poster.venue }}</p>
-      </div>
-    </div>
-    <div class="poster-grid">
-      <figure class="figure poster-img">
-        <a href="{{ r.poster.pdf | relative_url }}" target="_blank" rel="noopener"><img src="{{ r.poster.image | relative_url }}" alt="Poster: {{ r.poster.title }}" loading="lazy" width="1800" height="1350"></a>
-        <figcaption>The symposium poster. Click to open the PDF.</figcaption>
-      </figure>
-      <div class="poster-side">
-        <figure class="figure"><img src="{{ r.poster.photo | relative_url }}" alt="MD Shafikul Islam presenting the poster at the LSU Control Systems Symposium" loading="lazy" width="1265" height="952"><figcaption>Presenting at the LSU Control Systems Symposium.</figcaption></figure>
-        <div class="card tint-yellow tldr-box">
-          <div class="eyebrow">TL;DR</div>
-          <p>{{ r.poster.tldr }}</p>
-          <div class="btn-row">
-            <a class="btn btn-primary btn-sm" href="{{ '/research/entropy-mpc/' | relative_url }}">Plain-language summary {% include icon.html name="arrow-right" %}</a>
-            <a class="btn btn-sm" href="{{ r.poster.pdf | relative_url }}" target="_blank" rel="noopener">{% include icon.html name="file" %} Poster PDF</a>
-            <a class="btn btn-sm" href="https://doi.org/{{ r.poster.doi }}" target="_blank" rel="noopener">{% include icon.html name="link" %} DOI</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <h3 style="margin-top:28px;">Results at a glance <span class="status status-accent">Simulation and surrogate-model study</span></h3>
-    <div class="stats">
-      {%- for s in r.poster.stats %}
-      <div class="stat"><div class="stat-value">{{ s.value }}<small>{{ s.unit }}</small></div><div class="stat-label">{{ s.label }}</div></div>
-      {%- endfor %}
-    </div>
-    <p class="muted" style="margin-top:12px;font-size:.9rem;">These numbers come from simulation with learned surrogate models (DMDc and SINDy), not from physical experiments.</p>
-  </div>
-</section>
-
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">Animation 2 &middot; Current work</div>
+        <div class="eyebrow">🏗️ Research focus 2 &middot; Environment</div>
         <h2>Designing a world robots can work in</h2>
-        <p>Robots fail less when the factory is designed for them. I <strong>measure</strong> how much the environment matters, <strong>model</strong> it, and <strong>design better cells in a digital twin</strong> before building them for real. Then real trials recalibrate the twin (<strong>sim to real</strong> and back).</p>
+        <p>Robots fail less when the factory is designed for them. I <strong>measure</strong> how much lighting, camera pose, clutter, part presentation, fixture design, and layout matter, <strong>model</strong> that effect as a robotability score R(e), and <span class="hl">search for better cell designs in a digital twin</span> before building them. Real trials then recalibrate the twin (<strong>sim to real</strong> and back).</p>
       </div>
     </div>
     {% include robotability-animation.html %}
@@ -103,28 +84,7 @@ description: Research on multimodal sensing, digital twins, predictive control, 
   <div class="container">
     <div class="section-head">
       <div>
-        <div class="eyebrow">Directions</div>
-        <h2>Research directions</h2>
-      </div>
-    </div>
-    <div class="grid grid-3">
-      {%- for d in r.directions %}
-      <article class="card card-rule-{% cycle 'blue', 'accent', 'yellow' %}">
-        <div class="card-icon icon-{% cycle 'blue', 'rose', 'yellow' %}">{% include icon.html name=d.icon %}</div>
-        <h3>{{ d.title }}</h3>
-        <p>{{ d.text }}</p>
-        <ul class="tags">{% for t in d.tags %}<li class="tag">{{ t }}</li>{% endfor %}</ul>
-      </article>
-      {%- endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">Projects</div>
+        <div class="eyebrow">🛠️ Projects</div>
         <h2>Current projects</h2>
         <p>Work in progress is labeled as such. Results appear here only after they are measured.</p>
       </div>
@@ -134,7 +94,7 @@ description: Research on multimodal sensing, digital twins, predictive control, 
       <article class="card card-hover tint-{{ d.tint }}">
         <div class="card-icon">{% include icon.html name=d.icon %}</div>
         <span class="status status-accent" style="margin:0 0 8px;">{{ d.status }}</span>
-        <h3>{{ d.title }}</h3>
+        <h3>{{ d.emoji }} {{ d.title }}</h3>
         <p>{{ d.text }}</p>
         <ul class="tags">{% for t in d.tags %}<li class="tag" style="background:var(--bg-elev);">{{ t }}</li>{% endfor %}</ul>
       </article>

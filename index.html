@@ -7,7 +7,7 @@ title: Home
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <div class="eyebrow">Ph.D. Researcher &middot; Louisiana State University</div>
+      <div class="eyebrow">🎓 Ph.D. Researcher &middot; Louisiana State University</div>
       <h1>{{ p.name }}</h1>
       <p class="hero-role">Building <em>Physical AI for manufacturing</em>: machines that sense, predict, and correct themselves in real time.</p>
       <p>
@@ -23,14 +23,14 @@ title: Home
       </div>
       <ul class="link-pills" aria-label="Profiles">
         {%- for l in p.links %}
-        <li><a class="link-pill" href="{{ l.url }}"{% unless l.url contains 'mailto' %} target="_blank" rel="noopener"{% endunless %}>{% include icon.html name=l.icon %}{{ l.name }}</a></li>
+        <li><a class="link-pill link-pill-{{ l.icon }}" href="{{ l.url }}"{% unless l.url contains 'mailto' %} target="_blank" rel="noopener"{% endunless %}>{% include icon.html name=l.icon %}{{ l.name }}</a></li>
         {%- endfor %}
       </ul>
     </div>
-    <div class="hero-photo">
-      <img src="{{ '/assets/images/headshot.jpg' | relative_url }}" alt="Portrait of MD Shafikul Islam" width="720" height="720" fetchpriority="high">
-      <span class="photo-badge b1">{% include icon.html name="robot" %} Physical AI &amp; Robotics</span>
-      <span class="photo-badge b2">{% include icon.html name="grad" %} M.S. 2026 &middot; Ph.D. LSU</span>
+    <div class="hero-photo" id="hero-photo">
+      <img class="is-on" src="{{ '/assets/images/headshot.jpg' | relative_url }}" alt="Portrait of MD Shafikul Islam" width="720" height="720" fetchpriority="high">
+      <img src="{{ '/assets/images/grad-1.jpg' | relative_url }}" alt="MD Shafikul Islam in graduation gown at LSU after earning the M.S." width="750" height="1000" loading="lazy" style="object-position:50% 38%">
+      <img src="{{ '/assets/images/grad-2.jpg' | relative_url }}" alt="MD Shafikul Islam at LSU graduation, holding his cap" width="690" height="1000" loading="lazy" style="object-position:50% 40%">
     </div>
   </div>
 </section>
@@ -39,7 +39,7 @@ title: Home
   <div class="container">
     <div class="section-head">
       <div>
-        <div class="eyebrow">Research focus</div>
+        <div class="eyebrow">🔬 Research focus</div>
         <h2>Four pillars of my work</h2>
         <p>Metal additive manufacturing can print complex parts, but it still struggles to detect process changes and correct defects during fabrication. I work on the full loop, from sensing to action.</p>
       </div>
@@ -48,8 +48,8 @@ title: Home
     <div class="grid grid-4">
       {%- assign tints = "blue,yellow,green,rose,violet" | split: "," -%}
       {%- for item in r.pillars %}{% assign ti = forloop.index0 | modulo: 5 %}
-      <article class="card card-hover pillar tint-{{ tints[ti] }}">
-        <div class="card-icon">{% include icon.html name=item.icon %}</div>
+      <article class="card card-hover pillar tint-{{ tints[ti] }} ink-{{ tints[ti] }}">
+        <div class="mv-box">{% include mini-viz.html name=item.viz %}</div>
         <h3>{{ item.title }}</h3>
         <p>{{ item.text }}</p>
       </article>
@@ -62,7 +62,7 @@ title: Home
   <div class="container">
     <div class="section-head">
       <div>
-        <div class="eyebrow">Updates</div>
+        <div class="eyebrow">📰 Updates</div>
         <h2>Selected news</h2>
         <p>Papers, awards, talks, and milestones. Scroll inside the box for older items.</p>
       </div>
@@ -71,7 +71,7 @@ title: Home
       <div class="news-scroll" tabindex="0" role="region" aria-label="All news, scrollable">
         <ul class="news">
           {%- for n in site.data.news %}
-          <li{% if forloop.index <= 6 %} class="is-new"{% endif %}><span class="news-date">{{ n.date }}</span><span class="news-text"><span class="news-badge nb-{{ n.type }}">{{ n.type }}</span>{{ n.text }}</span></li>
+          <li{% if forloop.index <= 6 %} class="is-new"{% endif %}><span class="news-date">{{ n.date }}</span><span class="news-text"><span class="news-badge nb-{{ n.type }}">{{ site.data.news_types[n.type] }} {{ n.type }}</span>{{ n.text }}</span></li>
           {%- endfor %}
         </ul>
       </div>
@@ -83,9 +83,9 @@ title: Home
   <div class="container">
     <div class="section-head">
       <div>
-        <div class="eyebrow">Selected work</div>
+        <div class="eyebrow">⭐ Selected work</div>
         <h2>Featured research</h2>
-        <p>Four papers, each with a <strong>visual, plain-language summary</strong>. The full list is on the <a href="{{ '/publications/' | relative_url }}">Publications</a> page.</p>
+        <p>Four papers, each with a <strong>visual research summary</strong> of the method and findings. The full list is on the <a href="{{ '/publications/' | relative_url }}">Publications</a> page.</p>
       </div>
     </div>
     {%- for f in r.featured %}
@@ -97,7 +97,7 @@ title: Home
         {% if f.venue %}<p class="pub-venue">{{ f.venue }}</p>{% endif %}
         <p>{{ f.teaser }}</p>
         <div class="btn-row">
-          <a class="btn btn-primary btn-sm" href="{{ f.tldr | relative_url }}">TL;DR: visual summary {% include icon.html name="arrow-right" %}</a>
+          <a class="btn btn-primary btn-sm" href="{{ f.tldr | relative_url }}">📘 TL;DR: research summary {% include icon.html name="arrow-right" %}</a>
           {%- for l in f.links %}
           <a class="btn btn-sm" href="{{ l.url | relative_url }}"{% if l.url contains 'http' %} target="_blank" rel="noopener"{% endif %}>{% include icon.html name="link" %} {{ l.label }}</a>
           {%- endfor %}
@@ -112,7 +112,7 @@ title: Home
   <div class="container">
     <div class="section-head">
       <div>
-        <div class="eyebrow">Highlights</div>
+        <div class="eyebrow">📸 Highlights</div>
         <h2>Conferences and recognition</h2>
       </div>
       <a class="text-link" href="{{ '/achievements/' | relative_url }}">All achievements {% include icon.html name="arrow-right" %}</a>
@@ -132,7 +132,7 @@ title: Home
   <div class="container">
     <div class="card" style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;">
       <div style="max-width:640px;">
-        <div class="eyebrow">Get in touch</div>
+        <div class="eyebrow">🤝 Get in touch</div>
         <h2 style="margin-bottom:.3em;">Let us build machines that correct themselves</h2>
         <p style="margin:0;">I welcome conversations about research collaborations, internships, and roles in Physical AI, robotics, manufacturing AI, and applied science. Email is the fastest way to reach me.</p>
       </div>

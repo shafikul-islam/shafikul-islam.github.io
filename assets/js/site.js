@@ -31,6 +31,19 @@
     });
   }
 
+  // ---------- Hero photos: crossfade every 10 s ----------
+  var heroPhotos = document.querySelectorAll("#hero-photo img");
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (heroPhotos.length > 1 && !reduceMotion) {
+    var hi = 0;
+    setInterval(function () {
+      if (document.hidden) return;
+      heroPhotos[hi].classList.remove("is-on");
+      hi = (hi + 1) % heroPhotos.length;
+      heroPhotos[hi].classList.add("is-on");
+    }, 10000);
+  }
+
   // ---------- Mobile navigation ----------
   var navBtn = document.getElementById("nav-toggle");
   var header = document.getElementById("site-header");

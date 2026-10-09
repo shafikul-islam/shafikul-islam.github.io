@@ -1,19 +1,19 @@
 ---
 layout: page
 title: Experience
-eyebrow: Experience
+eyebrow: "💼 Experience"
 heading: Research and industry experience
 lead: Research roles at the intersection of metal additive manufacturing, machine learning, and optimization, plus industry and shop-floor training.
 ---
 {%- assign x = site.data.experience -%}
 <section class="section">
   <div class="container">
-    <div class="section-head"><div><div class="eyebrow">Research</div><h2>Research positions</h2></div></div>
+    <div class="section-head"><div><div class="eyebrow">🔬 Research</div><h2>Research positions</h2></div></div>
     <ol class="timeline">
       {%- for j in x.research %}
       <li>
         <article class="card card-rule-blue">
-          <div class="tl-head"><h3>{{ j.role }}</h3><span class="tl-when">{{ j.when }}</span></div>
+          <div class="tl-head"><h3>{{ j.emoji }} {{ j.role }}</h3><span class="tl-when">{{ j.when }}</span></div>
           <p class="tl-org"><a href="{{ j.url }}" target="_blank" rel="noopener">{{ j.org }}</a> &middot; {{ j.location }}</p>
           <p>{{ j.text }}</p>
           <ul>{% for b in j.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
@@ -26,12 +26,12 @@ lead: Research roles at the intersection of metal additive manufacturing, machin
 </section>
 <section class="section section-alt">
   <div class="container">
-    <div class="section-head"><div><div class="eyebrow">Teaching</div><h2>Teaching and mentoring</h2></div></div>
+    <div class="section-head"><div><div class="eyebrow">👨‍🏫 Teaching</div><h2>Teaching and mentoring</h2></div></div>
     <div class="grid grid-2">
       {%- for j in x.mentoring %}
       <article class="card tint-{% cycle 'violet', 'green' %}">
         <div class="card-icon">{% include icon.html name="users" %}</div>
-        <h3>{{ j.role }}</h3>
+        <h3>{{ j.emoji }} {{ j.role }}</h3>
         <p class="tl-org">{{ j.org }} &middot; <span class="mono">{{ j.when }}</span></p>
         <p>{{ j.text }}</p>
       </article>
@@ -42,12 +42,12 @@ lead: Research roles at the intersection of metal additive manufacturing, machin
 
 <section class="section">
   <div class="container">
-    <div class="section-head"><div><div class="eyebrow">Industry</div><h2>Industry and training</h2></div></div>
+    <div class="section-head"><div><div class="eyebrow">🏭 Industry</div><h2>Industry and training</h2></div></div>
     <div class="grid grid-3">
       {%- for j in x.industry %}
       <article class="card card-flat card-rule-yellow">
         <div class="card-icon icon-yellow">{% include icon.html name="factory" %}</div>
-        <h3>{{ j.role }}</h3>
+        <h3>{{ j.emoji }} {{ j.role }}</h3>
         <p class="tl-org">{{ j.org }}</p>
         <p class="item-meta" style="margin:-6px 0 10px;">{{ j.when }} &middot; {{ j.location }}</p>
         <p>{{ j.text }}</p>

@@ -1,15 +1,15 @@
-<svg class="tl-svg" viewBox="0 0 760 300" role="img" aria-label="Illustrative curves: after a restart, arc-sound entropy drops; entropy-aware MPC returns it to the stable band faster than a thermal-only controller by applying a short front-loaded heat pulse.">
+<svg class="tl-svg" viewBox="0 0 760 330" role="img" aria-label="Illustrative curves: after a restart, arc-sound entropy drops; entropy-aware MPC returns it to the stable band faster than a thermal-only controller by applying a short front-loaded heat pulse.">
   <text x="20" y="22" class="tl-title">Arc-sound entropy after a cold restart</text>
   <rect x="60" y="56" width="400" height="34" fill="var(--il-ok)" opacity=".13"/>
-  <text x="466" y="78" style="fill:var(--tint-green-ink)">stable band</text>
+  <text x="380" y="50" style="fill:var(--tint-green-ink)">stable band</text>
   <path d="M60 230H460M60 40V230" class="tl-axis"/>
   <text x="200" y="250">time after restart</text>
   <text x="14" y="140" transform="rotate(-90 14 140)">entropy H(t)</text>
   <path d="M60 70 L90 200 C130 190 170 160 220 120 S330 82 455 74" class="tl-draw" style="stroke:var(--il-robot);stroke-width:3;fill:none"/>
   <path d="M60 70 L90 200 C110 140 130 90 165 76 S260 72 455 72" class="tl-draw" style="stroke:var(--accent);stroke-width:3.4;fill:none;animation-delay:.2s"/>
-  <g transform="translate(470 120)">
-    <rect width="12" height="4" y="-2" fill="var(--il-robot)"/><text x="18" y="4">thermal-only MPC</text>
-    <rect width="12" height="4" y="20" fill="var(--accent)"/><text x="18" y="26">entropy-aware MPC</text>
+  <g transform="translate(60 276)">
+    <rect width="14" height="4" y="-2" fill="var(--il-robot)"/><text x="20" y="4">thermal-only MPC</text>
+    <rect x="170" width="14" height="4" y="-2" fill="var(--accent)"/><text x="190" y="4">entropy-aware MPC</text>
   </g>
   <text x="530" y="22" class="tl-title">Heat-input correction q(t)</text>
   <path d="M530 230H740M530 120V230" class="tl-axis"/>
@@ -21,7 +21,7 @@
     <rect x="644" y="222" width="22" height="8" fill="var(--accent)" opacity=".3"/>
   </g>
   <text x="560" y="250">front-loaded pulse</text>
-  <text x="20" y="288" style="fill:var(--ink-3)">Shapes are illustrative. Measured curves are on the poster.</text>
+  <text x="20" y="318" style="fill:var(--ink-3)">Shapes are illustrative. Measured curves are on the poster.</text>
 </svg>
 <style>
 .tl-pulse rect { transform-box: fill-box; transform-origin: bottom; animation: grow 3.2s var(--ease) infinite; }

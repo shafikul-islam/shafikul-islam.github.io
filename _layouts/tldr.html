@@ -2,15 +2,23 @@
 layout: default
 ---
 <section class="page-hero tldr-hero">
+  <div class="container tldr-top">
+    <div>
+      <p style="margin:0 0 14px;"><a class="text-link" href="{{ '/research/' | relative_url }}">&larr; Back to Research</a></p>
+      <div class="eyebrow">📘 Research summary &middot; {{ page.kind }}</div>
+      <h1>{{ page.short_title }}</h1>
+      <p class="lead" style="margin-bottom:14px;">{{ page.paper_title }}</p>
+      <p class="tl-org" style="margin:0;">{{ page.authors }}</p>
+      <p class="item-meta" style="margin-top:4px;">{{ page.venue }}{% if page.status %} &middot; <span class="status status-accent">{{ page.status }}</span>{% endif %}</p>
+    </div>
+    <figure class="figure tldr-method">
+      <a href="{{ page.method_image | relative_url }}" target="_blank" rel="noopener"><img src="{{ page.method_image | relative_url }}" alt="{{ page.method_caption }}" width="1200" height="800"></a>
+      <figcaption>{{ page.method_caption }}</figcaption>
+    </figure>
+  </div>
   <div class="container">
-    <a class="text-link" href="{{ '/research/' | relative_url }}" style="margin-bottom:14px;">&larr; Research</a>
-    <div class="eyebrow">Plain-language summary &middot; {{ page.kind }}</div>
-    <h1>{{ page.short_title }}</h1>
-    <p class="lead" style="margin-bottom:14px;">{{ page.paper_title }}</p>
-    <p class="tl-org" style="margin:0;">{{ page.authors }}</p>
-    <p class="item-meta" style="margin-top:4px;">{{ page.venue }}{% if page.status %} &middot; <span class="status status-accent">{{ page.status }}</span>{% endif %}</p>
-    <div class="card tint-yellow tldr-box" style="margin-top:22px;">
-      <div class="eyebrow">TL;DR</div>
+    <div class="card tint-yellow tldr-box" style="margin-top:26px;">
+      <div class="eyebrow">⚡ TL;DR</div>
       <p style="margin:0;">{{ page.tldr }}</p>
     </div>
   </div>
@@ -19,7 +27,7 @@ layout: default
 <section class="section">
   <div class="container">
     <div class="anim-frame">
-      <div class="anim-caption"><span class="live-dot">{{ page.visual_title }}</span><span>{{ page.visual_note | default: "Illustration" }}</span></div>
+      <div class="anim-caption"><span class="live-dot">Concept animation: {{ page.visual_title }}</span></div>
       {% include {{ page.visual }} %}
     </div>
   </div>
@@ -29,12 +37,12 @@ layout: default
   <div class="container grid grid-2">
     <article class="card tint-rose">
       <div class="card-icon">{% include icon.html name="flag" %}</div>
-      <h2 class="tldr-h">The problem</h2>
+      <h2 class="tldr-h">🎯 Problem</h2>
       <p>{{ page.problem }}</p>
     </article>
     <article class="card tint-blue">
       <div class="card-icon">{% include icon.html name="spark" %}</div>
-      <h2 class="tldr-h">The idea</h2>
+      <h2 class="tldr-h">💡 Approach</h2>
       <p>{{ page.idea }}</p>
     </article>
   </div>
@@ -42,7 +50,7 @@ layout: default
 
 <section class="section section-alt">
   <div class="container">
-    <div class="section-head"><div><div class="eyebrow">Method</div><h2>How it works, step by step</h2></div></div>
+    <div class="section-head"><div><div class="eyebrow">🧩 Method</div><h2>Method overview</h2></div></div>
     <ol class="steps">
       {%- for s in page.steps %}
       <li class="step" style="--i:{{ forloop.index0 }};">
@@ -59,8 +67,8 @@ layout: default
   <div class="container">
     <div class="section-head">
       <div>
-        <div class="eyebrow">Results</div>
-        <h2>What we found</h2>
+        <div class="eyebrow">📊 Results</div>
+        <h2>Key findings</h2>
         {% if page.results_note %}<p><span class="status status-accent" style="margin:0;">{{ page.results_note }}</span></p>{% endif %}
       </div>
     </div>
@@ -83,12 +91,12 @@ layout: default
   <div class="container grid grid-2">
     <article class="card tint-green">
       <div class="card-icon">{% include icon.html name="factory" %}</div>
-      <h2 class="tldr-h">Why it matters</h2>
+      <h2 class="tldr-h">🏭 Significance</h2>
       <p>{{ page.why }}</p>
     </article>
     <article class="card">
       <div class="card-icon icon-violet">{% include icon.html name="book" %}</div>
-      <h2 class="tldr-h">Read the work</h2>
+      <h2 class="tldr-h">📄 Citation and links</h2>
       <p>{{ page.authors }}. "{{ page.paper_title }}." {{ page.venue }}.</p>
       <div class="btn-row">
         {%- for l in page.links %}
@@ -101,11 +109,11 @@ layout: default
 
 <section class="section section-alt">
   <div class="container">
-    <div class="section-head"><div><div class="eyebrow">More summaries</div><h2>Other plain-language summaries</h2></div></div>
+    <div class="section-head"><div><div class="eyebrow">📚 More research</div><h2>Other research summaries</h2></div></div>
     <div class="grid grid-3">
       {%- for f in site.data.research.featured %}{% unless f.tldr == page.url %}
       <a class="card card-hover tldr-link" href="{{ f.tldr | relative_url }}">
-        <span class="eyebrow" style="margin-bottom:6px;">TL;DR</span>
+        <span class="eyebrow" style="margin-bottom:6px;">📘 Summary</span>
         <strong>{{ f.title }}</strong>
         <span class="text-link" style="margin-top:10px;">Open {% include icon.html name="arrow-right" %}</span>
       </a>

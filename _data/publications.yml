@@ -379,3 +379,16 @@
   tags:
   - Digital Twins
   - Optimization
+
+# ---------- Thesis ----------
+- id: T1
+  type: thesis
+  status: published
+  title: Trustworthy Artificial Intelligence for Real-Time Quality Assurance in Additive Manufacturing
+  authors: "**Islam, M. S.**"
+  venue: M.S. thesis, Louisiana State University, LSU Digital Commons
+  year: 2026
+  tags: [Manufacturing]
+  links:
+  - label: Thesis
+    url: https://repository.lsu.edu/gradschool_theses/6431/

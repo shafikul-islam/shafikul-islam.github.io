@@ -109,8 +109,6 @@
 
     // gauge
     $("rb-gauge").setAttribute("opacity", t >= 4 ? 1 : 0);
-    var fill = 160 * (f[0] + f[1] + f[2] + f[3] + f[4] + f[5]) / 6;
-    set($("rb-gauge-fill"), { y: 230 - fill, height: fill });
 
     // scene 2 labels
     for (var k = 0; k < 6; k++) {
@@ -169,6 +167,14 @@
     $("rb-part").setAttribute("transform", "translate(" + partPos[0].toFixed(1) + " " + partPos[1].toFixed(1) + ") rotate(" + partRot.toFixed(1) + ")");
     $("rb-flash").setAttribute("opacity", flash);
     $("rb-seat").setAttribute("class", seat > 0.5 ? "rb-seat on" : "rb-seat");
+
+    // Robotability gauge: manual fixes raise it partway; the twin's design search and the
+    // successful real trial raise it the rest of the way. Only a bar, never a number.
+    var manual = (f[0] + f[1] + f[2] + f[3] + f[4] + f[5]) / 6;
+    var twinGain = t >= 10 ? ease(seg(t, 13.4, 14.8)) : 0;
+    var realGain = scene >= 3 ? seat : 0;
+    var fill = 160 * (0.45 * manual + 0.3 * twinGain + 0.25 * realGain);
+    set($("rb-gauge-fill"), { y: (230 - fill).toFixed(1), height: fill.toFixed(1) });
 
     // ----- digital twin and ghosts (scene 3+) -----
     var twinIn = ease(seg(t, 10, 11.2));

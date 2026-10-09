@@ -1,5 +1,6 @@
 degrees:
   - degree: Ph.D. in Industrial Engineering
+    emoji: "🧑‍🔬"
     school: Louisiana State University (LSU)
     dept: Department of Mechanical and Industrial Engineering
     url: https://www.lsu.edu/
@@ -17,6 +18,7 @@ degrees:
       - "<strong>Physics-informed ML for process defect detection and fatigue modeling (NSF LAMDA):</strong> co-authored the funded proposal, built a sensor-integrated WAAM platform, and developed PI-CNN and physics-guided LSTM models for porosity and fatigue prediction."
       - "<strong>ArcAssist:</strong> an edge-AI co-pilot on NVIDIA Jetson that estimates melt pool state, flags risks, and suggests corrective actions for wire arc additive manufacturing."
   - degree: M.S. in Industrial Engineering (Thesis Option)
+    emoji: "🎓"
     school: Louisiana State University (LSU)
     dept: Department of Mechanical and Industrial Engineering
     url: https://www.lsu.edu/
@@ -25,9 +27,10 @@ degrees:
     status: Conferred August 14, 2026
     tint: green
     meta:
-      - [Thesis, "<em>Trustworthy Artificial Intelligence for Real-Time Quality Assurance in Additive Manufacturing</em>"]
+      - [Thesis, '<a href="https://repository.lsu.edu/gradschool_theses/6431/" target="_blank" rel="noopener"><em>Trustworthy Artificial Intelligence for Real-Time Quality Assurance in Additive Manufacturing</em></a>']
       - [Advisor, '<a href="https://www.lsu.edu/eng/mie/people/faculty/bappy.php" target="_blank" rel="noopener">Dr. Mahathir Mohammad Bappy</a>']
   - degree: B.Sc. in Industrial and Production Engineering
+    emoji: "🏛️"
     school: Shahjalal University of Science and Technology (SUST)
     dept: Department of Industrial and Production Engineering
     url: https://www.sust.edu/

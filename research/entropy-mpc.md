@@ -1,55 +1,57 @@
 ---
 layout: tldr
-title: "TL;DR: Entropy-aware MPC for WAAM restarts"
+title: "Summary: Entropy-aware MPC for WAAM restart transients"
 permalink: /research/entropy-mpc/
 kind: Poster
-short_title: Listening to the arc to fix restart defects
+short_title: Acoustic entropy as a control state for WAAM restarts
 paper_title: Entropy-Aware Model Predictive Control for Transient Quality Mitigation in Wire-Arc Additive Manufacturing
 authors: Md Shafikul Islam, Mahathir Mohammad Bappy, Safiur Rahman Tushar
 venue: LSU Control Systems Symposium, 2026. doi:10.31390/lsucontrol.26.12
 status: Simulation and surrogate-model study
-description: A plain-language, visual summary of entropy-aware model predictive control for restart transients in wire arc additive manufacturing.
+description: Research summary of entropy-aware model predictive control for restart transients in wire arc additive manufacturing.
+method_image: /assets/images/research/entropy_mpc_method.jpg
+method_caption: "Entropy-aware MPC architecture: arc sound, STFT spectrum, spectral entropy H(t), MPC, and heat-input correction q*(t)."
 tldr: >-
-  When a wire-arc 3D printer restarts after a pause, current and voltage can look normal while quality silently drops.
-  The sound of the arc reveals the problem: its spectral entropy collapses. We use that entropy as the state of a
-  model predictive controller, which answers with a short, front-loaded burst of extra heat. In simulation, recovery
-  is 47% faster and quality deviation is 35% lower.
+  Pause-induced cooling creates a restart transient in WAAM that electrical signals often fail to reveal. We show that the
+  spectral entropy of the arc sound collapses during this transient and use it as the state of a model predictive
+  controller. In a simulation and surrogate-model study, the entropy-aware controller shortens restart recovery by 47% and
+  reduces the quality-deviation AUC by 35% relative to a thermal-only baseline.
 visual: tldr/entropy.html
-visual_title: Entropy recovery and heat correction
+visual_title: entropy recovery and heat correction
 problem: >-
-  During a build the robot sometimes has to pause. While it waits, the part cools down and acts like a heat sink. When
-  the arc restarts, the first part of the new bead is too cold, so its shape and quality drift. The usual signals,
-  current and voltage, can stay nominal, so the controller does not notice anything is wrong.
+  When deposition pauses, the part cools and acts as a heat sink. At restart, current and voltage can remain within their
+  nominal ranges while bead morphology and quality drift. Controllers that rely on electrical or thermal states alone may
+  therefore miss a transient that later appears as a defect.
 idea: >-
-  Use the arc's sound as a sensor. We turn the sound into a single number, the <strong>spectral entropy H(t)</strong>,
-  which drops sharply at a cold restart. A <strong>model predictive controller (MPC)</strong> then chooses the heat
-  input that brings H(t) back to a reference value quickly, while penalizing large jumps in heat.
+  Treat the <strong>arc's acoustic signature</strong> as a response-side quality signal. Its <strong>spectral entropy
+  H(t)</strong> provides a compact, control-ready state. An <strong>entropy-aware MPC</strong> tracks a reference entropy
+  H<sub>ref</sub> while penalizing abrupt changes in heat input, which yields a short, front-loaded correction.
 steps:
-  - title: Record the arc sound
-    text: A microphone records the welding arc, x[n], during the build.
-  - title: Make a spectrum
-    text: A short-time Fourier transform (STFT) turns the sound into frequency content over time, X(k, t).
-  - title: Compute entropy
-    text: "Spectral entropy H(t) = -sum of p_k(t) log p_k(t) summarizes how spread out the sound is. It collapses at a cold restart."
-  - title: Predict and decide
-    text: "A learned dynamics model (DMDc or SINDy) predicts the response; MPC picks q*(t) = argmin [(H - H_ref)^2 + lambda (delta q)^2]."
-  - title: Correct the heat
-    text: The controller applies a short, front-loaded heat pulse, then backs off as entropy returns to the stable band.
-results_note: All numbers are from simulation with learned surrogate models, not physical experiments.
+  - title: Acoustic sensing
+    text: A microphone records the arc signal x[n] throughout deposition and restart.
+  - title: Time-frequency analysis
+    text: A short-time Fourier transform produces the spectrum X(k, t).
+  - title: Spectral entropy
+    text: "H(t) = -&Sigma; p<sub>k</sub>(t) log p<sub>k</sub>(t) summarizes spectral spread; it drops sharply after a cold restart."
+  - title: Surrogate dynamics and MPC
+    text: "Learned models (DMDc, SINDy) predict the response; MPC solves q*(t) = argmin [(H - H<sub>ref</sub>)<sup>2</sup> + &lambda;(&Delta;q)<sup>2</sup>]."
+  - title: Heat-input correction
+    text: The optimal input applies a front-loaded heat pulse and relaxes as entropy re-enters the stable band.
+results_note: All results come from simulation with learned surrogate models, not physical experiments.
 stats:
   - { value: "47", unit: "%", label: Faster restart recovery }
   - { value: "35", unit: "%", label: Lower quality-deviation AUC }
-  - { value: "2.8", unit: s, label: "Settling time, DMDc + entropy-aware MPC (6.7 s for thermal-only)" }
-  - { value: "0.054", unit: "", label: "Risk AUC, DMDc + entropy-aware MPC (0.222 for thermal-only)" }
+  - { value: "2.8", unit: s, label: "Settling time, DMDc + entropy-aware MPC (6.7 s thermal-only)" }
+  - { value: "0.054", unit: "", label: "Risk AUC, DMDc + entropy-aware MPC (0.222 thermal-only)" }
 findings:
-  - Adding the entropy objective to MPC reduced settling time and entropy-risk AUC for both DMDc and SINDy models.
-  - Across hold-out runs, larger entropy drops were associated with a higher flaw-density proxy, so arc sound works as an early quality-risk signal.
-  - Recovery stayed stable when the SINDy model parameters drifted by plus or minus 5%.
+  - Adding the entropy objective reduced settling time and entropy-risk AUC for both DMDc and SINDy surrogate models; DMDc with entropy-aware MPC performed best.
+  - Across hold-out runs, larger entropy drops were associated with a higher flaw-density proxy, supporting arc sound as an in-situ quality-risk signal.
+  - Recovery remained stable under plus or minus 5% drift in the SINDy model parameters.
 why: >-
-  A microphone is cheap and non-contact. If arc sound can warn about restart defects before post-build inspection,
-  robotic WAAM cells can correct themselves in real time instead of scrapping parts later.
+  Acoustic sensing is inexpensive and non-contact, and it responds to process quality rather than to the commanded
+  electrical inputs. Using it as a control state is a step toward robotic WAAM cells that detect and correct transients
+  during the build instead of relying on post-build inspection.
 links:
   - { label: Poster PDF, url: /assets/docs/entropy-mpc-poster.pdf }
   - { label: DOI, url: "https://doi.org/10.31390/lsucontrol.26.12" }
-  - { label: Research page, url: "/research/#poster" }
 ---

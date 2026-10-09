@@ -1,41 +1,53 @@
 milestones:
   - title: M.S. in Industrial Engineering (Thesis Option)
     meta: Louisiana State University, conferred August 14, 2026
-    text: 'Thesis: <em>Trustworthy Artificial Intelligence for Real-Time Quality Assurance in Additive Manufacturing</em>.'
+    text: 'Thesis: <a href="https://repository.lsu.edu/gradschool_theses/6431/" target="_blank" rel="noopener"><em>Trustworthy Artificial Intelligence for Real-Time Quality Assurance in Additive Manufacturing</em></a> (LSU Digital Commons).'
+    photo: /assets/images/grad-1.jpg
+    photo2: /assets/images/grad-2.jpg
 
 awards:
   - icon: trophy
+    emoji: "🥈"
     title: 2nd Place, Best Track Paper Award (Health Systems Track)
     meta: IISE Annual Conference and Expo, 2026
     text: For the paper "Multimodal Vision-Language Models for Automated and Explainable Postoperative Complication Risk Stratification".
   - icon: medal
+    emoji: "🥉"
     title: 3rd Place, DAIS Student Data Analytics Competition
     meta: IISE Annual Conference and Expo, 2026
     text: National recognition by the IISE Data Analytics and Information Systems (DAIS) Division.
   - icon: trophy
+    emoji: "🏆"
     title: Champion, IISE Innovative Design Competition
     meta: IISE Annual Conference and Expo, 2025
     text: '"Hearth AI: Meaningful Connection at your Fingertips".'
   - icon: medal
+    emoji: "🥈"
     title: Runner-up, Stakeholder Engagement Data Challenge
     meta: INFORMS Annual Meeting, 2025
   - icon: medal
+    emoji: "🥉"
     title: 2nd Runner-up, QCRE Data Challenge
     meta: IISE Annual Conference and Expo, 2025
   - icon: mic
+    emoji: "🎤"
     title: Best Graduate Oral Presentation
     meta: Louisiana Academy of Sciences, 99th Annual Meeting, 2025
     text: Materials Science and Engineering division.
   - icon: plane
+    emoji: "✈️"
     title: NSF Student Travel Award
     meta: NAMRC, 2025
   - icon: plane
+    emoji: "✈️"
     title: NSF Student Travel Award
     meta: IISE Annual Conference and Expo, 2025
   - icon: mic
+    emoji: "🏅"
     title: Best Technical Presentation (merit-based)
     meta: IEEE ICCIT, 2024
   - icon: grad
+    emoji: "🎓"
     title: University Merit Scholarship
     meta: SUST, 2020 to 2024
     text: Top 5% for four consecutive years.
@@ -44,44 +56,59 @@ grants:
   - title: Physics-Informed ML for Process Defect Detection and Fatigue Modeling in WAAM
     meta: NSF LAMDA Seed Grant, Aug 2025
     status: Funded
+    emoji: "✅"
     status_class: status-ok
   - title: Cross-Modality Domain Adaptation for Anomaly Detection in LPBF Systems
     meta: NASA EPSCoR CAN, Aug 2025
     status: Recommended
+    emoji: "⭐"
     status_class: status-accent
   - title: Privacy-preserving Certification Framework for AMaaS Platforms
     meta: NSF Southwest I-Corps IdeaLaunch, Feb to Mar 2025
     status: Selected, Entrepreneurial Lead
+    emoji: "🚀"
     status_class: status-accent
   - title: Crowd-Sourced Data with ML for Road Condition Monitoring
     meta: LTRC TIRE Program, Jan 2025
     status: Not funded
+    emoji: "📝"
 
 service:
+  - icon: users
+    emoji: "🏏"
+    title: University Students Coordinator and Web Design Lead, Louisiana Cricket Board
+    meta: Community service
   - icon: flag
+    emoji: "⚖️"
     title: Judge, Louisiana Science and Engineering Fair (LSEF), Senior Division
     meta: Apr 2026
   - icon: mic
+    emoji: "🎙️"
     title: Invited talk, CeRoM, LSU
     meta: Dec 12, 2025
     text: '"Application of Machine Learning Methods in Grease Manufacturing under Data Scarcity." <a href="https://drive.google.com/file/d/1C9_OywNGRFTo3NkrM9h7bl9viEQqztRU/view?usp=drive_link" target="_blank" rel="noopener">Slides</a>'
   - icon: review
-    title: Reviewer, Digital Twins and Applications (Wiley), Elsevier Heliyon, and 2026 MSEC Conference
+    emoji: "📝"
+    title: Reviewer, Expert Systems with Applications (Elsevier), Heliyon (Elsevier), Digital Twins and Applications (Wiley), and the 2026 MSEC Conference
     meta: 2025 to present
   - icon: users
+    emoji: "🪑"
     title: Session Chair, 2025 IISE Annual Conference and Expo
     meta: May 2025
 
 leadership:
   - icon: flag
+    emoji: "⚽"
     title: Sports Secretary, Bangladeshi Student Association (BSA), LSU
     meta: Jun 2025 to present
     text: Lead organizing committees for sporting events and community engagement.
   - icon: users
+    emoji: "🚀"
     title: Founder and Director, Computational Intelligence and Operations Lab (CIOL)
     meta: Jan 2022 to present
     text: 'An open research and learning community at the intersection of optimization and machine learning. <a href="https://github.com/ciol-researchlab/CIOL-Winter-ML-Bootcamp" target="_blank" rel="noopener">Bootcamp materials</a>'
   - icon: grad
+    emoji: "👥"
     title: Seminar Organizer, CIOL
     meta: Nov 2023
     text: 'Higher-education research seminar with 50+ attendees. <a href="https://youtu.be/QvSKnodvAbY?si=fgS55CbQcrpNkshf" target="_blank" rel="noopener">Video</a>'

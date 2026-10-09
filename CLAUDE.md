@@ -24,7 +24,7 @@ Identity to convey: a PhD researcher building Physical AI for manufacturing. Mac
 - Mobile-first layout. Test at 375 px, 768 px, and 1280 px widths.
 - Respect `prefers-reduced-motion`. Animation is subtle and optional.
 - Images: compressed WebP or optimized JPEG/PNG, `loading="lazy"`, explicit width and height. Videos: muted, looped, with a poster image, under about 4 MB.
-- No emoji as icons. Use inline SVG icons.
+- Emoji are welcome as friendly accents in headings, tags, and list items (Sohan's preference). Keep inline SVG icons for interface controls (menu, theme toggle, links).
 
 ## Never commit
 
@@ -49,7 +49,7 @@ Never publish or commit: transcripts, date of birth, visa or immigration status,
 - Name: MD Shafikul Islam. Goes by Sohan.
 - Ph.D. program: Industrial Engineering, Department of Mechanical and Industrial Engineering, Louisiana State University. Started January 2025. Cumulative GPA 4.05.
 - M.S. in Industrial Engineering (Thesis Option), Louisiana State University. Conferred August 14, 2026.
-- M.S. thesis: "Trustworthy Artificial Intelligence for Real-Time Quality Assurance in Additive Manufacturing."
+- M.S. thesis: "Trustworthy Artificial Intelligence for Real-Time Quality Assurance in Additive Manufacturing." https://repository.lsu.edu/gradschool_theses/6431/
 - B.S. in Industrial and Production Engineering, Shahjalal University of Science and Technology, Bangladesh, 2024. GPA 3.74/4.00, top 5 percent.
 - Advisor: Dr. Mahathir Mohammad Bappy. Lab: AnalyticsIQ Lab.
 - Founder and Director, Computational Intelligence and Operations Lab (CIOL), since January 2022.

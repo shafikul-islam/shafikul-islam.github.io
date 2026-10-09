@@ -1,5 +1,6 @@
 research:
   - role: Graduate Research Assistant
+    emoji: "🔬"
     org: AnalyticsIQ Lab, Louisiana State University
     url: https://www.lsu.edu/eng/mie/people/faculty/bappy.php
     when: Jan 2025 to present
@@ -15,6 +16,7 @@ research:
       - "<strong>DrinkSafe LA</strong> (National Academies Gulf Research Program and NOAA): built and debugged Python data pipelines for water-quality indicators and supported resilience modeling."
     tags: [WAAM, Physics-informed ML, Edge AI, XCT]
   - role: Founder and Director
+    emoji: "🚀"
     org: Computational Intelligence and Operations Lab (CIOL)
     url: https://github.com/ciol-researchlab
     when: Jan 2022 to present
@@ -28,6 +30,7 @@ research:
       - Organized seminars and bootcamps on explainable AI, higher-education pathways, and research translation.
     tags: [Graph ML, Optimization, Mentoring]
   - role: Undergraduate Researcher
+    emoji: "🧮"
     org: Department of Industrial and Production Engineering, SUST
     url: https://www.sust.edu/
     when: Jun 2022 to Dec 2022
@@ -40,26 +43,31 @@ research:
 
 mentoring:
   - role: Undergraduate Research Mentor
+    emoji: "🧑‍🏫"
     org: AnalyticsIQ Lab, LSU
     when: 2024 to present
     text: Directing two undergraduate researchers in designing and running experiments for cyber-physical manufacturing systems, with hands-on guidance on AI-driven sensing, data pipelines, and manufacturing analytics.
   - role: Instructor and Mentor
+    emoji: "📚"
     org: CIOL Winter ML Bootcamp
     when: Jan 2024
     text: Delivered sessions on explainable AI and translating code to research, and mentored a cohort of about 20 students.
 
 industry:
   - role: Information Technology Intern
+    emoji: "💻"
     org: IDLC Finance PLC
     when: Sep 2024 to Dec 2024
     location: Dhaka, Bangladesh
     text: Supported secure IT operations and workflow automation for enterprise finance systems.
   - role: Industrial Trainee
+    emoji: "🏭"
     org: Training Institute for Chemical Industries (TICI)
     when: Dec 2023
     location: Dhaka, Bangladesh
     text: Hands-on training in operations processes, instrumentation and control, engineering materials, welding technology, and industrial safety.
   - role: Industrial Training
+    emoji: "🛠️"
     org: BITAC
     when: Dec 2022 (10-day program)
     location: Bangladesh

@@ -2,20 +2,25 @@
 
 pillars:
   - title: Multimodal perception
+    viz: perception
     icon: eye
     text: Computer vision and sensor fusion (thermal, optical, acoustic, electrical) for in-process quality monitoring.
   - title: Learned dynamics and digital twins
+    viz: twin
     icon: cube
     text: Physics-informed surrogate models and simulation in NVIDIA Isaac Sim and Omniverse.
   - title: Predictive control and safe autonomy
+    viz: control
     icon: gauge
     text: Model predictive control that selects corrective actions within machine and safety limits.
   - title: Edge deployment
+    viz: edge
     icon: cpu
     text: Real-time inference on NVIDIA Jetson with TensorRT, close to the machine.
 
 directions:
   - title: Digital twins for monitoring and control
+    viz: twin
     icon: cube
     text: >-
       A digital twin is most useful when it supports <strong>state estimation</strong>, <strong>prediction</strong>,
@@ -24,6 +29,7 @@ directions:
       including linear-quadratic regulation and model predictive control.
     tags: [Digital Twin, State Estimation, Optimal Control]
   - title: In-situ monitoring and uncertainty-aware learning
+    viz: monitor
     icon: activity
     text: >-
       Multimodal process measurements provide evidence of melt-pool behaviour and defect formation.
@@ -31,6 +37,7 @@ directions:
       and the reliability of predictions used for control and quality assurance.
     tags: [Physics-informed, Uncertainty, Robustness]
   - title: Robotics and manufacturing environment design
+    viz: robot
     icon: robot
     text: >-
       I study how workspace layout and other manufacturing environment variables affect robot task performance.
@@ -40,6 +47,7 @@ directions:
 
 projects:
   - title: Designing a world robots can work in (robotability)
+    emoji: "🏗️"
     icon: robot
     tint: blue
     status: In progress
@@ -49,6 +57,7 @@ projects:
       cell designs in a <strong>digital twin</strong> before validating them on a real robot (<strong>sim to real</strong>).
     tags: [Robotics, Environment co-design, Sim to real, Digital Twin]
   - title: Digital twin of a robotic WAAM cell in NVIDIA Isaac Sim
+    emoji: "🧊"
     icon: cube
     tint: violet
     status: In progress
@@ -57,6 +66,7 @@ projects:
       robot motion, sensor placement, and control studies before they run on the real machine.
     tags: [Isaac Sim, WAAM, Digital Twin]
   - title: Physics-informed ML for WAAM defect detection
+    emoji: "🔬"
     icon: layers
     tint: yellow
     status: NSF LAMDA funded
@@ -65,6 +75,7 @@ projects:
       with a physics-informed CNN for porosity detection validated against X-ray CT.
     tags: [WAAM, In-situ Sensing, Physics-informed ML]
   - title: ArcAssist, an edge-AI co-pilot for WAAM
+    emoji: "⚡"
     icon: cpu
     tint: green
     status: In progress
@@ -73,6 +84,7 @@ projects:
       to the operator.
     tags: [Edge AI, Jetson, Control]
   - title: Geometry-invariant melt-pool control
+    emoji: "🎛️"
     icon: gauge
     tint: rose
     status: In progress
@@ -81,6 +93,7 @@ projects:
       part geometries, comparing LQR and MPC for layer-wise correction.
     tags: [Metal AM, Control, Uncertainty]
   - title: Fatigue modeling linked to process signatures
+    emoji: "📈"
     icon: activity
     tint: blue
     status: In progress
@@ -123,7 +136,7 @@ featured:
     alt: Symposium poster on entropy-aware model predictive control for wire arc additive manufacturing
     tags: [Process Control, Acoustic Sensing, WAAM]
     venue: Poster, LSU Control Systems Symposium, 2026
-    teaser: When a wire-arc printer restarts after a pause, the weld can look normal on current and voltage while quality silently drops. Listening to the arc sound and correcting heat input early fixes it faster (simulation and surrogate study).
+    teaser: Restart transients in WAAM can remain invisible in current and voltage. Spectral entropy of the arc sound serves as a control state for MPC, which shortens recovery through a front-loaded heat correction (simulation and surrogate-model study).
     tldr: /research/entropy-mpc/
     links:
       - label: Poster PDF
@@ -135,7 +148,7 @@ featured:
     alt: Graph neural network methodology figure
     tags: [Graph ML, Privacy, Additive Manufacturing]
     venue: Major revision at ASME JCISE, arXiv:2604.05077
-    teaser: Factories want to share melt-pool data to train better porosity detectors without exposing their process secrets. Adding noise where it hurts least keeps most of the accuracy while giving each sample a formal privacy guarantee.
+    teaser: Embedding-level local differential privacy with feature-aware, anisotropic noise allocation, combined with a layer-wise graph attention network, enables collaborative porosity detection while preserving much of the non-private utility.
     tldr: /research/private-graph-am/
     links:
       - label: arXiv
@@ -145,7 +158,7 @@ featured:
     alt: FDM anomaly detection methodology figure
     tags: [Vision Transformers, Manufacturing, Real-time]
     venue: International Journal of Advanced Manufacturing Technology, 2026
-    teaser: Surface defects on 3D-printed parts are spread out and subtle. A vision transformer looks at the whole surface at once, so it catches defects that local filters miss, fast enough for real-time use.
+    teaser: An optimized vision transformer on laser-scan depth maps uses global self-attention to detect spatially distributed surface anomalies in FDM in real time (macro-F1 0.877, support-weighted mAUC 0.972).
     tldr: /research/vit-fdm/
     links:
       - label: DOI
@@ -155,7 +168,7 @@ featured:
     alt: Fracture Finder YOLOv8 pipeline figure
     tags: [Medical Imaging, YOLOv8, Real-time]
     venue: IISE Transactions on Healthcare Systems Engineering, 2026
-    teaser: Spine fractures can be missed when doctors are under time pressure. Fracture Finder draws a box around suspected fractures in about 126 ms per X-ray, so risky cases get reviewed first.
+    teaser: A single-stage YOLOv8 detector with targeted augmentation and weighted box fusion localizes suspected vertebral fractures on thoracic spine X-rays in about 126 ms per image.
     tldr: /research/fracture-finder/
     links:
       - label: DOI
@@ -166,6 +179,10 @@ highlights:
     title: Best Graduate Oral Presentation
     caption: Louisiana Academy of Sciences, 99th Annual Meeting.
     tag: Award
+  - image: /assets/images/poster/presenting-poster.jpg
+    title: LSU Control Systems Symposium 2026
+    caption: Poster on entropy-aware MPC for WAAM restart transients.
+    tag: Poster
   - image: /assets/images/gallery/At IISE conference 2025.jpg
     title: IISE Annual Conference 2025
     caption: Presenting research on AM reliability.

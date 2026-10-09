@@ -1,13 +1,13 @@
 ---
 layout: page
 title: Publications
-eyebrow: Publications
+eyebrow: "📚 Publications"
 heading: Publications
-lead: 13 journal articles, 11 conference and workshop papers, 8 preprints, and 2 posters (as of the July 2026 CV). Search by title, venue, author, or keyword, or filter by type and topic.
+lead: 13 journal articles, 11 conference and workshop papers, 8 preprints, 2 posters, and an M.S. thesis (as of the July 2026 CV). Search by title, venue, author, or keyword, or filter by type and topic.
 description: Publications of MD Shafikul Islam in manufacturing AI, computer vision, graph learning and digital twins.
 ---
 {%- assign pubs = site.data.publications -%}
-{%- assign types = "journal|Journal articles,conf|Conference and workshop papers,preprint|Preprints,poster|Posters" | split: "," -%}
+{%- assign types = "journal|Journal articles,conf|Conference and workshop papers,preprint|Preprints,poster|Posters,thesis|Thesis" | split: "," -%}
 {%- assign topics = "Manufacturing,Computer Vision,Graph Neural Networks,Digital Twins,Healthcare AI,Control,Privacy,Supply Chain,Time Series,Optimization,LLMs" | split: "," -%}
 <div class="container" id="pubs">
   <div class="pubs-controls">
@@ -35,8 +35,8 @@ description: Publications of MD Shafikul Islam in manufacturing AI, computer vis
   {%- for t in types %}{% assign kv = t | split: "|" %}
   {%- assign group = pubs | where: "type", kv[0] %}
   <section class="pub-group" data-group="{{ kv[0] }}" id="{{ kv[0] }}">
-    <h2>{{ kv[1] }} <span class="count" data-count>{{ group.size }}</span></h2>
-    <div class="card card-flat card-rule-{% cycle 'blue', 'accent', 'yellow', 'blue' %}" style="padding-top:4px;padding-bottom:4px;">
+    <h2>{{ site.data.pub_types[kv[0]] }} {{ kv[1] }} <span class="count" data-count>{{ group.size }}</span></h2>
+    <div class="pub-box pub-box-{{ kv[0] }}">
       {%- for p in group %}
       <article class="pub" data-type="{{ p.type }}" data-tags="{{ p.tags | join: '|' }}">
         <div class="pub-id">{{ p.id }}</div>
