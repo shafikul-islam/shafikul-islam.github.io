@@ -74,10 +74,6 @@ grants:
     emoji: "📝"
 
 service:
-  - icon: users
-    emoji: "🏏"
-    title: University Students Coordinator and Web Design Lead, Louisiana Cricket Board
-    meta: Community service
   - icon: flag
     emoji: "⚖️"
     title: Judge, Louisiana Science and Engineering Fair (LSEF), Senior Division
@@ -97,6 +93,10 @@ service:
     meta: May 2025
 
 leadership:
+  - icon: users
+    emoji: "🏏"
+    title: University Students Coordinator and Web Design Lead, Louisiana Cricket Board
+    meta: Community
   - icon: flag
     emoji: "⚽"
     title: Sports Secretary, Bangladeshi Student Association (BSA), LSU

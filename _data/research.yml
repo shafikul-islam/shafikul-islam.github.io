@@ -65,6 +65,15 @@ projects:
       A simulation copy of our robotic wire arc additive manufacturing cell, built in September 2026, as a testbed for
       robot motion, sensor placement, and control studies before they run on the real machine.
     tags: [Isaac Sim, WAAM, Digital Twin]
+  - title: Entropy-aware MPC for WAAM restart transients
+    emoji: "🔊"
+    icon: activity
+    tint: rose
+    status: Poster, 2026 (simulation study)
+    text: >-
+      Spectral entropy of the arc sound as a control state for model predictive control, so the controller can correct
+      restart transients that current and voltage do not reveal. Presented at the LSU Control Systems Symposium 2026.
+    tags: [Acoustic sensing, MPC, WAAM]
   - title: Physics-informed ML for WAAM defect detection
     emoji: "🔬"
     icon: layers
@@ -101,34 +110,6 @@ projects:
       A physics-guided LSTM that links process-induced defects to structural performance by combining fracture mechanics
       with deep learning.
     tags: [Reliability, Sequence Models, Physics-guided]
-
-poster:
-  title: Entropy-Aware Model Predictive Control for Transient Quality Mitigation in Wire-Arc Additive Manufacturing
-  authors: "<strong>Md Shafikul Islam</strong>, Mahathir Mohammad Bappy, Safiur Rahman Tushar"
-  venue: LSU Control Systems Symposium, June 26, 2026
-  doi: 10.31390/lsucontrol.26.12
-  image: /assets/images/poster/entropy-mpc-poster.jpg
-  photo: /assets/images/poster/presenting-poster.jpg
-  pdf: /assets/docs/entropy-mpc-poster.pdf
-  tldr: >-
-    Cold restarts can look electrically normal while the <strong>arc sound's entropy collapses</strong>. Entropy-aware MPC
-    turns this hidden transient into a <strong>short, front-loaded heat correction</strong>.
-  stats:
-    - value: "47"
-      unit: "%"
-      label: Faster restart recovery
-    - value: "35"
-      unit: "%"
-      label: Lower quality-deviation AUC
-    - value: "2.8"
-      unit: s
-      label: Settling time with DMDc + entropy-aware MPC (6.7 s thermal-only baseline)
-    - value: "0.054"
-      unit: ""
-      label: Risk AUC with DMDc + entropy-aware MPC (0.222 thermal-only baseline)
-    - value: "±5"
-      unit: "%"
-      label: Model parameter drift with stable recovery
 
 featured:
   - title: Entropy-Aware Model Predictive Control for Transient Quality Mitigation in WAAM

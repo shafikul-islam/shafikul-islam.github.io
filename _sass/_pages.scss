@@ -6,7 +6,7 @@
 .hero {
   position: relative;
   isolation: isolate;
-  padding: clamp(36px, 6vw, 80px) 0 clamp(40px, 6vw, 72px);
+  padding: clamp(28px, 4.5vw, 56px) 0 clamp(32px, 4.5vw, 52px);
   border-bottom: 1px solid var(--line);
   overflow: hidden;
 }
@@ -39,7 +39,7 @@
   border: 6px solid var(--bg-elev);
   box-shadow: var(--shadow-lg);
   z-index: 1; opacity: 0;
-  transition: opacity 1.2s var(--ease);
+  transition: opacity .9s var(--ease);
 }
 .hero-photo img.is-on { opacity: 1; z-index: 2; }
 .hero-photo::before {
@@ -348,7 +348,7 @@
 .section-green { background: var(--tint-green); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .section-yellow { background: var(--tint-yellow); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .section-blue + .section, .section-green + .section, .section-yellow + .section,
-.section + .section-blue, .section + .section-green, .section + .section-yellow { padding-top: clamp(48px, 7vw, 88px); }
+.section + .section-blue, .section + .section-green, .section + .section-yellow { padding-top: clamp(32px, 4.5vw, 60px); }
 .hl {
   background: linear-gradient(transparent 58%, color-mix(in srgb, var(--robot-yellow) 45%, transparent) 58%);
   color: var(--ink); font-weight: 600; padding: 0 2px;
@@ -381,3 +381,9 @@
 .milestone-photos img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius); border: 4px solid var(--bg-elev); box-shadow: var(--shadow); }
 .milestone-photos img:last-child { transform: translateY(18px) rotate(2deg); }
 @media (max-width: 760px) { .milestone-card { grid-template-columns: 1fr; } }
+.toolkit { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 18px 0 0; }
+.toolkit-label { font-family: var(--font-mono); font-size: .76rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-2); margin-right: 4px; font-weight: 500; }
+.lever b { color: var(--ink); font-weight: 600; }
+.meet { display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: start; }
+.meet-icon { font-size: 2.2rem; line-height: 1; }
+@media (max-width: 560px) { .meet { grid-template-columns: 1fr; } }

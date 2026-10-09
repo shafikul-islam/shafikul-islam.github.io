@@ -123,15 +123,15 @@ main { display: block; min-height: 60vh; }
 }
 
 // ---------- Sections ----------
-.section { padding: clamp(48px, 7vw, 88px) 0; }
+.section { padding: clamp(32px, 4.5vw, 60px) 0; }
 .section + .section { padding-top: 0; }
 .section-alt {
   background: var(--bg-sunken);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
-.section-alt + .section { padding-top: clamp(48px, 7vw, 88px); }
-.section + .section-alt { margin-top: 0; padding-top: clamp(48px, 7vw, 88px); }
+.section-alt + .section { padding-top: clamp(32px, 4.5vw, 60px); }
+.section + .section-alt { margin-top: 0; padding-top: clamp(32px, 4.5vw, 60px); }
 
 .section-head {
   display: flex;
@@ -139,7 +139,7 @@ main { display: block; min-height: 60vh; }
   justify-content: space-between;
   gap: 16px 24px;
   flex-wrap: wrap;
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 }
 .section-head > div { max-width: 720px; }
 .section-head h2 { margin-bottom: .25em; }
@@ -168,12 +168,12 @@ main { display: block; min-height: 60vh; }
 .page-hero {
   position: relative;
   background: var(--hero-wash);
-  padding: clamp(40px, 6vw, 72px) 0 clamp(28px, 4vw, 44px);
+  padding: clamp(28px, 4vw, 48px) 0 clamp(22px, 3vw, 32px);
   border-bottom: 1px solid var(--line);
   overflow: hidden;
 }
 .page-hero h1 { margin-bottom: .3em; }
-.page-hero .lead { max-width: 760px; }
+.page-hero .lead { max-width: 820px; margin-bottom: 0; }
 
 .lead { font-size: 1.12rem; color: var(--ink-2); line-height: 1.6; }
 .muted { color: var(--ink-3); }

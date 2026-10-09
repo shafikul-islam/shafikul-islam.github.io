@@ -31,7 +31,7 @@
     });
   }
 
-  // ---------- Hero photos: crossfade every 10 s ----------
+  // ---------- Hero photos: crossfade every 4 s ----------
   var heroPhotos = document.querySelectorAll("#hero-photo img");
   var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (heroPhotos.length > 1 && !reduceMotion) {
@@ -41,7 +41,7 @@
       heroPhotos[hi].classList.remove("is-on");
       hi = (hi + 1) % heroPhotos.length;
       heroPhotos[hi].classList.add("is-on");
-    }, 10000);
+    }, 4000);
   }
 
   // ---------- Mobile navigation ----------

@@ -2,63 +2,43 @@
 layout: page
 title: Research
 eyebrow: "🤖 Research"
-heading: Physical AI for robotic manufacturing
+heading: Physical AI for reliable robotic manufacturing
 lead: >-
-  My goal is <strong>robots that build parts reliably without constant human correction</strong>. I approach it from two
-  sides of the same robot: <span class="hl">improving the process</span> the robot runs, and <span class="hl">improving the
-  environment</span> the robot works in. Both rely on sensing, learned models, digital twins, and predictive control.
-description: Research on Physical AI for robotic manufacturing, process control in wire arc additive manufacturing, robot cell design, digital twins and sim to real.
+  Robots on the factory floor fail for two reasons: <span class="hl">the process drifts</span>, or
+  <span class="hl">the environment works against them</span>. I build Physical AI that closes the loop on both.
+  During a build, the robot <strong>senses its process and corrects it</strong>. Before a build, the robot's cell is
+  <strong>designed and tested in a digital twin</strong> so the robot can succeed in the first place.
+description: Physical AI for robotic manufacturing, process control in wire arc additive manufacturing, robot cell design, digital twins, and sim to real.
 ---
 {%- assign r = site.data.research -%}
-
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">🧭 Directions</div>
-        <h2>Research directions</h2>
-        <p>Three directions that connect <strong>process observation</strong>, <strong>control</strong>, and <strong>robotic manufacturing</strong>.</p>
-      </div>
-    </div>
-    <div class="grid grid-3">
-      {%- assign dt = "blue,rose,yellow" | split: "," -%}
-      {%- for d in r.directions %}{% assign t = dt[forloop.index0] %}
-      <article class="card tint-{{ t }} ink-{{ t }}">
-        <div class="mv-box">{% include mini-viz.html name=d.viz %}</div>
-        <h3>{{ d.title }}</h3>
-        <p>{{ d.text }}</p>
-        <ul class="tags">{% for tg in d.tags %}<li class="tag" style="background:var(--bg-elev);">{{ tg }}</li>{% endfor %}</ul>
-      </article>
-      {%- endfor %}
-    </div>
-  </div>
-</section>
 
 <section class="section section-blue">
   <div class="container">
     <div class="section-head">
       <div>
-        <div class="eyebrow">🎯 One goal, two levers</div>
-        <h2>Same robot, two ways to make it succeed</h2>
-        <p>A robot fails when the process drifts or when its surroundings work against it. My first focus makes the <strong>process</strong> watch and correct itself. My second focus redesigns the <strong>robot cell</strong> so the robot can succeed in the first place, and tests those designs in a digital twin before building them.</p>
+        <div class="eyebrow">🎯 One goal, two loops</div>
+        <h2>Same robot, two loops that make it reliable</h2>
+        <p>Both lines of my work follow one cycle: <strong>sense, model, decide, and check on the real robot</strong>. What differs is <span class="hl">when the loop closes</span>.</p>
       </div>
     </div>
     <div class="levers">
-      <a class="lever tint-yellow" href="#focus-process"><span class="lever-n">1</span><span><strong>🔥 Improve the process</strong><br>Sense the weld, predict defects, correct heat and speed in real time.</span></a>
+      <a class="lever tint-yellow" href="#loop-process"><span class="lever-n">1</span><span><strong>🔥 Loop 1 &middot; During the build</strong><br><b>Improve the process:</b> sense the weld, predict defects, correct heat and speed in real time.</span></a>
       <span class="lever-plus" aria-hidden="true">+</span>
-      <a class="lever tint-green" href="#focus-environment"><span class="lever-n">2</span><span><strong>🏗️ Improve the environment</strong><br>Measure what makes a cell hard for robots, then design a better one.</span></a>
+      <a class="lever tint-green" href="#loop-environment"><span class="lever-n">2</span><span><strong>🏗️ Loop 2 &middot; Before the build</strong><br><b>Improve the environment:</b> measure what makes a cell hard for robots, then design a better one in a digital twin.</span></a>
     </div>
+    <p class="toolkit"><span class="toolkit-label">🧰 Shared toolkit</span>
+      <span class="tag tag-blue">Sensing</span><span class="tag tag-violet">Learned models</span><span class="tag tag-green">Digital twins</span><span class="tag tag-accent">Predictive control</span><span class="tag tag-yellow">Sim to real</span></p>
   </div>
 </section>
 
-<section class="section" id="focus-process">
+<section class="section" id="loop-process">
   <div class="container split">
     <div>
-      <div class="eyebrow">🔥 Research focus 1 &middot; Process</div>
+      <div class="eyebrow">🔥 Loop 1 &middot; Process</div>
       <h2>A robotic WAAM cell that watches itself</h2>
-      <p>In <strong>wire arc additive manufacturing (WAAM)</strong>, an industrial robot carries a welding torch and builds a metal part one bead at a time. Each new layer reheats the layers below, so <span class="hl">heat, bead shape, and porosity drift</span> during the build.</p>
-      <p>My cell adds the senses a skilled welder relies on: a <strong>camera</strong> on the melt pool, an <strong>acoustic sensor</strong> on the arc, and electrical and thermal signals. Learned models turn these signals into a process state, predict defect risk, and recommend a <strong>bounded correction</strong> to heat input or travel speed before a defect forms. One example is entropy-aware model predictive control for restart transients (<a href="{{ '/research/entropy-mpc/' | relative_url }}">summary</a>).</p>
-      <ul class="tags"><li class="tag tag-blue">👁️ Sense: vision, sound, thermal</li><li class="tag tag-violet">🧠 Predict: defect risk</li><li class="tag tag-accent">⚙️ Act: heat and speed</li></ul>
+      <p>In <strong>wire arc additive manufacturing</strong>, an industrial robot builds a metal part one weld bead at a time, and <span class="hl">heat, bead shape, and porosity drift</span> as layers stack up.</p>
+      <p>My cell adds the senses a skilled welder relies on: <strong>vision</strong> on the melt pool, <strong>sound</strong> from the arc, and electrical and thermal signals. Learned models turn these signals into a process state, predict defect risk, and recommend a <strong>bounded correction</strong> before a defect forms.</p>
+      <ul class="tags"><li class="tag tag-blue">👁️ Sense</li><li class="tag tag-violet">🧠 Predict</li><li class="tag tag-accent">⚙️ Act</li></ul>
     </div>
     <div class="anim-frame">
       <div class="anim-caption"><span class="live-dot">Robotic WAAM cell</span></div>
@@ -67,11 +47,11 @@ description: Research on Physical AI for robotic manufacturing, process control 
   </div>
 </section>
 
-<section class="section section-green" id="focus-environment">
+<section class="section section-green" id="loop-environment">
   <div class="container">
     <div class="section-head">
       <div>
-        <div class="eyebrow">🏗️ Research focus 2 &middot; Environment</div>
+        <div class="eyebrow">🏗️ Loop 2 &middot; Environment</div>
         <h2>Designing a world robots can work in</h2>
         <p>Robots fail less when the factory is designed for them. I <strong>measure</strong> how much lighting, camera pose, clutter, part presentation, fixture design, and layout matter, <strong>model</strong> that effect as a robotability score R(e), and <span class="hl">search for better cell designs in a digital twin</span> before building them. Real trials then recalibrate the twin (<strong>sim to real</strong> and back).</p>
       </div>
@@ -81,6 +61,19 @@ description: Research on Physical AI for robotic manufacturing, process control 
 </section>
 
 <section class="section">
+  <div class="container">
+    <div class="card tint-violet meet">
+      <div class="meet-icon" aria-hidden="true">🔗</div>
+      <div>
+        <div class="eyebrow">🤝 Where the loops meet</div>
+        <h2 style="margin-bottom:.35em;">One cell, both loops</h2>
+        <p style="margin:0;">The same thinking returns to the WAAM cell. <strong>Torch access, part orientation, and sensor placement</strong> are environment choices too. The long-term goal is to design the robot, the process, and the environment together, so manufacturing cells are <span class="hl">reliable by design and self-correcting in operation</span>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
   <div class="container">
     <div class="section-head">
       <div>

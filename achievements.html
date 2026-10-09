@@ -61,7 +61,7 @@ lead: Recognition for research and design work, grant proposals I helped write, 
     </div>
     <div>
       <div class="eyebrow">🤝 Leadership</div>
-      <h2>Leadership and community</h2>
+      <h2>Leadership and community service</h2>
       <ul class="item-list">
         {%- for i in a.leadership %}
         <li><span class="item-icon icon-{% cycle 'yellow', 'blue', 'rose', 'violet', 'green' %}">{% if i.emoji %}<span class="item-emoji">{{ i.emoji }}</span>{% else %}{% include icon.html name=i.icon %}{% endif %}</span><span><strong>{{ i.title }}</strong><span class="item-meta">{{ i.meta }}</span>{% if i.text %}{{ i.text }}{% endif %}</span></li>
