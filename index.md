@@ -14,24 +14,23 @@ toc: true
 
     <p class="hero-lead">
       I am a PhD student in Mechanical and Industrial Engineering at <a href="https://www.lsu.edu/" target="_blank" rel="noopener">Louisiana State University</a> and currently serve as a <strong>Graduate Research Assistant</strong> in the <a href="https://www.lsu.edu/eng/mie/people/faculty/bappy.php" target="_blank" rel="noopener">AnalyticsIQ Lab</a>. My research targets
-      <strong>cyber-physical intelligence for additive manufacturing</strong>—moving from <em>post-build inspection</em>
-      to <strong>predictive, safety-aware, and adaptive process autonomy</strong>.
+      <strong>Physical AI for controllable and certifiable metal additive manufacturing</strong>, connecting
+      <strong>in-situ monitoring, digital twins, and optimal control</strong>.
     </p>
 
     <p class="hero-body">
-      Today’s additive manufacturing systems can print complex geometries, but they still struggle to
-      <strong>perceive, diagnose, and correct</strong> defects as they form. My goal is to transform AM into a
-      <strong>self-healing cyber-physical process</strong> where machines (i) sense their own behaviour through
-      multi-modal signals, (ii) interpret anomalies using physics-informed AI, and (iii) adjust parameters or
-      toolpaths to reduce defect formation before solidification.
+      Metal additive manufacturing systems can print complex geometries, but they still struggle to
+      <strong>detect process changes and correct defects during fabrication</strong>. My research focuses on
+      wire arc additive manufacturing (WAAM), directed energy deposition (DED), and laser powder bed fusion (LPBF),
+      using multimodal sensing to estimate process state and guide parameter adjustments under uncertainty.
     </p>
 
     <p class="hero-body">
       I work at the intersection of <strong>physics-based modelling</strong>, <strong>uncertainty-aware machine learning</strong>,
-      and <strong>real-time robotic control</strong>. I envision distributed manufacturing systems that can
-      <strong>collaborate securely</strong>—learning from each other without sharing sensitive data—while operators
-      are guided by trustworthy AI co-pilots. The long-term direction is scalable and certifiable autonomy: turning
-      trial-and-error processing into resilient, data-driven production.
+      and <strong>optimal control</strong>. My current interests also include <strong>robotics and simulation</strong>,
+      using digital twins to study how manufacturing environments affect robot task performance.
+      The long-term goal is reliable autonomy supported by measurable process quality, auditable decisions,
+      and human oversight.
     </p>
 
     <div class="link-badges" aria-label="Links and profiles">
@@ -72,13 +71,13 @@ toc: true
 <section class="section-interests">
   <div class="section-head">
     <h3 class="section-title">🧭 Research Interests</h3>
-    <p class="section-subtitle">Core areas that guide my work in cyber-physical manufacturing and AI.</p>
+    <p class="section-subtitle">Core areas that guide my work in Physical AI and manufacturing.</p>
   </div>
 
   <div class="interest-grid">
     <div class="interest-card interest-am">
       <img class="interest-icon" src="{{ '/assets/icons/Icon/additive manufacturing.png' | uri_escape | relative_url }}" alt="Additive manufacturing icon">
-      <span>Additive Manufacturing</span>
+      <span>Metal Additive Manufacturing</span>
     </div>
     <div class="interest-card interest-dt">
       <img class="interest-icon" src="{{ '/assets/icons/Icon/digital-twin.png' | relative_url }}" alt="Digital twin icon">
@@ -86,7 +85,7 @@ toc: true
     </div>
     <div class="interest-card interest-edge">
       <img class="interest-icon" src="{{ '/assets/icons/Icon/edge-computing.png' | relative_url }}" alt="Edge computing icon">
-      <span>Edge AI</span>
+      <span>Physical AI</span>
     </div>
     <div class="interest-card interest-robot">
       <img class="interest-icon" src="{{ '/assets/icons/Icon/robotics_control.png' | relative_url }}" alt="Robotics control icon">
@@ -94,11 +93,11 @@ toc: true
     </div>
     <div class="interest-card interest-priv">
       <img class="interest-icon" src="{{ '/assets/icons/Icon/privacy.png' | relative_url }}" alt="Privacy icon">
-      <span>Privacy-Preserving Learning</span>
+      <span>In-situ Monitoring</span>
     </div>
     <div class="interest-card interest-trust">
       <img class="interest-icon" src="{{ '/assets/icons/Icon/trustworthy.png' | relative_url }}" alt="Trustworthy AI icon">
-      <span>Trustworthy AI</span>
+      <span>Optimal Control</span>
     </div>
   </div>
 </section>
@@ -254,7 +253,10 @@ toc: true
 <div class="section-research">
   <div class="section-head">
     <h3 class="section-title">🔬 Featured Research</h3>
-    <p class="section-subtitle">A few representative projects. Full list is on the <a href="{{ '/publications/' | relative_url }}">Publications</a> page.</p>
+    <p class="section-subtitle">My current focus is in-situ monitoring and control of metal AM, alongside robotics and digital twins.
+      See <a href="{{ '/research/' | relative_url }}">Research</a> for ongoing projects.
+      The selected prior work below provides background in sensing and machine learning;
+      the full publication list is on the <a href="{{ '/publications/' | relative_url }}">Publications</a> page.</p>
   </div>
 
   <div class="research-stack">
