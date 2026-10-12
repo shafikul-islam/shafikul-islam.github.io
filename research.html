@@ -4,95 +4,65 @@ title: Research
 eyebrow: "🤖 Research"
 heading: Physical AI for reliable robotic manufacturing
 lead: >-
-  Robots on the factory floor fail for two reasons: <span class="hl">the process drifts</span>, or
-  <span class="hl">the environment works against them</span>. I build Physical AI that closes the loop on both.
-  During a build, the robot <strong>senses its process and corrects it</strong>. Before a build, the robot's cell is
-  <strong>designed and tested in a digital twin</strong> so the robot can succeed in the first place.
-description: Physical AI for robotic manufacturing, process control in wire arc additive manufacturing, robot cell design, digital twins, and sim to real.
+  My research aims at manufacturing systems that <span class="hl">sense, predict, and correct themselves</span>.
+  I work on <strong>in-situ monitoring, process modeling, predictive control, and robotics</strong> for metal additive
+  manufacturing and robotic production, with an emphasis on <strong>trustworthy, deployable AI</strong>.
+description: Research directions in Physical AI for manufacturing, in-situ monitoring, process modeling, predictive control, robotics, and trustworthy AI.
 ---
 {%- assign r = site.data.research -%}
+{%- assign tints = "blue,yellow,green,rose,violet,blue" | split: "," -%}
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">🧭 Directions</div>
+        <h2>Research directions</h2>
+        <p>The broad questions that guide my work. Details of ongoing studies appear here once they are published.</p>
+      </div>
+    </div>
+    <div class="grid grid-3">
+      {%- for d in r.directions %}{% assign t = tints[forloop.index0] %}
+      <article class="card tint-{{ t }} ink-{{ t }}">
+        <div class="mv-box">{% include mini-viz.html name=d.viz %}</div>
+        <h3>{{ d.emoji }} {{ d.title }}</h3>
+        <p>{{ d.text }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
 
 <section class="section section-blue">
   <div class="container">
     <div class="section-head">
       <div>
-        <div class="eyebrow">🎯 One goal, two loops</div>
-        <h2>Same robot, two loops that make it reliable</h2>
-        <p>Both lines of my work follow one cycle: <strong>sense, model, decide, and check on the real robot</strong>. What differs is <span class="hl">when the loop closes</span>.</p>
+        <div class="eyebrow">📚 Published work</div>
+        <h2>Research summaries</h2>
+        <p>Short summaries of <strong>published papers and presented posters</strong>, each with its method figure and key findings. The full list is on the <a href="{{ '/publications/' | relative_url }}">Publications</a> page.</p>
       </div>
     </div>
-    <div class="levers">
-      <a class="lever tint-yellow" href="#loop-process"><span class="lever-n">1</span><span><strong>🔥 Loop 1 &middot; During the build</strong><br><b>Improve the process:</b> sense the weld, predict defects, correct heat and speed in real time.</span></a>
-      <span class="lever-plus" aria-hidden="true">+</span>
-      <a class="lever tint-green" href="#loop-environment"><span class="lever-n">2</span><span><strong>🏗️ Loop 2 &middot; Before the build</strong><br><b>Improve the environment:</b> measure what makes a cell hard for robots, then design a better one in a digital twin.</span></a>
+    <div class="grid grid-2">
+      {%- for f in r.featured %}
+      <a class="card card-hover pubsum" href="{{ f.tldr | relative_url }}">
+        <figure class="figure"><img src="{{ f.image | relative_url }}" alt="{{ f.alt }}" loading="lazy" width="800" height="450"></figure>
+        <span class="item-meta">{{ f.venue }}</span>
+        <strong>{{ f.title }}</strong>
+        <span class="text-link" style="margin-top:8px;">📘 Read the summary {% include icon.html name="arrow-right" %}</span>
+      </a>
+      {%- endfor %}
     </div>
-    <p class="toolkit"><span class="toolkit-label">🧰 Shared toolkit</span>
-      <span class="tag tag-blue">Sensing</span><span class="tag tag-violet">Learned models</span><span class="tag tag-green">Digital twins</span><span class="tag tag-accent">Predictive control</span><span class="tag tag-yellow">Sim to real</span></p>
-  </div>
-</section>
-
-<section class="section" id="loop-process">
-  <div class="container split">
-    <div>
-      <div class="eyebrow">🔥 Loop 1 &middot; Process</div>
-      <h2>A robotic WAAM cell that watches itself</h2>
-      <p>In <strong>wire arc additive manufacturing</strong>, an industrial robot builds a metal part one weld bead at a time, and <span class="hl">heat, bead shape, and porosity drift</span> as layers stack up.</p>
-      <p>My cell adds the senses a skilled welder relies on: <strong>vision</strong> on the melt pool, <strong>sound</strong> from the arc, and electrical and thermal signals. Learned models turn these signals into a process state, predict defect risk, and recommend a <strong>bounded correction</strong> before a defect forms.</p>
-      <ul class="tags"><li class="tag tag-blue">👁️ Sense</li><li class="tag tag-violet">🧠 Predict</li><li class="tag tag-accent">⚙️ Act</li></ul>
-    </div>
-    <div class="anim-frame">
-      <div class="anim-caption"><span class="live-dot">Robotic WAAM cell</span></div>
-      {% include waam-robot.html %}
-    </div>
-  </div>
-</section>
-
-<section class="section section-green" id="loop-environment">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">🏗️ Loop 2 &middot; Environment</div>
-        <h2>Designing a world robots can work in</h2>
-        <p>Robots fail less when the factory is designed for them. I <strong>measure</strong> how much lighting, camera pose, clutter, part presentation, fixture design, and layout matter, <strong>model</strong> that effect as a robotability score R(e), and <span class="hl">search for better cell designs in a digital twin</span> before building them. Real trials then recalibrate the twin (<strong>sim to real</strong> and back).</p>
-      </div>
-    </div>
-    {% include robotability-animation.html %}
   </div>
 </section>
 
 <section class="section">
   <div class="container">
     <div class="card tint-violet meet">
-      <div class="meet-icon" aria-hidden="true">🔗</div>
+      <div class="meet-icon" aria-hidden="true">🤝</div>
       <div>
-        <div class="eyebrow">🤝 Where the loops meet</div>
-        <h2 style="margin-bottom:.35em;">One cell, both loops</h2>
-        <p style="margin:0;">The same thinking returns to the WAAM cell. <strong>Torch access, part orientation, and sensor placement</strong> are environment choices too. The long-term goal is to design the robot, the process, and the environment together, so manufacturing cells are <span class="hl">reliable by design and self-correcting in operation</span>.</p>
+        <h2 style="margin-bottom:.35em;">Interested in collaborating?</h2>
+        <p style="margin:0;">I am glad to discuss these directions with researchers and industry partners. <a href="{{ '/contact/' | relative_url }}">Get in touch</a>.</p>
       </div>
     </div>
   </div>
 </section>
-
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <div class="eyebrow">🛠️ Projects</div>
-        <h2>Current projects</h2>
-        <p>Work in progress is labeled as such. Results appear here only after they are measured.</p>
-      </div>
-    </div>
-    <div class="grid grid-3">
-      {%- for d in r.projects %}
-      <article class="card card-hover tint-{{ d.tint }}">
-        <div class="card-icon">{% include icon.html name=d.icon %}</div>
-        <span class="status status-accent" style="margin:0 0 8px;">{{ d.status }}</span>
-        <h3>{{ d.emoji }} {{ d.title }}</h3>
-        <p>{{ d.text }}</p>
-        <ul class="tags">{% for t in d.tags %}<li class="tag" style="background:var(--bg-elev);">{{ t }}</li>{% endfor %}</ul>
-      </article>
-      {%- endfor %}
-    </div>
-  </div>
-</section>
-<script src="{{ '/assets/js/robotability.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

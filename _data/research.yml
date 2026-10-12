@@ -8,7 +8,7 @@ pillars:
   - title: Learned dynamics and digital twins
     viz: twin
     icon: cube
-    text: Physics-informed surrogate models and simulation in NVIDIA Isaac Sim and Omniverse.
+    text: Physics-informed and data-driven models that connect process data to part quality.
   - title: Predictive control and safe autonomy
     viz: control
     icon: gauge
@@ -18,89 +18,44 @@ pillars:
     icon: cpu
     text: Real-time inference on NVIDIA Jetson with TensorRT, close to the machine.
 
+# High-level directions only. Do not describe unpublished methods, results, or project
+# details here (dissertation novelty). Published work goes under "featured".
 directions:
-  - title: Digital twins for monitoring and control
+  - title: In-situ monitoring and quality assurance
+    viz: perception
+    emoji: "👁️"
+    text: >-
+      Multimodal sensing and machine learning to detect process changes and defects during metal additive
+      manufacturing, with attention to <strong>reliability and uncertainty</strong>.
+  - title: Process modeling and digital twins
     viz: twin
-    icon: cube
-    text: >-
-      A digital twin is most useful when it supports <strong>state estimation</strong>, <strong>prediction</strong>,
-      and <strong>process control</strong> under uncertainty. I study reduced-order process models and
-      representation learning to connect in-situ measurements with layer-wise prediction and parameter adjustment,
-      including linear-quadratic regulation and model predictive control.
-    tags: [Digital Twin, State Estimation, Optimal Control]
-  - title: In-situ monitoring and uncertainty-aware learning
-    viz: monitor
-    icon: activity
-    text: >-
-      Multimodal process measurements provide evidence of melt-pool behaviour and defect formation.
-      I combine physics-guided learning with uncertainty estimation to study state changes, domain shift,
-      and the reliability of predictions used for control and quality assurance.
-    tags: [Physics-informed, Uncertainty, Robustness]
-  - title: Robotics and manufacturing environment design
-    viz: robot
-    icon: robot
-    text: >-
-      I study how workspace layout and other manufacturing environment variables affect robot task performance.
-      This direction combines physical experiments with digital-twin simulation in <strong>NVIDIA Omniverse</strong>
-      to evaluate task success and explore robot and environment co-design.
-    tags: [Robotics, Simulation, Co-design]
-
-projects:
-  - title: Designing a world robots can work in (robotability)
-    emoji: "🏗️"
-    icon: robot
-    tint: blue
-    status: In progress
-    text: >-
-      Robots fail less when the factory is designed for them. I measure how lighting, camera pose, clutter, part
-      presentation, fixture design, and layout change robot task success, model that effect, and search for better
-      cell designs in a <strong>digital twin</strong> before validating them on a real robot (<strong>sim to real</strong>).
-    tags: [Robotics, Environment co-design, Sim to real, Digital Twin]
-  - title: Digital twin of a robotic WAAM cell in NVIDIA Isaac Sim
     emoji: "🧊"
-    icon: cube
-    tint: violet
-    status: In progress
     text: >-
-      A simulation copy of our robotic wire arc additive manufacturing cell, built in September 2026, as a testbed for
-      robot motion, sensor placement, and control studies before they run on the real machine.
-    tags: [Isaac Sim, WAAM, Digital Twin]
-  - title: Entropy-aware MPC for WAAM restart transients
-    emoji: "🔊"
-    icon: activity
-    tint: rose
-    status: Poster, 2026 (simulation study)
-    text: >-
-      Spectral entropy of the arc sound as a control state for model predictive control, so the controller can correct
-      restart transients that current and voltage do not reveal. Presented at the LSU Control Systems Symposium 2026.
-    tags: [Acoustic sensing, MPC, WAAM]
-  - title: Physics-informed ML for WAAM defect detection
-    emoji: "🔬"
-    icon: layers
-    tint: yellow
-    status: NSF LAMDA funded
-    text: >-
-      Multimodal in-situ sensing (IR thermal, optical emission, electrical) for layer-wise melt-pool characterization,
-      with a physics-informed CNN for porosity detection validated against X-ray CT.
-    tags: [WAAM, In-situ Sensing, Physics-informed ML]
-  - title: Geometry-invariant melt-pool control
+      Physics-informed and data-driven models that link in-process measurements to part quality for
+      <strong>prediction and decision support</strong>.
+  - title: Predictive control for manufacturing
+    viz: control
     emoji: "🎛️"
-    icon: gauge
-    tint: rose
-    status: In progress
     text: >-
-      Uncertainty-aware representations and reduced-order process models for monitoring and control across toolpaths and
-      part geometries, comparing LQR and MPC for layer-wise correction.
-    tags: [Metal AM, Control, Uncertainty]
-  - title: Fatigue modeling linked to process signatures
-    emoji: "📈"
-    icon: activity
-    tint: blue
-    status: In progress
+      Control methods that use sensing and learned models to keep manufacturing processes within
+      <strong>quality and safety limits</strong>.
+  - title: Robotics for manufacturing
+    viz: robot
+    emoji: "🦾"
     text: >-
-      A physics-guided LSTM that links process-induced defects to structural performance by combining fracture mechanics
-      with deep learning.
-    tags: [Reliability, Sequence Models, Physics-guided]
+      Making industrial robots perform <strong>reliably in real manufacturing settings</strong>, supported by
+      simulation and physical experiments.
+  - title: Trustworthy and privacy-preserving AI
+    viz: monitor
+    emoji: "🛡️"
+    text: >-
+      Explainable, uncertainty-aware, and privacy-preserving learning so manufacturing AI can be
+      <strong>audited and shared safely</strong>.
+  - title: Edge AI on the shop floor
+    viz: edge
+    emoji: "⚡"
+    text: >-
+      Efficient models that run <strong>close to the machine in real time</strong>, where decisions have to be made.
 
 featured:
   - title: Entropy-Aware Model Predictive Control for Transient Quality Mitigation in WAAM

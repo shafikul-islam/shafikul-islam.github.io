@@ -1,8 +1,4 @@
 # Newest first. type: paper | award | talk | milestone | service | research
-- date: "Sep 2026"
-  type: research
-  text: >-
-    Built a <strong>digital twin of our robotic wire arc additive manufacturing cell</strong> in NVIDIA Isaac Sim.
 - date: "Aug 14, 2026"
   type: milestone
   text: >-

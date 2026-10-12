@@ -34,6 +34,10 @@ Build output and caches: `_site/`, `vendor/`, `.sass-cache/`, `.jekyll-cache/`, 
 
 Never publish or commit: transcripts, date of birth, visa or immigration status, student ID, home address, or personal documents. Contact on the site is email, LinkedIn, Google Scholar, GitHub, and city-level location only.
 
+## Unpublished research (strict)
+
+Following advice from Sohan's advisor: do not put unpublished research ideas, methods, results, project details, or illustrations of them on the site, because they may become part of the dissertation. Describe ongoing work only as broad research directions. Only published or publicly presented work (papers, preprints, posters with a DOI) may get summaries, figures, or animations.
+
 ## Content accuracy rules (strict)
 
 - Never invent facts, dates, metrics, author lists, venues, or results. If a detail is missing or uncertain, ask Sohan before writing it.
