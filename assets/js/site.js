@@ -44,6 +44,48 @@
     }, 4000);
   }
 
+  // ---------- News: jump to latest / oldest ----------
+  var newsBox = document.getElementById("news-scroll");
+  document.querySelectorAll("[data-news-jump]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      if (!newsBox) return;
+      var top = b.getAttribute("data-news-jump") === "top" ? 0 : newsBox.scrollHeight;
+      newsBox.scrollTo({ top: top, behavior: reduceMotion ? "auto" : "smooth" });
+    });
+  });
+
+  // ---------- Highlights: slow continuous scroll ----------
+  // The cards are rendered twice, so when the first set has scrolled past
+  // we jump back by exactly one set width and the loop looks seamless.
+  var rail = document.getElementById("highlights-rail");
+  if (rail && !reduceMotion) {
+    var paused = false, visible = true, pos = 0, lastT = null, SPEED = 28; // px per second
+    var setWidth = function () {
+      var clone = rail.querySelector("[data-clone]");
+      return clone ? clone.offsetLeft - rail.firstElementChild.offsetLeft : 0;
+    };
+    ["mouseenter", "focusin", "touchstart"].forEach(function (ev) { rail.addEventListener(ev, function () { paused = true; }, { passive: true }); });
+    ["mouseleave", "focusout", "touchend"].forEach(function (ev) { rail.addEventListener(ev, function () { paused = false; pos = rail.scrollLeft; }, { passive: true }); });
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (e) { visible = e[0].isIntersecting; }, { threshold: 0.1 }).observe(rail);
+    }
+    var step = function (t) {
+      if (lastT !== null && !paused && visible && !document.hidden) {
+        var w = setWidth();
+        pos += SPEED * Math.min((t - lastT) / 1000, 0.05);
+        if (w > 0 && pos >= w) pos -= w;
+        rail.scrollLeft = pos;
+      } else if (paused) {
+        pos = rail.scrollLeft;
+      }
+      lastT = t;
+      requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  } else if (rail) {
+    rail.querySelectorAll("[data-clone]").forEach(function (c) { c.remove(); });
+  }
+
   // ---------- Mobile navigation ----------
   var navBtn = document.getElementById("nav-toggle");
   var header = document.getElementById("site-header");

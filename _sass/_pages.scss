@@ -300,3 +300,11 @@
 .pubsum .figure { aspect-ratio: 16 / 9; background: #fff; margin-bottom: 8px; }
 .pubsum .figure img { object-fit: contain; padding: 6px; }
 .pubsum strong { font-family: var(--font-head); font-size: 1.05rem; line-height: 1.35; }
+
+// ---------- Home: news jump buttons and moving highlights ----------
+.news-jump { display: flex; gap: 8px; }
+.icon.flip { transform: rotate(180deg); }
+.rail-auto { scroll-snap-type: none; scrollbar-width: none; }
+.rail-auto::-webkit-scrollbar { display: none; }
+.rail-auto .photo-card { transition: transform .3s var(--ease), box-shadow .3s; }
+.rail-auto .photo-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
