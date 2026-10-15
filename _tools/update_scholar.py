@@ -100,29 +100,36 @@ def _num(v):
 
 
 def fetch_searchapi(key: str) -> dict:
-    q = urllib.parse.urlencode({"engine": "google_scholar_author", "author_id": USER,
-                                "num": 100, "sort": "cited_by", "api_key": key})
+    # Default sort is by citation count; the first page holds the most-cited papers.
+    q = urllib.parse.urlencode({"engine": "google_scholar_author", "author_id": USER, "hl": "en", "api_key": key})
     req = urllib.request.Request("https://www.searchapi.io/api/v1/search?" + q, headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=60) as r:
         d = json.load(r)
     if d.get("error"):
         raise ValueError(f"SearchApi error: {d['error']}")
     cb = d.get("cited_by") or {}
-    table = {}
-    for row in cb.get("table") or []:
-        for k, v in row.items():
-            table[k] = v
-    def pair(name):
-        v = table.get(name) or {}
-        allv = _num(v.get("all")) if isinstance(v, dict) else _num(v)
-        recent = next((_num(x) for k, x in (v.items() if isinstance(v, dict) else []) if k.startswith("since")), allv)
-        return allv, recent
-    c, cr = pair("citations"); h, hr = pair("h_index"); i, ir = pair("i10_index")
+    metrics = {}
+    table = cb.get("table")
+    if isinstance(table, dict):  # {"headers": [...], "rows": [["Citations", all, since], ...]}
+        for row in table.get("rows") or []:
+            if isinstance(row, list) and len(row) >= 2:
+                metrics[norm(str(row[0]))] = (_num(row[1]), _num(row[2]) if len(row) > 2 else _num(row[1]))
+    elif isinstance(table, list):  # [{"citations": {"all": n, "since_...": m}}, ...]
+        for row in table:
+            for k, v in (row.items() if isinstance(row, dict) else []):
+                allv = _num(v.get("all")) if isinstance(v, dict) else _num(v)
+                rec = next((_num(x) for kk, x in v.items() if kk.startswith("since")), allv) if isinstance(v, dict) else allv
+                metrics[norm(k)] = (allv, rec)
+    c, cr = metrics.get("citations", (0, 0))
+    h, hr = metrics.get("hindex", (0, 0))
+    i, ir = metrics.get("i10index", (0, 0))
     if c <= 0:
-        raise ValueError("SearchApi response had no citation total")
-    per_year = sorted(({"year": _num(g.get("year")), "cites": _num(g.get("citations"))} for g in cb.get("graph") or []), key=lambda x: x["year"])
+        shape = {k: type(v).__name__ for k, v in cb.items()}
+        raise ValueError(f"SearchApi response had no citation total (cited_by keys: {shape})")
+    hist = cb.get("histogram") or cb.get("graph") or []
+    per_year = sorted(({"year": _num(g.get("year")), "cites": _num(g.get("cites", g.get("citations")))} for g in hist if isinstance(g, dict)), key=lambda x: x["year"])
     papers = [{"title": (a.get("title") or "").strip(), "cites": _num(a.get("cited_by")),
-               "year": _num(a.get("year")) or None} for a in d.get("articles") or []]
+               "year": _num(a.get("year")) or None} for a in d.get("articles") or [] if isinstance(a, dict)]
     return {
         "updated": dt.date.today().isoformat(),
         "profile": f"https://scholar.google.com/citations?user={USER}",
