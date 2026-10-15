@@ -359,6 +359,36 @@ nav_order: 20
   color: #92400e;
 }
 
+@media (max-width: 720px){
+  .pubs-section-header{
+    flex-wrap: wrap;
+  }
+
+  .pubs-count{
+    white-space: normal;
+  }
+
+  .pub-card{
+    padding: 14px;
+  }
+
+  .pub-card-top{
+    flex-direction: column;
+  }
+
+  .pub-badge{
+    align-self: flex-start;
+  }
+
+  .pub-card-footer{
+    align-items: flex-start;
+  }
+
+  .pub-actions{
+    width: 100%;
+  }
+}
+
 /* Empty message */
 .pubs-empty{
   display: none;

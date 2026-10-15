@@ -1,9 +1,17 @@
 .hamburger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
   background: transparent;
   border: 0;
   padding: 10px 0 10px 10px;
   cursor: pointer;
   z-index: 30;
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
 }
 
 .hamburger-box {

@@ -1656,6 +1656,24 @@ footer a,
 }
 
 @media (max-width: 720px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .hero-container {
+    padding: 20px;
+  }
+
+  .hero-media {
+    float: none;
+    width: min(260px, 100%);
+    margin: 0 0 14px;
+  }
+
+  .hero-body {
+    overflow-wrap: anywhere;
+  }
 
   .news-header,
   .section-head {
