@@ -95,14 +95,14 @@
   type: award
   text: >-
     <strong>NSF Student Travel Award</strong>, IISE Annual Conference & Expo 2025.
-- date: "Feb-Mar 2025"
-  type: research
-  text: >-
-    NSF Southwest I-Corps IdeaLaunch Program: <strong>Privacy-preserving certification framework</strong> for AMaaS platforms (Role: Entrepreneurial Lead).
 - date: "Mar 15, 2025"
   type: award
   text: >-
     Best graduate oral presentation award for <em>“Foundation Model-Driven Predictive and Interpretable Modeling for Critical Materials in Renewable Energy Applications”</em> (Materials Science/Engineering Division).
+- date: "Feb-Mar 2025"
+  type: research
+  text: >-
+    NSF Southwest I-Corps IdeaLaunch Program: <strong>Privacy-preserving certification framework</strong> for AMaaS platforms (Role: Entrepreneurial Lead).
 - date: "Jan 28, 2025"
   type: paper
   text: >-
@@ -111,14 +111,14 @@
   type: service
   text: >-
     Started the Ph.D. program in Industrial Engineering at LSU (Department of Mechanical and Industrial Engineering).
-- date: "Dec 25, 2024"
-  type: award
-  text: >-
-    Best Technical Presentation (Session ICCIT-2024) for “Predict Students’ Performance and Optimize Preparatory Leave: An Integrated Deep Learning and Dynamic Programming Approach”.
 - date: "Dec 26, 2024"
   type: talk
   text: >-
     Served as an instructor for the CIOL Winter ML Bootcamp.
+- date: "Dec 25, 2024"
+  type: award
+  text: >-
+    Best Technical Presentation (Session ICCIT-2024) for “Predict Students’ Performance and Optimize Preparatory Leave: An Integrated Deep Learning and Dynamic Programming Approach”.
 - date: "Dec 16, 2024"
   type: talk
   text: >-
