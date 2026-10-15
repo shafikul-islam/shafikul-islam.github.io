@@ -381,3 +381,10 @@ details.disclosure > div { margin-top: 10px; color: var(--ink-2); font-size: .95
 
 // ---------- Warmer alternating sections ----------
 .section-alt { background: linear-gradient(180deg, var(--tint-yellow), var(--bg-sunken)); }
+
+// DOI links stand out as solid blue buttons
+.pub-links a.pub-doi, .btn-doi {
+  background: var(--tint-blue-ink); color: var(--bg-elev); border-color: var(--tint-blue-ink); font-weight: 600;
+}
+.pub-links a.pub-doi:hover, .btn-doi:hover { background: var(--navy); color: var(--bg-elev); border-color: var(--navy); }
+.btn-doi .icon, .pub-links a.pub-doi .icon { color: inherit; }

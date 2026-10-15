@@ -11,6 +11,9 @@
   year: 2026
   tags: [Computer Vision, Healthcare AI]
   note: 2nd Place, Best Track Paper Award (Health Systems Track), IISE Annual Conference 2026
+  links:
+  - label: DOI
+    url: https://doi.org/10.1080/24725579.2026.2703103
 - id: J12
   type: journal
   status: published
@@ -19,6 +22,9 @@
   venue: <i>International Journal of System Assurance Engineering and Management</i>, pp. 1-31
   year: 2026
   tags: [Manufacturing]
+  links:
+  - label: DOI
+    url: https://doi.org/10.1007/s13198-026-03374-x
 - id: J11
   type: journal
   status: published
@@ -27,6 +33,9 @@
   venue: <i>International Journal of Production Research</i>, pp. 1-26
   year: 2026
   tags: [Graph Neural Networks, Supply Chain, Time Series]
+  links:
+  - label: DOI
+    url: https://doi.org/10.1080/00207543.2026.2685179
 - id: J10
   type: journal
   status: published
@@ -35,6 +44,9 @@
   venue: <i>Digital Twins and Applications</i> (Wiley), vol. 3, no. 1, e70039
   year: 2026
   tags: [Digital Twins, Manufacturing]
+  links:
+  - label: DOI
+    url: https://doi.org/10.1049/dgt2.70039
 - id: J9
   type: journal
   status: published
@@ -148,6 +160,9 @@
   venue: "Workshop paper, <i>3rd AI for Math Workshop: Toward Self-Evolving Scientific Agents</i>, ICML 2026"
   year: 2026
   tags: [LLMs]
+  links:
+  - label: ICML
+    url: https://icml.cc/virtual/2026/82490
 - id: C10
   type: conf
   status: published
