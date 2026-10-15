@@ -18,7 +18,7 @@
   type: journal
   status: published
   title: Advancing industry 4.0 and lean-driven ergonomic insights for sustainable textile manufacturing
-  authors: Hosen, M. I., Mithun, A. C., Tushar, S. R., Alam, M. F. B., **Islam, M. D.**, Bappy, M. M.
+  authors: Hosen, M. I., Mithun, A. C., Tushar, S. R., Alam, M. F. B., **Islam, M. S.**, Bappy, M. M.
   venue: <i>International Journal of System Assurance Engineering and Management</i>, pp. 1-31
   year: 2026
   tags: [Manufacturing]
@@ -29,7 +29,7 @@
   type: journal
   status: published
   title: "GRAPHINE: enhancing spatiotemporal supply chain forecasting using virtual node-augmented graph diffusion for improved fuel efficiency"
-  authors: Alshehri, A. S., Wasi, A. T., Anik, M. A., **Islam, M. D. S.**, Hadj-Kali, M. K.
+  authors: Alshehri, A. S., Wasi, A. T., Anik, M. A., **Islam, M. S.**, Hadj-Kali, M. K.
   venue: <i>International Journal of Production Research</i>, pp. 1-26
   year: 2026
   tags: [Graph Neural Networks, Supply Chain, Time Series]
@@ -40,7 +40,7 @@
   type: journal
   status: published
   title: "Digital Twin-Enabled Additive Manufacturing: A Comprehensive Review of Architectures, Integration Layers and Operational Maturity"
-  authors: Anik, M. A., Rahman, A., **Islam, M. D. S.**, Khan, M. I., Ahsan, M. M., Wasi, A. T.
+  authors: Anik, M. A., Rahman, A., **Islam, M. S.**, Khan, M. I., Ahsan, M. M., Wasi, A. T.
   venue: <i>Digital Twins and Applications</i> (Wiley), vol. 3, no. 1, e70039
   year: 2026
   tags: [Digital Twins, Manufacturing]
@@ -156,7 +156,7 @@
   type: conf
   status: workshop
   title: "InvariantBench: Can Large Language Models Exhibit Inherent Reasoning Across Equivalent Transformations?"
-  authors: Wasi, A. T., Khan, M. A., Rahman, A., Faisal, W., Saha, S., Bhuiyan, S., **Islam, M. D. S.**
+  authors: Wasi, A. T., Khan, M. A., Rahman, A., Faisal, W., Saha, S., Bhuiyan, S., **Islam, M. S.**
   venue: "Workshop paper, <i>3rd AI for Math Workshop: Toward Self-Evolving Scientific Agents</i>, ICML 2026"
   year: 2026
   tags: [LLMs]
@@ -290,7 +290,7 @@
   type: preprint
   status: preprint
   title: "Responsible Innovation in AI-Driven Operations and Supply Chain Management: An Institutional Theory Framework"
-  authors: Wasi, A. T., Rahman, A., Priti, R. N., Khan, M. A., **Islam, M. D. S.**
+  authors: Wasi, A. T., Rahman, A., Priti, R. N., Khan, M. A., **Islam, M. S.**
   venue: <i>Engineering Archive (engrXiv)</i> preprint
   year: 2025
   tags: [Supply Chain]
