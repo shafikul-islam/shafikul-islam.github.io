@@ -364,12 +364,23 @@
 .ybar:focus-visible .ybar-fill { outline: 2px solid var(--ink); outline-offset: 2px; }
 
 // Horizontal bars: most cited papers
-.hbars { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
-.hbars li { margin: 0; }
+.hbars { list-style: none; margin: 0; padding: 0; counter-reset: rank; }
+.hbars li { margin: 0; padding: 10px 0 10px 34px; position: relative; counter-increment: rank; }
+.hbars li + li { border-top: 1px dashed var(--line-strong); }
+.hbars li:first-child { padding-top: 0; }
+.hbars li::before {
+  content: counter(rank); position: absolute; left: 0; top: 10px;
+  width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center;
+  font-family: var(--font-mono); font-size: .74rem; font-weight: 600; color: #fff; background: var(--c);
+}
+.hbars li:first-child::before { top: 0; }
+.hbars li:nth-child(1) { --c: var(--cat-1); } .hbars li:nth-child(2) { --c: var(--cat-2); }
+.hbars li:nth-child(3) { --c: var(--cat-3); } .hbars li:nth-child(4) { --c: var(--cat-4); }
+.hbars li:nth-child(5) { --c: var(--cat-5); }
 .hbar-title { display: block; font-size: .86rem; color: var(--ink-2); line-height: 1.35; margin-bottom: 4px; }
 .hbar-row { display: flex; align-items: center; gap: 8px; }
 .hbar-fill {
-  height: 10px; width: 0; border-radius: 0 4px 4px 0; background: var(--tint-blue-ink);
+  height: 12px; width: 0; border-radius: 0 4px 4px 0; background: var(--c);
   transition: width .9s var(--ease); transition-delay: calc(var(--i) * .1s);
 }
 .is-in .hbar-fill, .no-anim .hbar-fill { width: calc(var(--w) * .85); }

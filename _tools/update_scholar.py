@@ -1,15 +1,22 @@
 #!/usr/bin/env python3
 """Fetch citation metrics from the public Google Scholar profile into _data/scholar.yml.
 
-Google Scholar has no official API, so this reads the public profile page.
-If Scholar blocks the request or the page layout changes, the script exits
-without touching the existing data file, so the site keeps the last good numbers.
+Google Scholar has no official API. Two sources are supported:
+  1. SearchApi (https://www.searchapi.io), used when the SEARCHAPI_KEY environment
+     variable is set. This is what the GitHub workflow uses, because Scholar blocks
+     requests from GitHub's servers. One run uses one search credit.
+  2. The public profile page, read directly. Works from a home connection.
+If the request fails or the response looks wrong, the script exits without
+touching the existing data file, so the site keeps the last good numbers.
 
-Usage: python3 _tools/update_scholar.py
+Usage: python3 _tools/update_scholar.py            (direct)
+       SEARCHAPI_KEY=... python3 _tools/update_scholar.py
 """
 import datetime as dt
 import html
 import json
+import os
+import urllib.parse
 import pathlib
 import re
 import sys
@@ -82,9 +89,52 @@ def match_ids(papers: list) -> dict:
     return out
 
 
-def main() -> int:
+def _num(v):
+    """SearchApi values may be ints, numeric strings, or {"value": n} objects."""
+    if isinstance(v, dict):
+        v = v.get("value", v.get("all", v.get("total")))
     try:
-        data = parse(fetch())
+        return int(str(v).replace(",", ""))
+    except (TypeError, ValueError):
+        return 0
+
+
+def fetch_searchapi(key: str) -> dict:
+    q = urllib.parse.urlencode({"engine": "google_scholar_author", "author_id": USER,
+                                "num": 100, "sort": "cited_by", "api_key": key})
+    req = urllib.request.Request("https://www.searchapi.io/api/v1/search?" + q, headers={"User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        d = json.load(r)
+    if d.get("error"):
+        raise ValueError(f"SearchApi error: {d['error']}")
+    cb = d.get("cited_by") or {}
+    table = {}
+    for row in cb.get("table") or []:
+        for k, v in row.items():
+            table[k] = v
+    def pair(name):
+        v = table.get(name) or {}
+        allv = _num(v.get("all")) if isinstance(v, dict) else _num(v)
+        recent = next((_num(x) for k, x in (v.items() if isinstance(v, dict) else []) if k.startswith("since")), allv)
+        return allv, recent
+    c, cr = pair("citations"); h, hr = pair("h_index"); i, ir = pair("i10_index")
+    if c <= 0:
+        raise ValueError("SearchApi response had no citation total")
+    per_year = sorted(({"year": _num(g.get("year")), "cites": _num(g.get("citations"))} for g in cb.get("graph") or []), key=lambda x: x["year"])
+    papers = [{"title": (a.get("title") or "").strip(), "cites": _num(a.get("cited_by")),
+               "year": _num(a.get("year")) or None} for a in d.get("articles") or []]
+    return {
+        "updated": dt.date.today().isoformat(),
+        "profile": f"https://scholar.google.com/citations?user={USER}",
+        "citations": c, "citations_recent": cr, "h_index": h, "h_index_recent": hr,
+        "i10_index": i, "i10_index_recent": ir, "per_year": per_year, "papers": papers,
+    }
+
+
+def main() -> int:
+    key = os.environ.get("SEARCHAPI_KEY", "").strip()
+    try:
+        data = fetch_searchapi(key) if key else parse(fetch())
     except Exception as e:  # keep the last good file
         print(f"Scholar update skipped: {e}", file=sys.stderr)
         return 0

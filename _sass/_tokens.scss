@@ -68,6 +68,8 @@
   --robot-yellow: #f2b705;
   --robot-yellow-dark: #c99400;
   --robot-gray: #5d6670;
+  // Validated categorical order for charts (light surface)
+  --cat-1: #e2570f; --cat-2: #1f5fa8; --cat-3: #23794a; --cat-4: #5b45a8; --cat-5: #b23a5a;
 }
 
 @mixin dark-theme {
@@ -109,6 +111,8 @@
   --robot-yellow: #f2b705;
   --robot-yellow-dark: #b88a00;
   --robot-gray: #8a95a3;
+  // Validated categorical order for charts (dark surface)
+  --cat-1: #e8692a; --cat-2: #4a8ad8; --cat-3: #3aa66c; --cat-4: #8a72e0; --cat-5: #d9507e;
 }
 
 :root { @include light-theme; }

@@ -1,10 +1,11 @@
 name: Update citation metrics
 
-# Refreshes _data/scholar.yml from the public Google Scholar profile every Monday.
-# If Scholar blocks the request, the script keeps the last good data and nothing is committed.
+# Refreshes _data/scholar.yml on the 1st and 16th of each month (about every 15 days).
+# Uses SearchApi through the SEARCHAPI_KEY repository secret, one search credit per run.
+# If the request fails, the script keeps the last good data and nothing is committed.
 on:
   schedule:
-    - cron: "17 6 * * 1"
+    - cron: "17 6 1,16 * *"
   workflow_dispatch:
 
 permissions:
@@ -19,6 +20,8 @@ jobs:
         with:
           python-version: "3.12"
       - name: Fetch Scholar metrics
+        env:
+          SEARCHAPI_KEY: ${{ secrets.SEARCHAPI_KEY }}
         run: python3 _tools/update_scholar.py
       - name: Commit if changed
         run: |
