@@ -51,7 +51,6 @@ lead: Recognition for research and design work, grant proposals I helped write, 
 <section class="section section-alt">
   <div class="container grid grid-2">
     <div>
-      <div class="eyebrow">🎤 Service</div>
       <h2>Professional service and invited talks</h2>
       <ul class="item-list">
         {%- for i in a.service %}
@@ -60,7 +59,6 @@ lead: Recognition for research and design work, grant proposals I helped write, 
       </ul>
     </div>
     <div>
-      <div class="eyebrow">🤝 Leadership</div>
       <h2>Leadership and community service</h2>
       <ul class="item-list">
         {%- for i in a.leadership %}
@@ -94,7 +92,7 @@ lead: Recognition for research and design work, grant proposals I helped write, 
     </div>
     <div>
       <div class="eyebrow">📣 Media and press</div>
-      <ul class="item-list">{% for m in a.press %}<li><span class="item-icon icon-violet">{% include icon.html name="mic" %}</span><span>{{ m }}</span></li>{% endfor %}</ul>
+      <ul class="item-list">{% for m in a.press %}<li><span class="item-icon icon-violet">{% include icon.html name="mic" %}</span><span><a href="{{ m.url }}" target="_blank" rel="noopener">{{ m.title }}</a><span class="item-meta">{{ m.source }}</span></span></li>{% endfor %}</ul>
     </div>
   </div>
   <div class="container" style="margin-top:28px;">
