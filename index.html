@@ -103,7 +103,7 @@ title: Home
         <div class="btn-row">
           <a class="btn btn-primary btn-sm" href="{{ f.tldr | relative_url }}">📘 TL;DR: research summary {% include icon.html name="arrow-right" %}</a>
           {%- for l in f.links %}
-          <a class="btn btn-sm{% if l.label == 'DOI' %} btn-doi{% endif %}" href="{{ l.url | relative_url }}"{% if l.url contains 'http' %} target="_blank" rel="noopener"{% endif %}>{% include icon.html name="link" %} {{ l.label }}</a>
+          <a class="btn btn-sm lk lk-{{ l.label | slugify }}" href="{{ l.url | relative_url }}"{% if l.url contains 'http' %} target="_blank" rel="noopener"{% endif %}>{% include icon.html name="link" %} {{ l.label }}</a>
           {%- endfor %}
         </div>
       </div>

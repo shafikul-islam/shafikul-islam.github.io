@@ -100,7 +100,7 @@ layout: default
       <p>{{ page.authors }}. "{{ page.paper_title }}." {{ page.venue }}.</p>
       <div class="btn-row">
         {%- for l in page.links %}
-        <a class="btn btn-sm{% if forloop.first %} btn-primary{% endif %}" href="{{ l.url | relative_url }}"{% if l.url contains 'http' or l.url contains '.pdf' %} target="_blank" rel="noopener"{% endif %}>{% include icon.html name="external" %} {{ l.label }}</a>
+        <a class="btn btn-sm lk lk-{{ l.label | slugify }}" href="{{ l.url | relative_url }}"{% if l.url contains 'http' or l.url contains '.pdf' %} target="_blank" rel="noopener"{% endif %}>{% include icon.html name="external" %} {{ l.label }}</a>
         {%- endfor %}
       </div>
     </article>

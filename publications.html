@@ -51,7 +51,7 @@ description: Publications of MD Shafikul Islam in manufacturing AI, computer vis
           <div class="pub-foot">
             {%- assign c = site.data.scholar.by_id[p.id] -%}
             {% if c %}<span class="pub-cites" title="Citations on Google Scholar">❝ {{ c }} citation{% if c != 1 %}s{% endif %}</span>{% endif %}
-            {% if p.links %}<div class="pub-links">{% for l in p.links %}{% if l.label == "Plain summary" %}<a class="pub-tldr" href="{{ l.url | relative_url }}">{% include icon.html name="spark" %}TL;DR</a>{% else %}<a{% if l.label == "DOI" %} class="pub-doi"{% endif %} href="{{ l.url | relative_url }}" target="_blank" rel="noopener">{% include icon.html name="external" %}{{ l.label }}</a>{% endif %}{% endfor %}</div>{% endif %}
+            {% if p.links %}<div class="pub-links">{% for l in p.links %}{% if l.label == "Plain summary" %}<a class="pub-tldr" href="{{ l.url | relative_url }}">{% include icon.html name="spark" %}TL;DR</a>{% else %}<a class="lk lk-{{ l.label | slugify }}" href="{{ l.url | relative_url }}" target="_blank" rel="noopener">{% include icon.html name="external" %}{{ l.label }}</a>{% endif %}{% endfor %}</div>{% endif %}
             <ul class="tags">{% for tg in p.tags %}<li class="tag">{{ tg }}</li>{% endfor %}</ul>
           </div>
         </div>

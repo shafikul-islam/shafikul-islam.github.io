@@ -382,9 +382,20 @@ details.disclosure > div { margin-top: 10px; color: var(--ink-2); font-size: .95
 // ---------- Warmer alternating sections ----------
 .section-alt { background: linear-gradient(180deg, var(--tint-yellow), var(--bg-sunken)); }
 
-// DOI links stand out as solid blue buttons
-.pub-links a.pub-doi, .btn-doi {
-  background: var(--tint-blue-ink); color: var(--bg-elev); border-color: var(--tint-blue-ink); font-weight: 600;
+// Link buttons: solid color per link type so each kind is easy to spot.
+// DOI blue, arXiv rose, slides violet, thesis green, SSRN amber, poster PDF orange,
+// venue and other pages navy.
+.lk {
+  --lk: var(--navy);
+  background: var(--lk) !important; color: var(--bg-elev) !important; border-color: var(--lk) !important; font-weight: 600;
+  transition: filter .15s, transform .15s;
 }
-.pub-links a.pub-doi:hover, .btn-doi:hover { background: var(--navy); color: var(--bg-elev); border-color: var(--navy); }
-.btn-doi .icon, .pub-links a.pub-doi .icon { color: inherit; }
+.lk:hover { filter: brightness(1.12) saturate(1.1); transform: translateY(-1px); }
+.lk .icon { color: inherit; }
+.lk-doi { --lk: var(--tint-blue-ink); }
+.lk-arxiv { --lk: var(--tint-rose-ink); }
+.lk-slides { --lk: var(--tint-violet-ink); }
+.lk-thesis { --lk: var(--tint-green-ink); }
+.lk-ssrn { --lk: var(--tint-yellow-ink); }
+.lk-poster-pdf { --lk: var(--accent-ink); }
+.lk-all-publications { --lk: var(--ink-2); }
