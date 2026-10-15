@@ -1,0 +1,66 @@
+{%- comment -%}
+Citation metrics from _data/scholar.yml (refreshed weekly by .github/workflows/scholar.yml).
+Headline tiles, a single-series bar chart of citations per year, and the most-cited papers.
+{%- endcomment -%}
+{%- assign sc = site.data.scholar -%}
+{%- if sc -%}
+{%- assign pubs = site.data.publications -%}
+{%- assign maxy = 0 -%}{%- for y in sc.per_year -%}{%- if y.cites > maxy -%}{%- assign maxy = y.cites -%}{%- endif -%}{%- endfor -%}
+{%- assign this_year = site.time | date: "%Y" | plus: 0 -%}
+<section class="metrics" aria-labelledby="metrics-title">
+  <div class="metrics-head">
+    <div>
+      <div class="eyebrow">📈 Impact</div>
+      <h2 id="metrics-title">Citation metrics</h2>
+    </div>
+    <a class="metrics-src" href="{{ sc.profile }}" target="_blank" rel="noopener">{% include icon.html name="scholar" %} Google Scholar &middot; updated {{ sc.updated | date: "%b %-d, %Y" }}</a>
+  </div>
+
+  <div class="metric-tiles">
+    <div class="metric tint-blue"><span class="metric-emoji" aria-hidden="true">❝</span><span class="metric-value" data-count="{{ sc.citations }}">{{ sc.citations }}</span><span class="metric-label">Citations</span></div>
+    <div class="metric tint-yellow"><span class="metric-emoji" aria-hidden="true">🏅</span><span class="metric-value" data-count="{{ sc.h_index }}">{{ sc.h_index }}</span><span class="metric-label">h-index</span></div>
+    <div class="metric tint-green"><span class="metric-emoji" aria-hidden="true">🔟</span><span class="metric-value" data-count="{{ sc.i10_index }}">{{ sc.i10_index }}</span><span class="metric-label">i10-index</span></div>
+    <div class="metric tint-violet"><span class="metric-emoji" aria-hidden="true">📄</span><span class="metric-value" data-count="{{ pubs.size }}">{{ pubs.size }}</span><span class="metric-label">Publications on this site</span></div>
+  </div>
+
+  <div class="metric-charts">
+    <figure class="card chart-card">
+      <figcaption class="chart-title">Citations per year</figcaption>
+      <div class="ychart" role="img" aria-label="Citations per year: {% for y in sc.per_year %}{{ y.year }}: {{ y.cites }}{% unless forloop.last %}, {% endunless %}{% endfor %}{% if sc.per_year.last.year == this_year %} (so far){% endif %}.">
+        <div class="ychart-grid" aria-hidden="true"><span></span><span></span><span></span></div>
+        {%- for y in sc.per_year %}
+        {%- assign pct = y.cites | times: 100.0 | divided_by: maxy -%}
+        {%- assign partial = false -%}{%- if y.year == this_year -%}{%- assign partial = true -%}{%- endif %}
+        <div class="ybar{% if partial %} is-partial{% endif %}" tabindex="0" style="--h:{{ pct | round: 1 }}%;--i:{{ forloop.index0 }};">
+          <span class="ybar-tip" role="tooltip">{{ y.cites }} citation{% if y.cites != 1 %}s{% endif %} in {{ y.year }}{% if partial %} (so far){% endif %}</span>
+          <span class="ybar-val">{{ y.cites }}</span>
+          <span class="ybar-fill"></span>
+          <span class="ybar-year">{{ y.year }}{% if partial %}<small>to date</small>{% endif %}</span>
+        </div>
+        {%- endfor %}
+      </div>
+    </figure>
+
+    <figure class="card chart-card">
+      <figcaption class="chart-title">Most cited</figcaption>
+      {%- assign top = sc.papers | sort: "cites" | reverse -%}
+      {%- assign topmax = top.first.cites -%}
+      <ol class="hbars">
+        {%- for p in top limit: 5 %}
+        {%- assign pct = p.cites | times: 100.0 | divided_by: topmax %}
+        <li style="--w:{{ pct | round: 1 }}%;--i:{{ forloop.index0 }};">
+          <span class="hbar-title">{{ p.title | truncate: 78 }}</span>
+          <span class="hbar-row"><span class="hbar-fill"></span><span class="hbar-val">{{ p.cites }}</span></span>
+        </li>
+        {%- endfor %}
+      </ol>
+    </figure>
+  </div>
+
+  <table class="sr-only">
+    <caption>Citations per year from Google Scholar</caption>
+    <thead><tr><th scope="col">Year</th><th scope="col">Citations</th></tr></thead>
+    <tbody>{% for y in sc.per_year %}<tr><td>{{ y.year }}</td><td>{{ y.cites }}</td></tr>{% endfor %}</tbody>
+  </table>
+</section>
+{%- endif -%}

@@ -1,0 +1,33 @@
+name: Update citation metrics
+
+# Refreshes _data/scholar.yml from the public Google Scholar profile every Monday.
+# If Scholar blocks the request, the script keeps the last good data and nothing is committed.
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch Scholar metrics
+        run: python3 _tools/update_scholar.py
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- _data/scholar.yml; then
+            echo "No change."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add _data/scholar.yml
+            git commit -m "Update citation metrics from Google Scholar"
+            git push
+          fi

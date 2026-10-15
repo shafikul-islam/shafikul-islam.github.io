@@ -86,6 +86,34 @@
     rail.querySelectorAll("[data-clone]").forEach(function (c) { c.remove(); });
   }
 
+  // ---------- Citation metrics: grow bars and count up when visible ----------
+  var metrics = document.querySelector(".metrics");
+  if (metrics) {
+    var counters = metrics.querySelectorAll("[data-count]");
+    var run = function () {
+      metrics.classList.add("is-in");
+      if (reduceMotion) return;
+      counters.forEach(function (el) {
+        var end = parseInt(el.getAttribute("data-count"), 10) || 0, t0 = null;
+        var tick = function (t) {
+          if (t0 === null) t0 = t;
+          var k = Math.min((t - t0) / 1100, 1);
+          el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3)));
+          if (k < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+    };
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      metrics.classList.add("no-anim");
+    } else {
+      var io = new IntersectionObserver(function (e) {
+        if (e[0].isIntersecting) { run(); io.disconnect(); }
+      }, { threshold: 0.25 });
+      io.observe(metrics);
+    }
+  }
+
   // ---------- Mobile navigation ----------
   var navBtn = document.getElementById("nav-toggle");
   var header = document.getElementById("site-header");
