@@ -4,7 +4,7 @@ This file is loaded automatically at the start of every Claude Code session. It 
 
 ## What this site is
 
-Personal academic and professional website, served by GitHub Pages at https://shafikul-islam.github.io from this repository. Built with Jekyll. Audience: industry recruiters (Physical AI, robotics, manufacturing AI, applied science) and academic researchers.
+Personal academic and professional website, served by GitHub Pages at https://www.shafikul-islam.com (custom domain; shafikul-islam.github.io redirects there) from this repository. Built with Jekyll. Audience: industry recruiters (Physical AI, robotics, manufacturing AI, applied science) and academic researchers.
 
 Identity to convey: a PhD researcher building Physical AI for manufacturing. Machines that sense, predict, and correct themselves: multimodal perception, learned dynamics and digital twins, predictive control, and real-time edge deployment on robotic systems.
 
