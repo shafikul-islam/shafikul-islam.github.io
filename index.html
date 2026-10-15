@@ -75,7 +75,7 @@ title: Home
       <div class="news-scroll" id="news-scroll" tabindex="0" role="region" aria-label="All news, scrollable">
         <ul class="news">
           {%- for n in site.data.news %}
-          <li{% if forloop.index <= 6 %} class="is-new"{% endif %}><span class="news-date">{{ n.date }}</span><span class="news-text"><span class="news-badge nb-{{ n.type }}">{{ site.data.news_types[n.type] }} {{ n.type }}</span>{{ n.text }}</span></li>
+          <li{% if forloop.index <= 6 %} class="is-new"{% endif %}><span class="news-date">{{ n.date }}</span><span class="news-text"><span class="news-badge nb-{{ n.type }}">{{ site.data.news_types[n.type] }} {{ n.type }}</span> {{ n.text }}</span></li>
           {%- endfor %}
         </ul>
       </div>
