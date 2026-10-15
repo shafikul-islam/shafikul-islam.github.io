@@ -132,9 +132,12 @@ memberships:
   - Institute of Industrial and Systems Engineers (IISE), Member, 2025 to 2027
 
 press:
-  - IISE Innovative Design Competition 2025, winner highlight
-  - LSU Mechanical and Industrial Engineering reposted an award-winning update (LinkedIn)
-  - INFORMS Data Mining Society posted the Stakeholder Data Challenge results (LinkedIn)
+  - title: IISE Innovative Design Competition 2025 — 1st Place, Hearth AI
+    source: Institute of Industrial and Systems Engineers
+    url: https://www.iise.org/Details.aspx?id=41826
+  - title: 2025 INFORMS Stakeholder Engagement Data Challenge — First Runner-Up
+    source: Computational Intelligence and Operations Lab (LinkedIn)
+    url: https://www.linkedin.com/posts/ciol-research_happy-to-share-that-team-ciol-and-louisiana-activity-7391096869776580608-UzGJ
 
 personal: >-
   I enjoy organizing community sports, mentoring students, and building practical ML systems that connect real-world
