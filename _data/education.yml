@@ -9,7 +9,6 @@ degrees:
     status: In progress
     tint: blue
     meta:
-      - [GPA, "4.05"]
       - [Advisor, '<a href="https://www.lsu.edu/eng/mie/people/faculty/bappy.php" target="_blank" rel="noopener">Dr. Mahathir Mohammad Bappy</a>, AnalyticsIQ Lab']
     text: >-
       Research focus: <strong>trustworthy and transferable autonomy for cyber-physical systems</strong>, geometry-invariant
